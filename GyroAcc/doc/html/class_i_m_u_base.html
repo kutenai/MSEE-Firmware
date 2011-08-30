@@ -110,6 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#adb8539af8660d291fdde1f38b3d644f3">Busy</a> ()=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#a6e65b709e0212f95299ce9fa464b4651">ResetTimer</a> ()=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#a9b4cc325e9858a8bb204733dc7906ec2">UseGyro</a> (bool bEnable)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#aa9c09bfd70f81b4a2df20cc5ae1474c3">NextIMU</a> (<a class="el" href="class_i_m_u_base.html">IMUBase</a> *)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#a55327f28a0ad5e54d94f0c698b04827a">BeginRead</a> ()=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#a53d56fa29c66935306e1dcca140aa9ff">DataReady</a> ()=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#a13cf0868e2c3c31838fe889315ccfb0c">GetPacketData</a> (uint8_t *pPacket)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_m_u_base.html#ab920218bb6630f9e91ef7d0f07599203">CheckIDs</a> (<a class="el" href="class_hardware_serial.html">HardwareSerial</a> *pSerial)=0</td></tr>
@@ -119,6 +121,26 @@ Public Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_i_m_u_8h_source.html#l00016">16</a> of file <a class="el" href="_i_m_u_8h_source.html">IMU.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a55327f28a0ad5e54d94f0c698b04827a"></a><!-- doxytag: member="IMUBase::BeginRead" ref="a55327f28a0ad5e54d94f0c698b04827a" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IMUBase::BeginRead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_i_m_u.html#a3c949edee15e2f618d7ee263b0a4bcb3">IMU</a>.</p>
+
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00108">IMU::BeginRead()</a>, and <a class="el" href="_i_m_u_8cpp_source.html#l00348">IMU::ProcessTransaction()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adb8539af8660d291fdde1f38b3d644f3"></a><!-- doxytag: member="IMUBase::Busy" ref="adb8539af8660d291fdde1f38b3d644f3" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -208,6 +230,25 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_i_m_u.html#a4f72b7f99fc42f30c9478ba7ed65654e">IMU</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9c09bfd70f81b4a2df20cc5ae1474c3"></a><!-- doxytag: member="IMUBase::NextIMU" ref="aa9c09bfd70f81b4a2df20cc5ae1474c3" args="(IMUBase *)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMUBase::NextIMU </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_m_u_base.html">IMUBase</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_i_m_u.html#ac46c8e580371cf97e4625dda450f01fd">IMU</a>.</p>
 
 </div>
 </div>

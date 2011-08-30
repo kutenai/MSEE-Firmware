@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br/>
 <code>#include &lt;inttypes.h&gt;</code><br/>
 <code>#include &lt;avr/interrupt.h&gt;</code><br/>
+<code>#include &quot;TimerCore.h&quot;</code><br/>
 <code>#include &quot;TimerCntr.h&quot;</code><br/>
 </div>
 <p><a href="_timer_cntr_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -99,10 +100,8 @@ Defines</h2></td></tr>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#add2914bbd945ab19476f186a9f348489">TC0_ISR_DEF</a> (TCC0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#a1169f7d0e22eb5607bf2267b4334233d">TC0_ISR_DEF</a> (TCD0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#af7d134c976e8ecab6d701823b9c84ec0">TC0_ISR_DEF</a> (TCE0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#a3865656655ac5108dd77105db88c9df4">TC1_ISR_DEF</a> (TCC1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#aaf2dd82ac2c50f84dbc0a8266e68395a">TC1_ISR_DEF</a> (TCD1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#ac6c73849682663358f575c58da28fd8a">TC1_ISR_DEF</a> (TCE1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#afb2d9165fd31c92b47af4ebc5adfc08a">SetPointer</a> (TC0_t *tc, <a class="el" href="class_timer_cntr.html">TimerCntr</a> *pTC)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_timer_cntr_8cpp.html#acb2dde5ac0f74a08d831eb548afb26bd">SetPointer</a> (TC1_t *tc, <a class="el" href="class_timer_cntr.html">TimerCntr</a> *pTC)</td></tr>
 </table>
@@ -141,7 +140,7 @@ ISR(tc##_CCD_vect) {\
     <span class="keywordflow">if</span> (tc##cp) tc##cp-&gt;ccx(3);\
 }
 </pre></div>
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00011">11</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00012">12</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 </div>
 </div>
@@ -173,7 +172,7 @@ ISR(tc##_CCB_vect) {\
     <span class="keywordflow">if</span> (tc##cp) tc##cp-&gt;ccx(1);\
 }
 </pre></div>
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00037">37</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00047">47</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 </div>
 </div>
@@ -203,7 +202,7 @@ ISR(tc##_CCB_vect) {\
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00057">57</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00074">74</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="comment">// Register this object with the appropriate</span>
     <span class="comment">// pointer so that the ISR routines can call p</span>
@@ -212,11 +211,15 @@ ISR(tc##_CCB_vect) {\
         TCC0cp = pTC;
     } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCD0) {
         TCD0cp = pTC;
-    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCE0) {
+<span class="preprocessor">#if not defined(TIMERCORE_USE_TCE0)</span>
+<span class="preprocessor"></span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCE0) {
         TCE0cp = pTC;
-    <span class="comment">//} else if (tc == &amp;TCF0) {</span>
-    <span class="comment">//    TCF0cp = pTC;</span>
-    }
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span><span class="preprocessor">#if not defined(TIMERCORE_USE_TCF0)</span>
+<span class="preprocessor"></span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCF0) {
+        TCF0cp = pTC;
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>    }
 }
 </pre></div>
 </div>
@@ -246,7 +249,7 @@ ISR(tc##_CCB_vect) {\
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00073">73</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00094">94</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="comment">// Register this object with the appropriate</span>
     <span class="comment">// pointer so that the ISR routines can call p</span>
@@ -255,30 +258,19 @@ ISR(tc##_CCB_vect) {\
         TCC1cp = pTC;
     } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCD1) {
         TCD1cp = pTC;
-    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCE1) {
+<span class="preprocessor">#if not defined(TIMERCORE_USE_TCE1)</span>
+<span class="preprocessor"></span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCE1) {
         TCE1cp = pTC;
-    <span class="comment">//} else if (tc == &amp;TCF1) {</span>
-    <span class="comment">//    TCF1cp = pTC;</span>
-    }
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span><span class="preprocessor">#if not defined(TIMERCORE_USE_TCF1)</span>
+<span class="preprocessor"></span><span class="preprocessor">#if defined(TCF1)</span>
+<span class="preprocessor"></span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tc == &amp;TCF1) {
+        TCF1cp = pTC;
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>    }
 }
 </pre></div>
-</div>
-</div>
-<a class="anchor" id="af7d134c976e8ecab6d701823b9c84ec0"></a><!-- doxytag: member="TimerCntr.cpp::TC0_ISR_DEF" ref="af7d134c976e8ecab6d701823b9c84ec0" args="(TCE0)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TC0_ISR_DEF </td>
-          <td>(</td>
-          <td class="paramtype">TCE0&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
 </div>
 </div>
 <a class="anchor" id="a1169f7d0e22eb5607bf2267b4334233d"></a><!-- doxytag: member="TimerCntr.cpp::TC0_ISR_DEF" ref="a1169f7d0e22eb5607bf2267b4334233d" args="(TCD0)" -->
@@ -340,23 +332,6 @@ ISR(tc##_CCB_vect) {\
           <td class="memname">TC1_ISR_DEF </td>
           <td>(</td>
           <td class="paramtype">TCD1&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac6c73849682663358f575c58da28fd8a"></a><!-- doxytag: member="TimerCntr.cpp::TC1_ISR_DEF" ref="ac6c73849682663358f575c58da28fd8a" args="(TCE1)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TC1_ISR_DEF </td>
-          <td>(</td>
-          <td class="paramtype">TCE1&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

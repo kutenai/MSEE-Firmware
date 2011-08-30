@@ -104,7 +104,6 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_port_8cpp.html#a994b06dc78c55a8c9e7b2883da7bb024">PORT_ISR_DEF</a> (PORTD)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_port_8cpp.html#a9bb0a9112275eaaaa6070b0b232c1b71">PORT_ISR_DEF</a> (PORTE)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_port_8cpp.html#a6857b09dab42360940128d667044f2cf">PORT_ISR_DEF</a> (PORTF)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_port_8cpp.html#a1b9a4b8cbc68480765347a71799fa781">PORT_ISR_DEF</a> (PORTH)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_port_8cpp.html#afaf5d589e6cb241cd3822efd8c9cbb05">SetPointer</a> (PORT_t *port, <a class="el" href="class_port.html">Port</a> *p)</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -163,23 +162,6 @@ ISR(port##_INT1_vect) {\
           <td class="memname">PORT_ISR_DEF </td>
           <td>(</td>
           <td class="paramtype">PORTB&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1b9a4b8cbc68480765347a71799fa781"></a><!-- doxytag: member="Port.cpp::PORT_ISR_DEF" ref="a1b9a4b8cbc68480765347a71799fa781" args="(PORTH)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PORT_ISR_DEF </td>
-          <td>(</td>
-          <td class="paramtype">PORTH&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -282,9 +264,9 @@ ISR(port##_INT1_vect) {\
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_port_8cpp_source.html#l00031">31</a> of file <a class="el" href="_port_8cpp_source.html">Port.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_port_8cpp_source.html#l00033">33</a> of file <a class="el" href="_port_8cpp_source.html">Port.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="_port_8cpp_source.html#l00054">Port::Port()</a>, and <a class="el" href="_port_8cpp_source.html#l00060">Port::~Port()</a>.</p>
+<p>Referenced by <a class="el" href="_port_8cpp_source.html#l00058">Port::Port()</a>, and <a class="el" href="_port_8cpp_source.html#l00064">Port::~Port()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="comment">// Register this object with the appropriate</span>
     <span class="comment">// pointer so that the ISR routines can call p</span>
@@ -301,9 +283,11 @@ ISR(port##_INT1_vect) {\
         PORTEcp = p;
     } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (port ==  &amp;PORTF) {
         PORTFcp = p;
-    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (port ==  &amp;PORTH) {
+<span class="preprocessor">#if defined (__AVR_ATxmega128A1__)</span>
+<span class="preprocessor"></span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (port ==  &amp;PORTH) {
         PORTHcp = p;
-    }
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>    }
 }
 </pre></div>
 </div>

@@ -33,6 +33,10 @@ virtual void \hyperlink{class_i_m_u_base_a6e65b709e0212f95299ce9fa464b4651}{Rese
 \item 
 virtual void \hyperlink{class_i_m_u_base_a9b4cc325e9858a8bb204733dc7906ec2}{UseGyro} (bool bEnable)=0
 \item 
+virtual void \hyperlink{class_i_m_u_base_aa9c09bfd70f81b4a2df20cc5ae1474c3}{NextIMU} (\hyperlink{class_i_m_u_base}{IMUBase} $\ast$)=0
+\item 
+virtual int \hyperlink{class_i_m_u_base_a55327f28a0ad5e54d94f0c698b04827a}{BeginRead} ()=0
+\item 
 virtual bool \hyperlink{class_i_m_u_base_a53d56fa29c66935306e1dcca140aa9ff}{DataReady} ()=0
 \item 
 virtual uint8\_\-t $\ast$ \hyperlink{class_i_m_u_base_a13cf0868e2c3c31838fe889315ccfb0c}{GetPacketData} (uint8\_\-t $\ast$pPacket)=0
@@ -51,6 +55,23 @@ Definition at line 16 of file IMU.h.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_i_m_u_base_a55327f28a0ad5e54d94f0c698b04827a}{
+\index{IMUBase@{IMUBase}!BeginRead@{BeginRead}}
+\index{BeginRead@{BeginRead}!IMUBase@{IMUBase}}
+\subsubsection[{BeginRead}]{\setlength{\rightskip}{0pt plus 5cm}virtual int IMUBase::BeginRead (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_i_m_u_base_a55327f28a0ad5e54d94f0c698b04827a}
+
+
+Implemented in \hyperlink{class_i_m_u_a3c949edee15e2f618d7ee263b0a4bcb3}{IMU}.
+
+
+
+Referenced by IMU::BeginRead(), and IMU::ProcessTransaction().
+
 \hypertarget{class_i_m_u_base_adb8539af8660d291fdde1f38b3d644f3}{
 \index{IMUBase@{IMUBase}!Busy@{Busy}}
 \index{Busy@{Busy}!IMUBase@{IMUBase}}
@@ -115,6 +136,19 @@ Implemented in \hyperlink{class_i_m_u_a004d2bb9e6155f45edc9e46bce730644}{IMU}.
 
 
 Implemented in \hyperlink{class_i_m_u_a4f72b7f99fc42f30c9478ba7ed65654e}{IMU}.
+
+\hypertarget{class_i_m_u_base_aa9c09bfd70f81b4a2df20cc5ae1474c3}{
+\index{IMUBase@{IMUBase}!NextIMU@{NextIMU}}
+\index{NextIMU@{NextIMU}!IMUBase@{IMUBase}}
+\subsubsection[{NextIMU}]{\setlength{\rightskip}{0pt plus 5cm}virtual void IMUBase::NextIMU (
+\begin{DoxyParamCaption}
+\item[{{\bf IMUBase} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_i_m_u_base_aa9c09bfd70f81b4a2df20cc5ae1474c3}
+
+
+Implemented in \hyperlink{class_i_m_u_ac46c8e580371cf97e4625dda450f01fd}{IMU}.
 
 \hypertarget{class_i_m_u_base_a27fdd96992dfa8867943407fc400d071}{
 \index{IMUBase@{IMUBase}!Reset@{Reset}}

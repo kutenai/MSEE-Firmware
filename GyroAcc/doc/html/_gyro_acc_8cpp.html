@@ -158,31 +158,37 @@ Variables</h2></td></tr>
 <div class="memdoc">
 
 <p><p>Create timers for each of the <a class="el" href="class_i_m_u.html">IMU</a> Masters. I use the TCx1 timers which are less capable, but it hardly matters as these are just setting a timer callback.</p>
-<p>Sort of need to set this once to initizlize it.</p>
+<p>Give the rate a default value. Start low</p>
 <p>This bit just toggles the light </p>
 </p>
 
 <p>Definition at line <a class="el" href="_gyro_acc_8cpp_source.html#l00034">34</a> of file <a class="el" href="_gyro_acc_8cpp_source.html">GyroAcc.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8cpp_source.html#l00153">HardwareSerial::begin()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00016">buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00263">HardwareSerial::enable()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00023">init()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00032">pdbgport</a>, <a class="el" href="_print_8cpp_source.html#l00045">Print::print()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00065">IMU::SetDebugPort()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00070">IMU::SetDebugPort2()</a>, and <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8cpp_source.html#l00140">HardwareSerial::begin()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00016">buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00248">HardwareSerial::enable()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00023">init()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00032">pdbgport</a>, <a class="el" href="_print_8cpp_source.html#l00045">Print::print()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00143">IMU::SetDebugPort()</a>, and <a class="el" href="_i_m_u_8cpp_source.html#l00148">IMU::SetDebugPort2()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordtype">char</span>    <a class="code" href="_i_m_u_8cpp.html#a38e7c3f1ce348a3ed20459d277245263">buffer</a>[100];
     <a class="code" href="_gyro_acc_8cpp.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();
 
-    DebugPort dbgPort2(&amp;PORTF);
+    PMIC.CTRL |= PMIC_HILVLEN_bm | PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm;
+    sei();
+    
+<span class="preprocessor">#ifdef USE_DEBUGPORT_2</span>
+<span class="preprocessor"></span>    DebugPort dbgPort2(&amp;PORTE);
     dbgPort2.PinMask(0xF0,5);
     dbgPort2.SetState(0);
-    
-    <a class="code" href="class_hardware_serial.html">HardwareSerial</a> dbgserial(&amp;USARTE1, &amp;PORTE, PIN6_bm, PIN7_bm);
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>    
+    <a class="code" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a> dbgserial(&amp;USARTF1, &amp;PORTF, PIN6_bm, PIN7_bm);
     dbgserial.begin(115200);
     <a class="code" href="_gyro_acc_8cpp.html#a953e918236b1fd18b8f07bad1217ecbe">pdbgserial</a> = &amp;dbgserial;
-    dbgserial.<a class="code" href="class_hardware_serial.html#a2e13244413a84a259cadab3fb452921a">enable</a>(<span class="keyword">false</span>);
+    <a class="code" href="_gyro_acc_8cpp.html#a953e918236b1fd18b8f07bad1217ecbe">pdbgserial</a>-&gt;<a class="code" href="class_hardware_serial.html#a2e13244413a84a259cadab3fb452921a">enable</a>(<span class="keyword">false</span>);
 
     <span class="comment">// Instantiate a commad processor.</span>
     <span class="comment">// Specify the USART, PORT, rxPin and txPin and the baud rate.</span>
-    <a class="code" href="class_hardware_serial.html">HardwareSerial</a> cmdSerial(&amp;USARTD0, &amp;PORTD, PIN2_bm, PIN3_bm);
+    <a class="code" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a> cmdSerial(&amp;USARTD0, &amp;PORTD, PIN2_bm, PIN3_bm);
     cmdSerial.begin(115200);
-    <span class="comment">//cmdSerial.begin(489795);</span>
+    <span class="comment">//cmdSerial.begin(285000);</span>
+    <span class="comment">//cmdSerial.begin(921600);</span>
     
     CCP = CCP_IOREG_gc;
     MCU.MCUCR = MCU_JTAGD_bm;
@@ -191,7 +197,6 @@ Variables</h2></td></tr>
     dbgPort.SetState(0xf);
     dbgPort.SetState(0);
     <a class="code" href="_gyro_acc_8cpp.html#ab6b6625a30d84db3519866cb8c32dd39">pdbgport</a> = &amp;dbgPort;
-
 
     I2C_Master  *pMaster[4];
     I2C_Master hand(&amp;TWIC);
@@ -210,38 +215,49 @@ Variables</h2></td></tr>
         }
     }
 
-    PMIC.CTRL |= PMIC_HILVLEN_bm | PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm;
-    sei();
-    <span class="comment">//SREG |= CPU_I_bm;</span>
+    <span class="comment">// Give the hardware time to stabilize..</span>
+    _delay_ms(1000);
     
-    <a class="code" href="class_i_m_u.html">IMU</a>     hand_imu(&amp;hand,0xD2,0x32);              <span class="comment">// Hand</span>
-    <a class="code" href="class_i_m_u.html">IMU</a>     single_imu(&amp;single,0xD0,0x30);          <span class="comment">// Pinkie</span>
-    <span class="comment">//IMU     pair1_imu(&amp;pair1,0xD2,0x32,0xD0,0x30);  // Ring, Middle</span>
-    <a class="code" href="class_i_m_u.html">IMU</a>     pair1_imu(&amp;pair1, 0xD0,0x30);  <span class="comment">// Ring, Middle</span>
-    <span class="comment">//IMU     pair2_imu(&amp;pair2,0xD2,0x32,0xD0,0x30);  // Index, Thumb</span>
-    <a class="code" href="class_i_m_u.html">IMU</a>     pair2_imu(&amp;pair2,0xD2,0x32);  <span class="comment">// Index, Thumb</span>
-    
+    <span class="comment">// When constructed without a list of ID&#39;s, the IMU will query known</span>
+    <span class="comment">// ID&#39;s 0xD0 and 0xD2 for the Gyro, and then 0x30 and 0x32 respectively</span>
+    <span class="comment">// for the ACC.</span>
+    <a class="code" href="class_i_m_u.html">IMU</a>     hand_imu(&amp;hand);    
+    <a class="code" href="class_i_m_u.html">IMU</a>     single_imu(&amp;single);
+    <a class="code" href="class_i_m_u.html">IMU</a>     pair1_imu(&amp;pair1);  
+    <a class="code" href="class_i_m_u.html">IMU</a>     pair2_imu(&amp;pair2);  
+
+    <span class="comment">// These all share the debug port, so they must operate</span>
+    <span class="comment">// in sequence. If I went back to a parallel operation, then</span>
+    <span class="comment">// this would have to change.</span>
     hand_imu.SetDebugPort(&amp;dbgPort);
-    hand_imu.SetDebugPort2(&amp;dbgPort2);
-    
+
+    single_imu.SetDebugPort(&amp;dbgPort);
+
+    pair1_imu.SetDebugPort(&amp;dbgPort);
+
+    pair2_imu.SetDebugPort(&amp;dbgPort);
+
+<span class="preprocessor">#ifdef USE_DEBUGPORT_2</span>
+<span class="preprocessor"></span>    hand_imu.SetDebugPort2(&amp;dbgPort2);
+    single_imu.SetDebugPort2(&amp;dbgPort2);
+    pair1_imu.SetDebugPort2(&amp;dbgPort2);
+    pair2_imu.SetDebugPort2(&amp;dbgPort2);
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>    
     <a class="code" href="class_timer_cntr.html">TimerCntr</a>   tcA(&amp;TCC1);
-    <a class="code" href="class_timer_cntr.html">TimerCntr</a>   tcB(&amp;TCD1);
-    <a class="code" href="class_timer_cntr.html">TimerCntr</a>   tcC(&amp;TCE1);
-    <a class="code" href="class_timer_cntr.html">TimerCntr</a>   tcD(&amp;TCE0);
-    
-    hand_imu.SetTimer(&amp;tcA);
-    single_imu.SetTimer(&amp;tcB);
-    pair1_imu.SetTimer(&amp;tcC);
-    pair2_imu.SetTimer(&amp;tcD);
     
     IMUManager imumgr(&amp;cmdSerial);
+    imumgr.SetBlueLed(&amp;PORTJ, PIN7_bm);
+    imumgr.LedOff();
+    imumgr.SetTimer(&amp;tcA);
     imumgr.AddIMU(&amp;hand_imu);
     imumgr.AddIMU(&amp;single_imu);
     imumgr.AddIMU(&amp;pair1_imu);
     imumgr.AddIMU(&amp;pair2_imu);
     imumgr.SampleRate(10); 
     
-    <span class="comment">//dbgserial.print(&quot;Starting main loop.\n&quot;);</span>
+    GyroCmdProcessor cmdproc(&amp;cmdSerial,&amp;pMaster[0],&amp;imumgr);
+
     sprintf(buffer,<span class="stringliteral">&quot;Welcome to Gyro Glove.\nRev %d.%d.%d Date: %02d/%02d/%04d Built at: %02d:%02d\n&quot;</span>,
         RevMajor, RevMinor, RevInc,
         DateMonth, DateDay, DateYear,
@@ -249,11 +265,11 @@ Variables</h2></td></tr>
         );
     cmdSerial.print(buffer);
     
-    GyroCmdProcessor cmdproc(&amp;cmdSerial,pMaster[0],&amp;imumgr);
-    
     <a class="code" href="class_timer_cntr.html">TimerCntr</a> mdtc(&amp;TCD0);
     MyDriver md;
     md.SetTimer(&amp;mdtc);
+    
+    cmdSerial.print(<span class="stringliteral">&quot;Starting endless loop\n&quot;</span>);
     
     <span class="keywordflow">while</span>(1) {
         cmdproc.Loop();        

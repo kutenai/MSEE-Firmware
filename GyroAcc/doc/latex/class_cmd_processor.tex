@@ -36,6 +36,8 @@ void \hyperlink{class_cmd_processor_a904eb6afbd77b68ec05d9c9043d4e0de}{getParam}
 \begin{DoxyCompactList}\small\item\em Parse the index parameter into a unsigned 8 bit integer. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_cmd_processor_a6ecb6c34b183926aeb224b660eb03b73}{getParam} (uint8\_\-t idx, uint16\_\-t \&p)
 \begin{DoxyCompactList}\small\item\em Parse the index parameter into a unsigned 16 bit integer. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_cmd_processor_abb99f82aa0e9c1c7023c334745e5b92d}{getParam} (uint8\_\-t idx, long \&l)
+\begin{DoxyCompactList}\small\item\em Parse the index parameter into a unsigned 8 bit integer. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_cmd_processor_a8cac703be39a93f638732e67b361fea0}{getParam} (uint8\_\-t idx, int \&p)
 \begin{DoxyCompactList}\small\item\em Parse the index parameter into a unsigned 8 bit integer. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_cmd_processor_aa0a295be3ce1557d86c5cc98394c3da1}{getParam} (uint8\_\-t idx, double \&f)
@@ -164,7 +166,7 @@ Definition at line 68 of file CmdProcessor.cpp.
 
 
 
-References \_\-cmdPos, \_\-pCmdString, \_\-pCmdTerm, \_\-pHW, HardwareSerial::available(), processCmd(), and HardwareSerial::read().
+References \_\-cmdPos, \_\-pCmdString, \_\-pCmdTerm, \_\-pHW, HardwareSerial::available(), Print::print(), processCmd(), and HardwareSerial::read().
 
 
 \begin{DoxyCode}
@@ -177,6 +179,8 @@ References \_\-cmdPos, \_\-pCmdString, \_\-pCmdTerm, \_\-pHW, HardwareSerial::av
                 _pCmdString[_cmdPos] = 0; // Null terminate command
                 processCmd();
                 return 1;
+            } else {
+                _pHW->print("Ok\n");
             }
         } else {
             _pCmdString[_cmdPos++] = c;
@@ -302,7 +306,7 @@ Return the command string.
 
 
 
-Definition at line 121 of file CmdProcessor.cpp.
+Definition at line 123 of file CmdProcessor.cpp.
 
 
 
@@ -330,7 +334,7 @@ Parse the index parameter into a double.
 
 
 
-Definition at line 167 of file CmdProcessor.cpp.
+Definition at line 176 of file CmdProcessor.cpp.
 
 
 
@@ -362,37 +366,7 @@ Parse the index parameter into a unsigned 8 bit integer.
 
 
 
-Definition at line 152 of file CmdProcessor.cpp.
-
-
-
-References \_\-paramCnt, and \_\-pTokens.
-
-
-\begin{DoxyCode}
-{
-    if (idx < _paramCnt) {
-        p = atoi(_pTokens[idx]);
-    }
-}
-\end{DoxyCode}
-\hypertarget{class_cmd_processor_a8cac703be39a93f638732e67b361fea0}{
-\index{CmdProcessor@{CmdProcessor}!getParam@{getParam}}
-\index{getParam@{getParam}!CmdProcessor@{CmdProcessor}}
-\subsubsection[{getParam}]{\setlength{\rightskip}{0pt plus 5cm}void CmdProcessor::getParam (
-\begin{DoxyParamCaption}
-\item[{uint8\_\-t}]{idx, }
-\item[{int \&}]{p}
-\end{DoxyParamCaption}
-)}}
-\label{class_cmd_processor_a8cac703be39a93f638732e67b361fea0}
-
-
-Parse the index parameter into a unsigned 8 bit integer. 
-
-
-
-Definition at line 159 of file CmdProcessor.cpp.
+Definition at line 154 of file CmdProcessor.cpp.
 
 
 
@@ -422,7 +396,37 @@ Parse the index parameter into a unsigned 16 bit integer.
 
 
 
-Definition at line 144 of file CmdProcessor.cpp.
+Definition at line 146 of file CmdProcessor.cpp.
+
+
+
+References \_\-paramCnt, and \_\-pTokens.
+
+
+\begin{DoxyCode}
+{
+    if (idx < _paramCnt) {
+        p = atoi(_pTokens[idx]);
+    }
+}
+\end{DoxyCode}
+\hypertarget{class_cmd_processor_a8cac703be39a93f638732e67b361fea0}{
+\index{CmdProcessor@{CmdProcessor}!getParam@{getParam}}
+\index{getParam@{getParam}!CmdProcessor@{CmdProcessor}}
+\subsubsection[{getParam}]{\setlength{\rightskip}{0pt plus 5cm}void CmdProcessor::getParam (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{idx, }
+\item[{int \&}]{p}
+\end{DoxyParamCaption}
+)}}
+\label{class_cmd_processor_a8cac703be39a93f638732e67b361fea0}
+
+
+Parse the index parameter into a unsigned 8 bit integer. 
+
+
+
+Definition at line 161 of file CmdProcessor.cpp.
 
 
 
@@ -453,7 +457,7 @@ Parse the index parameter into a string with the length specified.
 
 
 
-Definition at line 177 of file CmdProcessor.cpp.
+Definition at line 186 of file CmdProcessor.cpp.
 
 
 
@@ -464,6 +468,36 @@ References \_\-paramCnt, and \_\-pTokens.
 {
     if (idx < _paramCnt) {
         strncpy(p,_pTokens[idx],maxlen);
+    }
+}
+\end{DoxyCode}
+\hypertarget{class_cmd_processor_abb99f82aa0e9c1c7023c334745e5b92d}{
+\index{CmdProcessor@{CmdProcessor}!getParam@{getParam}}
+\index{getParam@{getParam}!CmdProcessor@{CmdProcessor}}
+\subsubsection[{getParam}]{\setlength{\rightskip}{0pt plus 5cm}void CmdProcessor::getParam (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{idx, }
+\item[{long \&}]{l}
+\end{DoxyParamCaption}
+)}}
+\label{class_cmd_processor_abb99f82aa0e9c1c7023c334745e5b92d}
+
+
+Parse the index parameter into a unsigned 8 bit integer. 
+
+
+
+Definition at line 168 of file CmdProcessor.cpp.
+
+
+
+References \_\-paramCnt, and \_\-pTokens.
+
+
+\begin{DoxyCode}
+{
+    if (idx < _paramCnt) {
+        l = atol(_pTokens[idx]);
     }
 }
 \end{DoxyCode}
@@ -482,7 +516,7 @@ Return the number of parameters parsed from the current command.
 
 
 
-Definition at line 127 of file CmdProcessor.cpp.
+Definition at line 129 of file CmdProcessor.cpp.
 
 
 
@@ -505,7 +539,7 @@ References \_\-paramCnt.
 \label{class_cmd_processor_a56ce7cebb2a72262ba0d1ba0937739d5}
 Process the commands in the command buffer Split the command into parameters based on the command delimiter. The maximum number of command tokens is 10. 
 
-Definition at line 90 of file CmdProcessor.cpp.
+Definition at line 92 of file CmdProcessor.cpp.
 
 
 
@@ -553,7 +587,7 @@ Clear the command status values so a new command can be started.
 
 
 
-Definition at line 113 of file CmdProcessor.cpp.
+Definition at line 115 of file CmdProcessor.cpp.
 
 
 

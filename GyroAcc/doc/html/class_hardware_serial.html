@@ -87,6 +87,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <!-- doxytag: class="HardwareSerial" --><!-- doxytag: inherits="Print" -->
+<p><a class="el" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a> implementation.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for HardwareSerial:</div>
@@ -131,8 +134,11 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hardware_serial.html#a8040fbab1f9197a9935df23a4c5e9a3b">_bEn</a></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00030">30</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<div class="textblock"><p><a class="el" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a> implementation. </p>
+<p>This class was originally copied form the Arduino source directory but has been modified somewhat to customize it for the CFA project.</p>
+<p>Ths class wraps the hardware serial resource in the ATXmega The class handles an interupt driven receive with a fixed size receive buffer of 128 bytes. The current implementation uses a synchronous send, but a buffered send would be a great enhancement for performance purposes. </p>
+
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00023">23</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab96331f0886097eb802a7839676ef645"></a><!-- doxytag: member="HardwareSerial::HardwareSerial" ref="ab96331f0886097eb802a7839676ef645" args="(USART_t *usart, PORT_t *port, uint8_t in_bm, uint8_t out_bm)" -->
 <div class="memitem">
@@ -171,9 +177,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00129">129</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00112">112</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00041">_bEn</a>, <a class="el" href="_hardware_serial_8h_source.html#l00038">_bsel</a>, <a class="el" href="_hardware_serial_8h_source.html#l00036">_in_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00037">_out_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00035">_port</a>, <a class="el" href="_hardware_serial_8h_source.html#l00033">_rx_buffer</a>, <a class="el" href="_hardware_serial_8h_source.html#l00034">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00035">RX_BUFFER_SIZE</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_baudrate</a>, <a class="el" href="_hardware_serial_8h_source.html#l00034">_bEn</a>, <a class="el" href="_hardware_serial_8h_source.html#l00032">_bscale</a>, <a class="el" href="_hardware_serial_8h_source.html#l00031">_bsel</a>, <a class="el" href="_hardware_serial_8h_source.html#l00029">_in_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00030">_out_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00028">_port</a>, <a class="el" href="_hardware_serial_8h_source.html#l00026">_rx_buffer</a>, <a class="el" href="_hardware_serial_8h_source.html#l00027">_usart</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00014">RX_BUFFER_SIZE</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00061">SetPointer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_hardware_serial.html#a9ee5f8b61e049f98dfd0b5ae53e97273">_rx_buffer</a> = (<a class="code" href="structring__buffer.html">ring_buffer</a>*)malloc(<a class="code" href="_hardware_serial_8cpp.html#a739a2a1a0047c98ac1b18ecd25dac092">RX_BUFFER_SIZE</a>+2*<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));
     <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>     = usart;
@@ -181,7 +187,10 @@ Protected Attributes</h2></td></tr>
     <a class="code" href="class_hardware_serial.html#a8724fdfd3955eeff5d3ed535624ce79a">_in_bm</a>     = in_bm;
     <a class="code" href="class_hardware_serial.html#a751a284e15af72b026143a8091be1b70">_out_bm</a>    = out_bm;
     <a class="code" href="class_hardware_serial.html#acc6c13c76a56c8b4bb88c3385b7bc791">_bsel</a>      = 0;
+    <a class="code" href="class_hardware_serial.html#a37dd406c01fd6432618925f0aeb329f3">_bscale</a>    = 0;
+    <a class="code" href="class_hardware_serial.html#ae692ab4a0a8aad73c74a10066fa9da24">_baudrate</a>  = 9600;
     <a class="code" href="class_hardware_serial.html#a8040fbab1f9197a9935df23a4c5e9a3b">_bEn</a>       = <span class="keyword">true</span>;
+    <a class="code" href="_hardware_serial_8cpp.html#aaec4e4f887a958cc22dd447565d7080b">SetPointer</a>(<a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>,<span class="keyword">this</span>);
 }
 </pre></div>
 </div>
@@ -200,13 +209,14 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00144">144</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00130">130</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_rx_buffer</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00218">end()</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00026">_rx_buffer</a>, <a class="el" href="_hardware_serial_8h_source.html#l00027">_usart</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00203">end()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00061">SetPointer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_hardware_serial.html#a0f86c41f580e04bdf30ea00e9014eacd">end</a>();
     free(<a class="code" href="class_hardware_serial.html#a9ee5f8b61e049f98dfd0b5ae53e97273">_rx_buffer</a>);
     <a class="code" href="class_hardware_serial.html#a9ee5f8b61e049f98dfd0b5ae53e97273">_rx_buffer</a> = 0;
+    <a class="code" href="_hardware_serial_8cpp.html#aaec4e4f887a958cc22dd447565d7080b">SetPointer</a>(<a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>,0);
 }
 </pre></div>
 </div>
@@ -227,9 +237,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00228">228</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00213">213</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_rx_buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00039">ring_buffer::head</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00035">RX_BUFFER_SIZE</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00040">ring_buffer::tail</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00026">_rx_buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00018">ring_buffer::head</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00014">RX_BUFFER_SIZE</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00019">ring_buffer::tail</a>.</p>
 
 <p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00068">CmdProcessor::checkCommands()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -263,9 +273,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00153">153</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00140">140</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00040">_baudrate</a>, <a class="el" href="_hardware_serial_8h_source.html#l00039">_bscale</a>, <a class="el" href="_hardware_serial_8h_source.html#l00036">_in_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00037">_out_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00035">_port</a>, <a class="el" href="_hardware_serial_8h_source.html#l00034">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00080">SetPointer()</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_baudrate</a>, <a class="el" href="_hardware_serial_8h_source.html#l00032">_bscale</a>, <a class="el" href="_hardware_serial_8h_source.html#l00029">_in_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00030">_out_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00028">_port</a>, and <a class="el" href="_hardware_serial_8h_source.html#l00027">_usart</a>.</p>
 
 <p>Referenced by <a class="el" href="_gyro_acc_8cpp_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -291,15 +301,13 @@ Protected Attributes</h2></td></tr>
     <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;BAUDCTRLA = (uint8_t)BSEL;
     <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;BAUDCTRLB = ((bscale &amp; 0xf) &lt;&lt; 4) | ((BSEL &amp; 0xf00) &gt;&gt; 8);
     
-    
     <span class="comment">// enable Rx and Tx</span>
     <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;CTRLB |= USART_RXEN_bm | USART_TXEN_bm;
     <span class="comment">// enable interrupt</span>
-    <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;CTRLA = USART_RXCINTLVL_LO_gc;
+    <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;CTRLA = USART_RXCINTLVL_HI_gc;
     
     <span class="comment">// Char size, parity and stop bits: 8N1</span>
     <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;CTRLC = USART_CHSIZE_8BIT_gc | USART_PMODE_DISABLED_gc;
-    <a class="code" href="_hardware_serial_8cpp.html#aaec4e4f887a958cc22dd447565d7080b">SetPointer</a>(<a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>,<span class="keyword">this</span>);
 }
 </pre></div>
 </div>
@@ -329,9 +337,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00188">188</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00173">173</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00040">_baudrate</a>, <a class="el" href="_hardware_serial_8h_source.html#l00039">_bscale</a>, <a class="el" href="_hardware_serial_8h_source.html#l00036">_in_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00037">_out_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00035">_port</a>, <a class="el" href="_hardware_serial_8h_source.html#l00034">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00080">SetPointer()</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_baudrate</a>, <a class="el" href="_hardware_serial_8h_source.html#l00032">_bscale</a>, <a class="el" href="_hardware_serial_8h_source.html#l00029">_in_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00030">_out_bm</a>, <a class="el" href="_hardware_serial_8h_source.html#l00028">_port</a>, <a class="el" href="_hardware_serial_8h_source.html#l00027">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00061">SetPointer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     uint16_t baud_setting;
     <a class="code" href="class_hardware_serial.html#a37dd406c01fd6432618925f0aeb329f3">_bscale</a> = bscale;
@@ -377,7 +385,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00117">117</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00100">100</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">{
 }
 </pre></div>
@@ -398,9 +406,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00263">263</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00248">248</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00041">_bEn</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00034">_bEn</a>.</p>
 
 <p>Referenced by <a class="el" href="_gyro_acc_8cpp_source.html#l00034">main()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -423,13 +431,13 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00218">218</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00203">203</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00034">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00080">SetPointer()</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00027">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00061">SetPointer()</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00025">CmdProcessor::~CmdProcessor()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00144">~HardwareSerial()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00025">CmdProcessor::~CmdProcessor()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00130">~HardwareSerial()</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="_hardware_serial_8cpp.html#aaec4e4f887a958cc22dd447565d7080b">SetPointer</a>(<a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>,(<a class="code" href="class_hardware_serial.html">HardwareSerial</a>*)0);
+    <a class="code" href="_hardware_serial_8cpp.html#aaec4e4f887a958cc22dd447565d7080b">SetPointer</a>(<a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>,(<a class="code" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a>*)0);
     
     <span class="comment">// disable Rx and Tx</span>
     <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;CTRLB &amp;= ~(USART_RXEN_bm | USART_TXEN_bm);
@@ -454,9 +462,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00245">245</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00230">230</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_rx_buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00039">ring_buffer::head</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00040">ring_buffer::tail</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00026">_rx_buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00018">ring_buffer::head</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00019">ring_buffer::tail</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="comment">// don&#39;t reverse this or there may be problems if the RX interrupt</span>
     <span class="comment">// occurs after reading the value of rx_buffer_head but before writing</span>
@@ -483,9 +491,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00233">233</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00218">218</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_rx_buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00038">ring_buffer::buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00039">ring_buffer::head</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00035">RX_BUFFER_SIZE</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00040">ring_buffer::tail</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00026">_rx_buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00017">ring_buffer::buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00018">ring_buffer::head</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00014">RX_BUFFER_SIZE</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00019">ring_buffer::tail</a>.</p>
 
 <p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00068">CmdProcessor::checkCommands()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -515,9 +523,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00111">111</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00094">94</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00033">_rx_buffer</a>, <a class="el" href="_hardware_serial_8h_source.html#l00034">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00066">store_char()</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00026">_rx_buffer</a>, <a class="el" href="_hardware_serial_8h_source.html#l00027">_usart</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00047">store_char()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c = <a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;DATA;
     <a class="code" href="_hardware_serial_8cpp.html#ac661d0ebc0efa48a2b2aed9ccf86aa64">store_char</a>(c,<a class="code" href="class_hardware_serial.html#a9ee5f8b61e049f98dfd0b5ae53e97273">_rx_buffer</a>);
@@ -539,7 +547,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00121">121</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00104">104</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">{
 }
 </pre></div>
@@ -562,9 +570,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_print.html#ad9393033793cfc17f3e37202ba244892">Print</a>.</p>
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00255">255</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00240">240</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8h_source.html#l00041">_bEn</a>, and <a class="el" href="_hardware_serial_8h_source.html#l00034">_usart</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8h_source.html#l00034">_bEn</a>, and <a class="el" href="_hardware_serial_8h_source.html#l00027">_usart</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="class_hardware_serial.html#a8040fbab1f9197a9935df23a4c5e9a3b">_bEn</a>) {
         <span class="keywordflow">while</span> ( !(<a class="code" href="class_hardware_serial.html#a3a3bd56aa561ae7e1eb1fd252b5b69a0">_usart</a>-&gt;STATUS &amp; USART_DREIF_bm) );
@@ -586,9 +594,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00040">40</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00033">33</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00153">begin()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00188">begin2x()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00140">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00173">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>.</p>
 
 </div>
 </div>
@@ -603,9 +611,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00041">41</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00034">34</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00263">enable()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00255">write()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00248">enable()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00240">write()</a>.</p>
 
 </div>
 </div>
@@ -620,9 +628,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00039">39</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00032">32</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00153">begin()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00188">begin2x()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00140">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00173">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>.</p>
 
 </div>
 </div>
@@ -637,9 +645,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00038">38</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00031">31</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>.</p>
 
 </div>
 </div>
@@ -654,9 +662,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00036">36</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00029">29</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00153">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00188">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00140">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00173">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>.</p>
 
 </div>
 </div>
@@ -671,9 +679,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00037">37</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00030">30</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00153">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00188">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00140">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00173">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>.</p>
 
 </div>
 </div>
@@ -688,9 +696,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00035">35</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00028">28</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00153">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00188">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00140">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00173">begin2x()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>.</p>
 
 </div>
 </div>
@@ -705,9 +713,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00033">33</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00026">26</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00228">available()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00245">flush()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00233">read()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00111">rxc()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00144">~HardwareSerial()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00213">available()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00230">flush()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00218">read()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00094">rxc()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00130">~HardwareSerial()</a>.</p>
 
 </div>
 </div>
@@ -722,9 +730,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00034">34</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8h_source.html#l00027">27</a> of file <a class="el" href="_hardware_serial_8h_source.html">HardwareSerial.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00153">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00188">begin2x()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00218">end()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00111">rxc()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00255">write()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00140">begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00173">begin2x()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00203">end()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00094">rxc()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00240">write()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00130">~HardwareSerial()</a>.</p>
 
 </div>
 </div>

@@ -111,7 +111,6 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_hardware_serial_8cpp.html#acb9cda6603cb216480642b2a6c07b8dc">SERIAL_ISR_DEF</a> (USARTE0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_hardware_serial_8cpp.html#a90ede4720358d6763ec23dc1f88e7d32">SERIAL_ISR_DEF</a> (USARTE1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_hardware_serial_8cpp.html#a9dc131346dc4fc2529d04056dff35e02">SERIAL_ISR_DEF</a> (USARTF0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_hardware_serial_8cpp.html#a6f12703aafce1cd7c9c6a675076e3472">SERIAL_ISR_DEF</a> (USARTF1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_hardware_serial_8cpp.html#ac661d0ebc0efa48a2b2aed9ccf86aa64">store_char</a> (unsigned char c, <a class="el" href="structring__buffer.html">ring_buffer</a> *rx_buffer)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_hardware_serial_8cpp.html#aaec4e4f887a958cc22dd447565d7080b">SetPointer</a> (USART_t *usart, <a class="el" href="class_hardware_serial.html">HardwareSerial</a> *p)</td></tr>
 </table>
@@ -127,9 +126,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00035">35</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00014">14</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00228">HardwareSerial::available()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00129">HardwareSerial::HardwareSerial()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00233">HardwareSerial::read()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00066">store_char()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00213">HardwareSerial::available()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial::HardwareSerial()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00218">HardwareSerial::read()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00047">store_char()</a>.</p>
 
 </div>
 </div>
@@ -147,7 +146,7 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">static</span> <a class="code" href="class_hardware_serial.html">HardwareSerial</a>*  usart##cp = 0;\
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">static</span> <a class="code" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a>*  usart##cp = 0;\
 ISR(usart##_RXC_vect) {\
     <span class="keywordflow">if</span> (usart##cp) usart##cp-&gt;<a class="code" href="class_hardware_serial.html#ac52002a727070c45b765d0dc55106cad">rxc</a>();\
 }\
@@ -158,7 +157,7 @@ ISR(usart##_TXC_vect) {\
     <span class="keywordflow">if</span> (usart##cp) usart##cp-&gt;txc();\
 }
 </pre></div>
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00045">45</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00024">24</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
 </div>
 </div>
@@ -205,23 +204,6 @@ ISR(usart##_TXC_vect) {\
           <td class="memname">SERIAL_ISR_DEF </td>
           <td>(</td>
           <td class="paramtype">USARTD1&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6f12703aafce1cd7c9c6a675076e3472"></a><!-- doxytag: member="HardwareSerial.cpp::SERIAL_ISR_DEF" ref="a6f12703aafce1cd7c9c6a675076e3472" args="(USARTF1)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SERIAL_ISR_DEF </td>
-          <td>(</td>
-          <td class="paramtype">USARTF1&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -324,9 +306,9 @@ ISR(usart##_TXC_vect) {\
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00080">80</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00061">61</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00153">HardwareSerial::begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00188">HardwareSerial::begin2x()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00218">HardwareSerial::end()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00089">TimerCntr::TimerCntr()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00107">TimerCntr::~TimerCntr()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00173">HardwareSerial::begin2x()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00203">HardwareSerial::end()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00112">HardwareSerial::HardwareSerial()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00116">TimerCntr::TimerCntr()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00130">HardwareSerial::~HardwareSerial()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00134">TimerCntr::~TimerCntr()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="comment">// Register this object with the appropriate</span>
     <span class="comment">// pointer so that the ISR routines can call p</span>
@@ -345,9 +327,11 @@ ISR(usart##_TXC_vect) {\
         USARTE1cp = p;
     } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (usart ==  &amp;USARTF0) {
         USARTF0cp = p;
-    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (usart ==  &amp;USARTF1) {
+<span class="preprocessor">#if defined(USARTF1_RXC_vect)</span>
+<span class="preprocessor"></span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (usart ==  &amp;USARTF1) {
         USARTF1cp = p;
-    }
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>    }
 }
 </pre></div>
 </div>
@@ -377,11 +361,11 @@ ISR(usart##_TXC_vect) {\
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00066">66</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_hardware_serial_8cpp_source.html#l00047">47</a> of file <a class="el" href="_hardware_serial_8cpp_source.html">HardwareSerial.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8cpp_source.html#l00038">ring_buffer::buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00039">ring_buffer::head</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00035">RX_BUFFER_SIZE</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00040">ring_buffer::tail</a>.</p>
+<p>References <a class="el" href="_hardware_serial_8cpp_source.html#l00017">ring_buffer::buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00018">ring_buffer::head</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00014">RX_BUFFER_SIZE</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00019">ring_buffer::tail</a>.</p>
 
-<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00111">HardwareSerial::rxc()</a>.</p>
+<p>Referenced by <a class="el" href="_hardware_serial_8cpp_source.html#l00094">HardwareSerial::rxc()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordtype">int</span> i = (rx_buffer-&gt;<a class="code" href="structring__buffer.html#ac1b620f2e27c3af75e68bd1645a2f5f0">head</a> + 1) % <a class="code" href="_hardware_serial_8cpp.html#a739a2a1a0047c98ac1b18ecd25dac092">RX_BUFFER_SIZE</a>;
     

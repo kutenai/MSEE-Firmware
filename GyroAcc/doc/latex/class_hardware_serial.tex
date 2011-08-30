@@ -4,6 +4,11 @@
 }
 
 
+\hyperlink{class_hardware_serial}{HardwareSerial} implementation.  
+
+
+
+
 {\ttfamily \#include $<$HardwareSerial.h$>$}
 
 Inheritance diagram for HardwareSerial:\begin{figure}[H]
@@ -69,9 +74,11 @@ bool \hyperlink{class_hardware_serial_a8040fbab1f9197a9935df23a4c5e9a3b}{\_\-bEn
 
 
 \subsection{Detailed Description}
+\hyperlink{class_hardware_serial}{HardwareSerial} implementation. This class was originally copied form the Arduino source directory but has been modified somewhat to customize it for the CFA project.
 
+Ths class wraps the hardware serial resource in the ATXmega The class handles an interupt driven receive with a fixed size receive buffer of 128 bytes. The current implementation uses a synchronous send, but a buffered send would be a great enhancement for performance purposes. 
 
-Definition at line 30 of file HardwareSerial.h.
+Definition at line 23 of file HardwareSerial.h.
 
 
 
@@ -90,11 +97,11 @@ Definition at line 30 of file HardwareSerial.h.
 \label{class_hardware_serial_ab96331f0886097eb802a7839676ef645}
 
 
-Definition at line 129 of file HardwareSerial.cpp.
+Definition at line 112 of file HardwareSerial.cpp.
 
 
 
-References \_\-bEn, \_\-bsel, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-rx\_\-buffer, \_\-usart, and RX\_\-BUFFER\_\-SIZE.
+References \_\-baudrate, \_\-bEn, \_\-bscale, \_\-bsel, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-rx\_\-buffer, \_\-usart, RX\_\-BUFFER\_\-SIZE, and SetPointer().
 
 
 \begin{DoxyCode}
@@ -105,7 +112,10 @@ References \_\-bEn, \_\-bsel, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-rx\_\-b
     _in_bm     = in_bm;
     _out_bm    = out_bm;
     _bsel      = 0;
+    _bscale    = 0;
+    _baudrate  = 9600;
     _bEn       = true;
+    SetPointer(_usart,this);
 }
 \end{DoxyCode}
 \hypertarget{class_hardware_serial_a1c7aae049aba33b03fe030960c1c4aa7}{
@@ -119,11 +129,11 @@ References \_\-bEn, \_\-bsel, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-rx\_\-b
 \label{class_hardware_serial_a1c7aae049aba33b03fe030960c1c4aa7}
 
 
-Definition at line 144 of file HardwareSerial.cpp.
+Definition at line 130 of file HardwareSerial.cpp.
 
 
 
-References \_\-rx\_\-buffer, and end().
+References \_\-rx\_\-buffer, \_\-usart, end(), and SetPointer().
 
 
 \begin{DoxyCode}
@@ -131,6 +141,7 @@ References \_\-rx\_\-buffer, and end().
     end();
     free(_rx_buffer);
     _rx_buffer = 0;
+    SetPointer(_usart,0);
 }
 \end{DoxyCode}
 
@@ -147,7 +158,7 @@ References \_\-rx\_\-buffer, and end().
 \label{class_hardware_serial_a10e05fa62dc473d0d8a7ee8184f504ba}
 
 
-Definition at line 228 of file HardwareSerial.cpp.
+Definition at line 213 of file HardwareSerial.cpp.
 
 
 
@@ -176,11 +187,11 @@ Referenced by CmdProcessor::checkCommands().
 \label{class_hardware_serial_a11049d350f4cf4bfdaafb24bb2738556}
 
 
-Definition at line 153 of file HardwareSerial.cpp.
+Definition at line 140 of file HardwareSerial.cpp.
 
 
 
-References \_\-baudrate, \_\-bscale, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-usart, and SetPointer().
+References \_\-baudrate, \_\-bscale, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, and \_\-usart.
 
 
 
@@ -211,15 +222,13 @@ Referenced by main().
     _usart->BAUDCTRLA = (uint8_t)BSEL;
     _usart->BAUDCTRLB = ((bscale & 0xf) << 4) | ((BSEL & 0xf00) >> 8);
     
-    
     // enable Rx and Tx
     _usart->CTRLB |= USART_RXEN_bm | USART_TXEN_bm;
     // enable interrupt
-    _usart->CTRLA = USART_RXCINTLVL_LO_gc;
+    _usart->CTRLA = USART_RXCINTLVL_HI_gc;
     
     // Char size, parity and stop bits: 8N1
     _usart->CTRLC = USART_CHSIZE_8BIT_gc | USART_PMODE_DISABLED_gc;
-    SetPointer(_usart,this);
 }
 \end{DoxyCode}
 \hypertarget{class_hardware_serial_adcfab60db442174cb53f005df6d2996d}{
@@ -234,7 +243,7 @@ Referenced by main().
 \label{class_hardware_serial_adcfab60db442174cb53f005df6d2996d}
 
 
-Definition at line 188 of file HardwareSerial.cpp.
+Definition at line 173 of file HardwareSerial.cpp.
 
 
 
@@ -283,7 +292,7 @@ References \_\-baudrate, \_\-bscale, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-
 \label{class_hardware_serial_ac33af9a86da3e3ae7ac1e2791c8eaf22}
 
 
-Definition at line 117 of file HardwareSerial.cpp.
+Definition at line 100 of file HardwareSerial.cpp.
 
 
 \begin{DoxyCode}
@@ -301,7 +310,7 @@ Definition at line 117 of file HardwareSerial.cpp.
 \label{class_hardware_serial_a2e13244413a84a259cadab3fb452921a}
 
 
-Definition at line 263 of file HardwareSerial.cpp.
+Definition at line 248 of file HardwareSerial.cpp.
 
 
 
@@ -328,7 +337,7 @@ Referenced by main().
 \label{class_hardware_serial_a0f86c41f580e04bdf30ea00e9014eacd}
 
 
-Definition at line 218 of file HardwareSerial.cpp.
+Definition at line 203 of file HardwareSerial.cpp.
 
 
 
@@ -361,7 +370,7 @@ Referenced by CmdProcessor::$\sim$CmdProcessor(), and $\sim$HardwareSerial().
 \label{class_hardware_serial_a1eeb094d8da77e0292f95f4498a5396f}
 
 
-Definition at line 245 of file HardwareSerial.cpp.
+Definition at line 230 of file HardwareSerial.cpp.
 
 
 
@@ -389,7 +398,7 @@ References \_\-rx\_\-buffer, ring\_\-buffer::head, and ring\_\-buffer::tail.
 \label{class_hardware_serial_a618696608a5fddcf3cb48ad6f044e756}
 
 
-Definition at line 233 of file HardwareSerial.cpp.
+Definition at line 218 of file HardwareSerial.cpp.
 
 
 
@@ -423,7 +432,7 @@ Referenced by CmdProcessor::checkCommands().
 \label{class_hardware_serial_ac52002a727070c45b765d0dc55106cad}
 
 
-Definition at line 111 of file HardwareSerial.cpp.
+Definition at line 94 of file HardwareSerial.cpp.
 
 
 
@@ -447,7 +456,7 @@ References \_\-rx\_\-buffer, \_\-usart, and store\_\-char().
 \label{class_hardware_serial_a82779b03507bc07f3bf2e090d3733015}
 
 
-Definition at line 121 of file HardwareSerial.cpp.
+Definition at line 104 of file HardwareSerial.cpp.
 
 
 \begin{DoxyCode}
@@ -469,7 +478,7 @@ Implements \hyperlink{class_print_ad9393033793cfc17f3e37202ba244892}{Print}.
 
 
 
-Definition at line 255 of file HardwareSerial.cpp.
+Definition at line 240 of file HardwareSerial.cpp.
 
 
 
@@ -494,11 +503,11 @@ References \_\-bEn, and \_\-usart.
 \label{class_hardware_serial_ae692ab4a0a8aad73c74a10066fa9da24}
 
 
-Definition at line 40 of file HardwareSerial.h.
+Definition at line 33 of file HardwareSerial.h.
 
 
 
-Referenced by begin(), and begin2x().
+Referenced by begin(), begin2x(), and HardwareSerial().
 
 \hypertarget{class_hardware_serial_a8040fbab1f9197a9935df23a4c5e9a3b}{
 \index{HardwareSerial@{HardwareSerial}!\_\-bEn@{\_\-bEn}}
@@ -507,7 +516,7 @@ Referenced by begin(), and begin2x().
 \label{class_hardware_serial_a8040fbab1f9197a9935df23a4c5e9a3b}
 
 
-Definition at line 41 of file HardwareSerial.h.
+Definition at line 34 of file HardwareSerial.h.
 
 
 
@@ -520,11 +529,11 @@ Referenced by enable(), HardwareSerial(), and write().
 \label{class_hardware_serial_a37dd406c01fd6432618925f0aeb329f3}
 
 
-Definition at line 39 of file HardwareSerial.h.
+Definition at line 32 of file HardwareSerial.h.
 
 
 
-Referenced by begin(), and begin2x().
+Referenced by begin(), begin2x(), and HardwareSerial().
 
 \hypertarget{class_hardware_serial_acc6c13c76a56c8b4bb88c3385b7bc791}{
 \index{HardwareSerial@{HardwareSerial}!\_\-bsel@{\_\-bsel}}
@@ -533,7 +542,7 @@ Referenced by begin(), and begin2x().
 \label{class_hardware_serial_acc6c13c76a56c8b4bb88c3385b7bc791}
 
 
-Definition at line 38 of file HardwareSerial.h.
+Definition at line 31 of file HardwareSerial.h.
 
 
 
@@ -546,7 +555,7 @@ Referenced by HardwareSerial().
 \label{class_hardware_serial_a8724fdfd3955eeff5d3ed535624ce79a}
 
 
-Definition at line 36 of file HardwareSerial.h.
+Definition at line 29 of file HardwareSerial.h.
 
 
 
@@ -559,7 +568,7 @@ Referenced by begin(), begin2x(), and HardwareSerial().
 \label{class_hardware_serial_a751a284e15af72b026143a8091be1b70}
 
 
-Definition at line 37 of file HardwareSerial.h.
+Definition at line 30 of file HardwareSerial.h.
 
 
 
@@ -572,7 +581,7 @@ Referenced by begin(), begin2x(), and HardwareSerial().
 \label{class_hardware_serial_add54c7d986c6122e8e8c23303f5b4845}
 
 
-Definition at line 35 of file HardwareSerial.h.
+Definition at line 28 of file HardwareSerial.h.
 
 
 
@@ -585,7 +594,7 @@ Referenced by begin(), begin2x(), and HardwareSerial().
 \label{class_hardware_serial_a9ee5f8b61e049f98dfd0b5ae53e97273}
 
 
-Definition at line 33 of file HardwareSerial.h.
+Definition at line 26 of file HardwareSerial.h.
 
 
 
@@ -598,11 +607,11 @@ Referenced by available(), flush(), HardwareSerial(), read(), rxc(), and $\sim$H
 \label{class_hardware_serial_a3a3bd56aa561ae7e1eb1fd252b5b69a0}
 
 
-Definition at line 34 of file HardwareSerial.h.
+Definition at line 27 of file HardwareSerial.h.
 
 
 
-Referenced by begin(), begin2x(), end(), HardwareSerial(), rxc(), and write().
+Referenced by begin(), begin2x(), end(), HardwareSerial(), rxc(), write(), and $\sim$HardwareSerial().
 
 
 

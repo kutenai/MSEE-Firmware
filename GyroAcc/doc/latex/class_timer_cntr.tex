@@ -43,6 +43,8 @@ void \hyperlink{class_timer_cntr_a3f1c57b8f31a717b5de335cd56408029}{Period} (uin
 \item 
 uint16\_\-t \hyperlink{class_timer_cntr_a0b50451ff7454d77aff54ca3274c7b7c}{Period} ()
 \item 
+void \hyperlink{class_timer_cntr_a00b8456f413fc621b667bc0d2f825623}{SetRate} (uint32\_\-t rateHz)
+\item 
 void \hyperlink{class_timer_cntr_aa4cead09b55956ef48dd19fcf7a2dea0}{CCReg} (uint8\_\-t idx, uint16\_\-t newVal)
 \item 
 uint16\_\-t \hyperlink{class_timer_cntr_a8cedc6015da8a1082273071d2eb7c68b}{CCReg} (uint8\_\-t idx)
@@ -79,7 +81,7 @@ Definition at line 13 of file TimerCntr.h.
 \label{class_timer_cntr_ad03f5cb857585c26d62eee0667a3c37c}
 
 
-Definition at line 89 of file TimerCntr.cpp.
+Definition at line 116 of file TimerCntr.cpp.
 
 
 
@@ -106,7 +108,7 @@ References \_\-bTC1, \_\-pNotifyClient, \_\-pNotifyClientID, \_\-pTC, and SetPoi
 \label{class_timer_cntr_a250ce8e521da601255ec0b631370a47c}
 
 
-Definition at line 98 of file TimerCntr.cpp.
+Definition at line 125 of file TimerCntr.cpp.
 
 
 
@@ -133,7 +135,7 @@ References \_\-bTC1, \_\-pNotifyClient, \_\-pNotifyClientID, \_\-pTC, and SetPoi
 \label{class_timer_cntr_a5b19cb68e0fc19361854553031161544}
 
 
-Definition at line 107 of file TimerCntr.cpp.
+Definition at line 134 of file TimerCntr.cpp.
 
 
 
@@ -163,7 +165,7 @@ References \_\-bTC1, \_\-pTC, and SetPointer().
 \label{class_timer_cntr_a7c3e5ae54af9a3431050d623d508cd2c}
 Set the state of the 4 CCxEN bits in CTRLB. The 4 lower bits of mask will enable D, C, B or A if set to 1 
 
-Definition at line 123 of file TimerCntr.cpp.
+Definition at line 150 of file TimerCntr.cpp.
 
 
 
@@ -179,6 +181,38 @@ Referenced by IMU::SetTimer().
     _pTC->CTRLB = ((_pTC->CTRLB & 0x0F) | (mask << 4));
 }
 \end{DoxyCode}
+\hypertarget{class_timer_cntr_aa4cead09b55956ef48dd19fcf7a2dea0}{
+\index{TimerCntr@{TimerCntr}!CCReg@{CCReg}}
+\index{CCReg@{CCReg}!TimerCntr@{TimerCntr}}
+\subsubsection[{CCReg}]{\setlength{\rightskip}{0pt plus 5cm}void TimerCntr::CCReg (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{idx, }
+\item[{uint16\_\-t}]{newVal}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer_cntr_aa4cead09b55956ef48dd19fcf7a2dea0}
+
+
+Definition at line 200 of file TimerCntr.cpp.
+
+
+
+References \_\-bTC1, and \_\-pTC.
+
+
+\begin{DoxyCode}
+{
+    if (idx == 0) {
+        _pTC->CCA = newVal;
+    } else if (idx == 1) {
+        _pTC->CCB = newVal;
+    } else if (!_bTC1 && idx == 2) {
+        _pTC->CCC = newVal;
+    } else if (!_bTC1 && idx == 3) {
+        _pTC->CCD = newVal;
+    }
+}
+\end{DoxyCode}
 \hypertarget{class_timer_cntr_a8cedc6015da8a1082273071d2eb7c68b}{
 \index{TimerCntr@{TimerCntr}!CCReg@{CCReg}}
 \index{CCReg@{CCReg}!TimerCntr@{TimerCntr}}
@@ -190,7 +224,7 @@ Referenced by IMU::SetTimer().
 \label{class_timer_cntr_a8cedc6015da8a1082273071d2eb7c68b}
 
 
-Definition at line 186 of file TimerCntr.cpp.
+Definition at line 213 of file TimerCntr.cpp.
 
 
 
@@ -211,38 +245,6 @@ References \_\-bTC1, and \_\-pTC.
     return 0;
 }
 \end{DoxyCode}
-\hypertarget{class_timer_cntr_aa4cead09b55956ef48dd19fcf7a2dea0}{
-\index{TimerCntr@{TimerCntr}!CCReg@{CCReg}}
-\index{CCReg@{CCReg}!TimerCntr@{TimerCntr}}
-\subsubsection[{CCReg}]{\setlength{\rightskip}{0pt plus 5cm}void TimerCntr::CCReg (
-\begin{DoxyParamCaption}
-\item[{uint8\_\-t}]{idx, }
-\item[{uint16\_\-t}]{newVal}
-\end{DoxyParamCaption}
-)}}
-\label{class_timer_cntr_aa4cead09b55956ef48dd19fcf7a2dea0}
-
-
-Definition at line 173 of file TimerCntr.cpp.
-
-
-
-References \_\-bTC1, and \_\-pTC.
-
-
-\begin{DoxyCode}
-{
-    if (idx == 0) {
-        _pTC->CCA = newVal;
-    } else if (idx == 1) {
-        _pTC->CCB = newVal;
-    } else if (!_bTC1 && idx == 2) {
-        _pTC->CCC = newVal;
-    } else if (!_bTC1 && idx == 3) {
-        _pTC->CCD = newVal;
-    }
-}
-\end{DoxyCode}
 \hypertarget{class_timer_cntr_a1966661facfcb11382471a214191d3f0}{
 \index{TimerCntr@{TimerCntr}!ccx@{ccx}}
 \index{ccx@{ccx}!TimerCntr@{TimerCntr}}
@@ -254,7 +256,7 @@ References \_\-bTC1, and \_\-pTC.
 \label{class_timer_cntr_a1966661facfcb11382471a214191d3f0}
 
 
-Definition at line 218 of file TimerCntr.cpp.
+Definition at line 245 of file TimerCntr.cpp.
 
 
 
@@ -282,7 +284,7 @@ Set the clock source for this timer in CTRLA.
 
 
 
-Definition at line 117 of file TimerCntr.cpp.
+Definition at line 144 of file TimerCntr.cpp.
 
 
 
@@ -309,7 +311,7 @@ Referenced by IMU::SetTimer().
 \label{class_timer_cntr_a483fd3e00603951991333699a1be67ea}
 
 
-Definition at line 151 of file TimerCntr.cpp.
+Definition at line 178 of file TimerCntr.cpp.
 
 
 
@@ -336,7 +338,7 @@ Referenced by IMU::ResetTimer().
 \label{class_timer_cntr_ae0b24888d24c907aad75ed985431f1a4}
 
 
-Definition at line 156 of file TimerCntr.cpp.
+Definition at line 183 of file TimerCntr.cpp.
 
 
 
@@ -359,7 +361,7 @@ References \_\-pTC.
 \label{class_timer_cntr_a98d639cbcb4ed28a75309870ae891d58}
 
 
-Definition at line 206 of file TimerCntr.cpp.
+Definition at line 233 of file TimerCntr.cpp.
 
 
 
@@ -384,7 +386,7 @@ References \_\-pNotifyClient, \_\-pNotifyClientID, and TimerNotify::err().
 \label{class_timer_cntr_a27f54d05be459f37793e98743325a614}
 
 
-Definition at line 135 of file TimerCntr.cpp.
+Definition at line 162 of file TimerCntr.cpp.
 
 
 
@@ -412,7 +414,7 @@ Referenced by IMU::SetTimer().
 \label{class_timer_cntr_a3d9d3bca0c89f5dbc69b34406ef6c4be}
 
 
-Definition at line 141 of file TimerCntr.cpp.
+Definition at line 168 of file TimerCntr.cpp.
 
 
 
@@ -439,7 +441,7 @@ Referenced by IMU::SetTimer().
 \label{class_timer_cntr_a687162461b8b992093f3573356506a8c}
 
 
-Definition at line 146 of file TimerCntr.cpp.
+Definition at line 173 of file TimerCntr.cpp.
 
 
 
@@ -467,7 +469,7 @@ Referenced by IMU::SetTimer().
 \label{class_timer_cntr_a71bf73ee43e8d344d1241695b553556b}
 
 
-Definition at line 200 of file TimerCntr.cpp.
+Definition at line 227 of file TimerCntr.cpp.
 
 
 
@@ -495,7 +497,7 @@ Referenced by IMU::SetTimer().
 \label{class_timer_cntr_ac2a4b19dfdb9f873075f405f242df698}
 
 
-Definition at line 212 of file TimerCntr.cpp.
+Definition at line 239 of file TimerCntr.cpp.
 
 
 
@@ -506,29 +508,6 @@ References \_\-pNotifyClient, \_\-pNotifyClientID, and TimerNotify::ovf().
 {
     if (_pNotifyClient) 
         _pNotifyClient->ovf(_pNotifyClientID);
-}
-\end{DoxyCode}
-\hypertarget{class_timer_cntr_a0b50451ff7454d77aff54ca3274c7b7c}{
-\index{TimerCntr@{TimerCntr}!Period@{Period}}
-\index{Period@{Period}!TimerCntr@{TimerCntr}}
-\subsubsection[{Period}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t TimerCntr::Period (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}
-\label{class_timer_cntr_a0b50451ff7454d77aff54ca3274c7b7c}
-
-
-Definition at line 167 of file TimerCntr.cpp.
-
-
-
-References \_\-pTC.
-
-
-\begin{DoxyCode}
-{
-    return _pTC->PER;
 }
 \end{DoxyCode}
 \hypertarget{class_timer_cntr_a3f1c57b8f31a717b5de335cd56408029}{
@@ -542,7 +521,7 @@ References \_\-pTC.
 \label{class_timer_cntr_a3f1c57b8f31a717b5de335cd56408029}
 
 
-Definition at line 162 of file TimerCntr.cpp.
+Definition at line 189 of file TimerCntr.cpp.
 
 
 
@@ -558,6 +537,48 @@ Referenced by IMU::SetTimerPeriod().
     _pTC->PER = newVal;
 }
 \end{DoxyCode}
+\hypertarget{class_timer_cntr_a0b50451ff7454d77aff54ca3274c7b7c}{
+\index{TimerCntr@{TimerCntr}!Period@{Period}}
+\index{Period@{Period}!TimerCntr@{TimerCntr}}
+\subsubsection[{Period}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t TimerCntr::Period (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer_cntr_a0b50451ff7454d77aff54ca3274c7b7c}
+
+
+Definition at line 194 of file TimerCntr.cpp.
+
+
+
+References \_\-pTC.
+
+
+\begin{DoxyCode}
+{
+    return _pTC->PER;
+}
+\end{DoxyCode}
+\hypertarget{class_timer_cntr_a00b8456f413fc621b667bc0d2f825623}{
+\index{TimerCntr@{TimerCntr}!SetRate@{SetRate}}
+\index{SetRate@{SetRate}!TimerCntr@{TimerCntr}}
+\subsubsection[{SetRate}]{\setlength{\rightskip}{0pt plus 5cm}void TimerCntr::SetRate (
+\begin{DoxyParamCaption}
+\item[{uint32\_\-t}]{rateHz}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer_cntr_a00b8456f413fc621b667bc0d2f825623}
+
+
+Definition at line 251 of file TimerCntr.cpp.
+
+
+\begin{DoxyCode}
+                                      {
+    //add an auto prescaler using 32 bit array
+}
+\end{DoxyCode}
 \hypertarget{class_timer_cntr_ab5df59d94a8d1706f9282a695e43a9a1}{
 \index{TimerCntr@{TimerCntr}!WaveformGenMode@{WaveformGenMode}}
 \index{WaveformGenMode@{WaveformGenMode}!TimerCntr@{TimerCntr}}
@@ -569,7 +590,7 @@ Referenced by IMU::SetTimerPeriod().
 \label{class_timer_cntr_ab5df59d94a8d1706f9282a695e43a9a1}
 Set the Waveform generator mode. Normal disables waveform generation. 
 
-Definition at line 129 of file TimerCntr.cpp.
+Definition at line 156 of file TimerCntr.cpp.
 
 
 

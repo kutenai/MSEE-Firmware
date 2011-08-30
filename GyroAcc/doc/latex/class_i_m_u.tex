@@ -20,10 +20,14 @@ struct \hyperlink{struct_i_m_u_1_1reg_write}{regWrite}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_i_m_u_ab77a4c6c64f65642c42ebbf55a4e7a1e}{IMU} (I2C\_\-Master $\ast$pMas)
+\item 
 \hyperlink{class_i_m_u_aa628daa06d0e29e4aa84bb8336649134}{IMU} (I2C\_\-Master $\ast$pMas, uint8\_\-t gID, uint8\_\-t aID)
 \begin{DoxyCompactList}\small\item\em Constructor for a single \hyperlink{class_i_m_u}{IMU} I2C Channel. \item\end{DoxyCompactList}\item 
 \hyperlink{class_i_m_u_ac3b25bbd72ae020b61012fd4ebf8a188}{IMU} (I2C\_\-Master $\ast$pMas, uint8\_\-t gID, uint8\_\-t aID, uint8\_\-t gID2, uint8\_\-t aID2)
 \begin{DoxyCompactList}\small\item\em Constructor for a double \hyperlink{class_i_m_u}{IMU} I2C Channel. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_i_m_u_a496602369b71a85051ba0506a8af70a1}{QueryChannels} ()
+\item 
 void \hyperlink{class_i_m_u_afedf46bdad68cb4002af8bf46530d265}{SetDebugPort} (DebugPort $\ast$pPort)
 \item 
 void \hyperlink{class_i_m_u_a6f86c79e66c4262093c2d65fe3fee45c}{SetDebugPort2} (DebugPort $\ast$pPort)
@@ -45,6 +49,10 @@ virtual bool \hyperlink{class_i_m_u_ade0f7e6be2eda441bfaa2cb372fec55a}{Busy} ()
 virtual void \hyperlink{class_i_m_u_a187dc9de30f97f5154e0ff904eb6ee1a}{ResetTimer} ()
 \item 
 virtual void \hyperlink{class_i_m_u_a86f05be645d2096f0b2b3cfbe8ea0ce8}{UseGyro} (bool bEnable)
+\item 
+virtual void \hyperlink{class_i_m_u_ac46c8e580371cf97e4625dda450f01fd}{NextIMU} (\hyperlink{class_i_m_u_base}{IMUBase} $\ast$pNext)
+\item 
+virtual int \hyperlink{class_i_m_u_a3c949edee15e2f618d7ee263b0a4bcb3}{BeginRead} ()
 \item 
 virtual bool \hyperlink{class_i_m_u_a078d2f3ad27475c9afcaf09c44886e4c}{DataReady} ()
 \item 
@@ -112,10 +120,6 @@ void \hyperlink{class_i_m_u_a14f3437170b38602f281b3f97d9ce129}{PushData} (uint8\
 void \hyperlink{class_i_m_u_a5d80a28d98df12c536f525b56b7e5abe}{SetState} (\hyperlink{class_i_m_u_a7b5e1bf1cf1407b3e4cf0dd2e18b523f}{StateType} s)
 \item 
 void \hyperlink{class_i_m_u_a7f9a7744a4fa3ea40da008cabd5da7b7}{MarkPos} (\hyperlink{class_i_m_u_ad01128d82debc1e4213affe4858f3144}{PosType} p)
-\item 
-bool \hyperlink{class_i_m_u_a0bd84946a218d910f248cfa8edf00a5c}{DataAvail} ()
-\item 
-bool \hyperlink{class_i_m_u_a492e190eef142fc6bc674cca4700f1e3}{DataAvail} (uint8\_\-t idx)
 \item 
 void \hyperlink{class_i_m_u_ab3992da77876e9b5cae8bc9d1334ff7b}{ResetBusyTime} ()
 \item 
@@ -187,10 +191,6 @@ bool \hyperlink{class_i_m_u_a62978e791838c3b4829e1d3d683e99b2}{\_\-bDualChan}
 \item 
 uint8\_\-t \hyperlink{class_i_m_u_a27df580b4559aaf3234469bfe16eb158}{\_\-numChans}
 \item 
-uint8\_\-t \hyperlink{class_i_m_u_a08a36cacd3d4d14b4aa834a657422b15}{\_\-currChannel}
-\item 
-uint16\_\-t \hyperlink{class_i_m_u_aa9a352174cae0cd174cb91ef09a47fe4}{\_\-currFifoReadLen} \mbox{[}2\mbox{]}
-\item 
 bool \hyperlink{class_i_m_u_a53aa928d2d68a5287da893bd157e7cbe}{\_\-configOkay} \mbox{[}2\mbox{]}
 \item 
 uint8\_\-t \hyperlink{class_i_m_u_a47ffe20a032e3a890cd3891793a60a40}{\_\-gID} \mbox{[}2\mbox{]}
@@ -205,17 +205,11 @@ uint8\_\-t \hyperlink{class_i_m_u_a4dbeaf17fd1ae9b41b5c3fe61706e5f1}{\_\-ClkSel}
 \item 
 uint16\_\-t \hyperlink{class_i_m_u_aafe9be107385c7ccedeb1539cf6d7fce}{\_\-Rate}
 \item 
-IMUPacketFifo \hyperlink{class_i_m_u_a43cbdffbfb85749212ede7f78ab6f1e0}{\_\-rdFifo}
-\item 
-IMUPacketFifo \hyperlink{class_i_m_u_a8eb715f35f45943bedc2b9280c3f2cd3}{\_\-rdFifo2}
-\item 
 bool \hyperlink{class_i_m_u_a0cee90ebd5d0b57fa5ad3890c65108e2}{\_\-bUseGyro}
 \item 
 uint8\_\-t \hyperlink{class_i_m_u_ab87a54288295d4d10d605cf6c21d4d0f}{\_\-dataBuffer} \mbox{[}2\mbox{]}\mbox{[}20\mbox{]}
 \begin{DoxyCompactList}\small\item\em This buffer is used to store data until we push it into the fifo. \item\end{DoxyCompactList}\item 
 bool \hyperlink{class_i_m_u_a8a71f0728b2d849d1d8e54fcb58aad4e}{\_\-bDataReady} \mbox{[}2\mbox{]}
-\item 
-uint16\_\-t \hyperlink{class_i_m_u_a9f7f36da069258a5615886e098527100}{\_\-fifoLen} \mbox{[}2\mbox{]}
 \item 
 \hyperlink{class_timer_cntr}{TimerCntr} $\ast$ \hyperlink{class_i_m_u_a16e73b1457a346aed16d4b61fae7f2c4}{\_\-pTimer}
 \item 
@@ -232,13 +226,15 @@ unsigned int \hyperlink{class_i_m_u_adce31ce2a3317918d73b47e94a2d9227}{\_\-busyW
 DebugPort $\ast$ \hyperlink{class_i_m_u_a83a2ffaf84cc04f17ff0301181c45366}{\_\-pDBGPort}
 \item 
 DebugPort $\ast$ \hyperlink{class_i_m_u_a1cf5672a28049d5885a2958010188928}{\_\-pDBGPort2}
+\item 
+\hyperlink{class_i_m_u_base}{IMUBase} $\ast$ \hyperlink{class_i_m_u_a72d5aa462d6627b458db76ca6567d130}{\_\-pNextIMU}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 38 of file IMU.h.
+Definition at line 40 of file IMU.h.
 
 
 
@@ -295,7 +291,7 @@ fArbLost}
 
 
 
-Definition at line 67 of file IMU.h.
+Definition at line 65 of file IMU.h.
 
 
 \begin{DoxyCode}
@@ -351,7 +347,7 @@ pSetup}
 
 
 
-Definition at line 56 of file IMU.h.
+Definition at line 54 of file IMU.h.
 
 
 \begin{DoxyCode}
@@ -395,7 +391,7 @@ ptI2CNack}
 
 
 
-Definition at line 80 of file IMU.h.
+Definition at line 78 of file IMU.h.
 
 
 \begin{DoxyCode}
@@ -455,7 +451,7 @@ sErrRecover}
 
 
 
-Definition at line 40 of file IMU.h.
+Definition at line 42 of file IMU.h.
 
 
 \begin{DoxyCode}
@@ -463,11 +459,7 @@ Definition at line 40 of file IMU.h.
         sIdle           = 0,
         sConfigure      = 1,
         sConfigured     = 2,
-//        sFifoInit1      = 3,
-//        sFifoInit2      = 4,
         sWait           = 5,       
-//        sReadLen1       = 6,
-//        sReadLen2       = 7,
         sReadGyro1      = 8,
         sReadAcc1       = 9,
         sReadGyro2      = 10,
@@ -478,6 +470,56 @@ Definition at line 40 of file IMU.h.
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_i_m_u_ab77a4c6c64f65642c42ebbf55a4e7a1e}{
+\index{IMU@{IMU}!IMU@{IMU}}
+\index{IMU@{IMU}!IMU@{IMU}}
+\subsubsection[{IMU}]{\setlength{\rightskip}{0pt plus 5cm}IMU::IMU (
+\begin{DoxyParamCaption}
+\item[{I2C\_\-Master $\ast$}]{pMas}
+\end{DoxyParamCaption}
+)}}
+\label{class_i_m_u_ab77a4c6c64f65642c42ebbf55a4e7a1e}
+Constructor for an auto-\/query channel Init fifos for dual channel 
+
+Definition at line 20 of file IMU.cpp.
+
+
+
+References \_\-aID, \_\-bDataReady, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-busyWaitTime, \_\-ClkSel, \_\-DLPF, \_\-failType, \_\-FullScale, \_\-gID, \_\-numChans, \_\-pDBGPort, \_\-pDBGPort2, \_\-pMas, \_\-pNextIMU, \_\-previousState, \_\-pTimer, \_\-Rate, \_\-State, fNone, QueryChannels(), ResetFailStats(), and sIdle.
+
+
+\begin{DoxyCode}
+{
+    _pNextIMU       = 0;
+    _gID[0]         = 0;
+    _aID[0]         = 0;
+    _gID[1]         = 0;
+    _aID[1]         = 0;
+    _bDualChan      = false;
+    _numChans       = 0;
+    _pMas           = pMas;
+    _DLPF           = 0x1;
+    _FullScale      = 0x1;
+    _ClkSel         = 0x1;
+    _Rate           = 10;
+    _State          = sIdle;
+    _previousState  = sIdle;
+    _failType       = fNone;
+    _bRun           = false;
+    _busyWaitTime   = 0;
+    _bDataReady[0]  = false;
+    _bDataReady[1]  = false;
+    
+    ResetFailStats();
+    _pDBGPort       = 0;
+    _pDBGPort2      = 0;
+    _pNextIMU       = 0;
+    _pTimer         = 0;
+    _bUseGyro       = false;
+    _pMas->NotifyMe(this);
+    QueryChannels();
+}
+\end{DoxyCode}
 \hypertarget{class_i_m_u_aa628daa06d0e29e4aa84bb8336649134}{
 \index{IMU@{IMU}!IMU@{IMU}}
 \index{IMU@{IMU}!IMU@{IMU}}
@@ -495,16 +537,16 @@ Constructor for a single \hyperlink{class_i_m_u}{IMU} I2C Channel.
 
 
 
-Definition at line 19 of file IMU.cpp.
+Definition at line 53 of file IMU.cpp.
 
 
 
-References \_\-aID, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-ClkSel, \_\-DLPF, \_\-FullScale, \_\-gID, \_\-numChans, \_\-pDBGPort, \_\-pDBGPort2, \_\-pMas, \_\-Rate, \_\-State, ResetFailStats(), and sIdle.
+References \_\-aID, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-ClkSel, \_\-DLPF, \_\-FullScale, \_\-gID, \_\-numChans, \_\-pDBGPort, \_\-pDBGPort2, \_\-pMas, \_\-pNextIMU, \_\-pTimer, \_\-Rate, \_\-State, ResetFailStats(), and sIdle.
 
 
 \begin{DoxyCode}
-                                                   : _rdFifo(10),_rdFifo2(0)
 {
+    _pNextIMU   = 0;
     _gID[0]     = gID;
     _aID[0]     = aID;
     _bDualChan  = false;
@@ -519,6 +561,7 @@ References \_\-aID, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-ClkSel, \_\-DLPF,
     _pMas->NotifyMe(this);
     _pDBGPort   = 0;
     _pDBGPort2  = 0;
+    _pTimer     = 0;
     ResetFailStats();    
     _bUseGyro   = false;
 }
@@ -542,16 +585,16 @@ Constructor for a double \hyperlink{class_i_m_u}{IMU} I2C Channel.
 
 
 
-Definition at line 40 of file IMU.cpp.
+Definition at line 76 of file IMU.cpp.
 
 
 
-References \_\-aID, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-ClkSel, \_\-DLPF, \_\-FullScale, \_\-gID, \_\-numChans, \_\-pDBGPort, \_\-pDBGPort2, \_\-pMas, \_\-Rate, \_\-State, ResetFailStats(), and sIdle.
+References \_\-aID, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-ClkSel, \_\-DLPF, \_\-FullScale, \_\-gID, \_\-numChans, \_\-pDBGPort, \_\-pDBGPort2, \_\-pMas, \_\-pNextIMU, \_\-pTimer, \_\-Rate, \_\-State, ResetFailStats(), and sIdle.
 
 
 \begin{DoxyCode}
-      : _rdFifo(10),_rdFifo2(10)
 {
+    _pNextIMU   = 0;
     _gID[0]     = gID;
     _aID[0]     = aID;
     _gID[1]     = gID2;
@@ -568,6 +611,7 @@ References \_\-aID, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-ClkSel, \_\-DLPF,
     _pMas->NotifyMe(this);
     _pDBGPort   = 0;
     _pDBGPort2  = 0;
+    _pTimer     = 0;
     ResetFailStats();
     _bUseGyro   = false;
 }
@@ -575,6 +619,40 @@ References \_\-aID, \_\-bDualChan, \_\-bRun, \_\-bUseGyro, \_\-ClkSel, \_\-DLPF,
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_i_m_u_a3c949edee15e2f618d7ee263b0a4bcb3}{
+\index{IMU@{IMU}!BeginRead@{BeginRead}}
+\index{BeginRead@{BeginRead}!IMU@{IMU}}
+\subsubsection[{BeginRead}]{\setlength{\rightskip}{0pt plus 5cm}int IMU::BeginRead (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_i_m_u_a3c949edee15e2f618d7ee263b0a4bcb3}
+
+
+Implements \hyperlink{class_i_m_u_base_a55327f28a0ad5e54d94f0c698b04827a}{IMUBase}.
+
+
+
+Definition at line 108 of file IMU.cpp.
+
+
+
+References \_\-pNextIMU, \_\-State, IMUBase::BeginRead(), Run(), and sWait.
+
+
+\begin{DoxyCode}
+{
+    if (_State == sWait) {
+        Run(); 
+    } else {
+        if (_pNextIMU) {
+            return _pNextIMU->BeginRead();
+        }
+    }
+    return 0;
+}
+\end{DoxyCode}
 \hypertarget{class_i_m_u_ade0f7e6be2eda441bfaa2cb372fec55a}{
 \index{IMU@{IMU}!Busy@{Busy}}
 \index{Busy@{Busy}!IMU@{IMU}}
@@ -590,7 +668,7 @@ Implements \hyperlink{class_i_m_u_base_adb8539af8660d291fdde1f38b3d644f3}{IMUBas
 
 
 
-Definition at line 189 of file IMU.cpp.
+Definition at line 277 of file IMU.cpp.
 
 
 
@@ -613,7 +691,7 @@ References \_\-State, and sIdle.
 \label{class_i_m_u_a6a61733d65cf2b60db212e0be9a00fed}
 
 
-Definition at line 206 of file IMU.h.
+Definition at line 195 of file IMU.h.
 
 
 
@@ -649,7 +727,7 @@ Implements \hyperlink{class_timer_notify_a2525b96a5e3ed4c4a039b296701f2b7e}{Time
 
 
 
-Definition at line 647 of file IMU.cpp.
+Definition at line 752 of file IMU.cpp.
 
 
 \begin{DoxyCode}
@@ -671,7 +749,7 @@ Implements \hyperlink{class_i_m_u_base_ab920218bb6630f9e91ef7d0f07599203}{IMUBas
 
 
 
-Definition at line 548 of file IMU.cpp.
+Definition at line 651 of file IMU.cpp.
 
 
 
@@ -684,17 +762,19 @@ References \_\-aID, \_\-gID, \_\-numChans, \_\-pMas, buffer, Print::print(), and
     for (int x=0;x<_numChans;x++) {
         int retc = _pMas->CheckID(_gID[x]); 
         if (retc == 0) {
-            pSerial->print("Gyro:Ack.\n");
+            sprintf(buffer,"Gyro%d (0x%x):Ack.\n",x,_gID[x]);
+            pSerial->print(buffer);
         } else {
-            sprintf(buffer,"Gyro:NAck (%d).\n",retc);
+            sprintf(buffer,"Gyro%d (0x%x):NAck (%d).\n",x,_gID[x],retc);
             pSerial->print(buffer);
         }
         Wr(_gID[x], 0x3D, 0x8);
         retc = _pMas->CheckID(_aID[x]); 
         if (retc == 0) {
-            pSerial->print("Acc:Ack.\n");
+            sprintf(buffer,"Acc%d (0x%x):Ack.\n",x,_aID[x]);
+            pSerial->print(buffer);
         } else {
-            sprintf(buffer,"Acc:NAck (%d).\n",retc);
+            sprintf(buffer,"Acc%d (0x%x):NAck (%d).\n",x,_aID[x],retc);
             pSerial->print(buffer);
         }
     }
@@ -711,7 +791,7 @@ References \_\-aID, \_\-gID, \_\-numChans, \_\-pMas, buffer, Print::print(), and
 \label{class_i_m_u_af4bede5261a1d6018c72782d8c54445e}
 Configure the Gyro and Accelerometer device. The input parameter selects the first or second channel. Build an array of RegWrite types so that I can check the return code of each write to insure they all pass. 
 
-Definition at line 698 of file IMU.cpp.
+Definition at line 803 of file IMU.cpp.
 
 
 
@@ -778,48 +858,6 @@ Referenced by Setup().
     return 0;
 }
 \end{DoxyCode}
-\hypertarget{class_i_m_u_a492e190eef142fc6bc674cca4700f1e3}{
-\index{IMU@{IMU}!DataAvail@{DataAvail}}
-\index{DataAvail@{DataAvail}!IMU@{IMU}}
-\subsubsection[{DataAvail}]{\setlength{\rightskip}{0pt plus 5cm}bool IMU::DataAvail (
-\begin{DoxyParamCaption}
-\item[{uint8\_\-t}]{idx}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
-\label{class_i_m_u_a492e190eef142fc6bc674cca4700f1e3}
-
-
-Definition at line 196 of file IMU.h.
-
-
-
-References \_\-currFifoReadLen.
-
-
-\begin{DoxyCode}
-    {
-        return (_currFifoReadLen[idx] > 17); 
-    }
-\end{DoxyCode}
-\hypertarget{class_i_m_u_a0bd84946a218d910f248cfa8edf00a5c}{
-\index{IMU@{IMU}!DataAvail@{DataAvail}}
-\index{DataAvail@{DataAvail}!IMU@{IMU}}
-\subsubsection[{DataAvail}]{\setlength{\rightskip}{0pt plus 5cm}bool IMU::DataAvail (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
-\label{class_i_m_u_a0bd84946a218d910f248cfa8edf00a5c}
-
-
-Definition at line 192 of file IMU.h.
-
-
-\begin{DoxyCode}
-    {
-        return DataAvail(0) || DataAvail(1);
-    }
-\end{DoxyCode}
 \hypertarget{class_i_m_u_a078d2f3ad27475c9afcaf09c44886e4c}{
 \index{IMU@{IMU}!DataReady@{DataReady}}
 \index{DataReady@{DataReady}!IMU@{IMU}}
@@ -835,15 +873,17 @@ Implements \hyperlink{class_i_m_u_base_a53d56fa29c66935306e1dcca140aa9ff}{IMUBas
 
 
 
-Definition at line 458 of file IMU.cpp.
+Definition at line 564 of file IMU.cpp.
 
 
 
-References \_\-bDataReady, and \_\-bDualChan.
+References \_\-bDataReady, \_\-bDualChan, and \_\-numChans.
 
 
 \begin{DoxyCode}
 {
+    if (_numChans == 0) return true;
+    
     bool bReady = false;
     cli();
     if (_bDualChan) {
@@ -874,7 +914,7 @@ Implements \hyperlink{class_timer_notify_a1b1d07d14c480883b6cda4d28b281978}{Time
 
 
 
-Definition at line 633 of file IMU.cpp.
+Definition at line 738 of file IMU.cpp.
 
 
 \begin{DoxyCode}
@@ -892,7 +932,7 @@ Definition at line 633 of file IMU.cpp.
 \label{class_i_m_u_acf8e9ee1971e527c255c046d3d3c1fe9}
 Called after we handle a Nack, Bus Error or ArbLost Attempt to fix something, then return to the previous state and give it another go. We will basically keep doing this forever until the Manager says stop. All error or fail recovery goes through here.. I have finally gotten things cleaned up enough so that I have a central location for error attempts. 
 
-Definition at line 304 of file IMU.cpp.
+Definition at line 398 of file IMU.cpp.
 
 
 
@@ -949,7 +989,7 @@ Implements \hyperlink{class_i_m_u_base_a60bf7f5f9728d11bae5ca64bc7a9c10b}{IMUBas
 
 
 
-Definition at line 87 of file IMU.cpp.
+Definition at line 165 of file IMU.cpp.
 
 
 
@@ -976,17 +1016,17 @@ Implements \hyperlink{class_i_m_u_base_a13cf0868e2c3c31838fe889315ccfb0c}{IMUBas
 
 
 
-Definition at line 500 of file IMU.cpp.
+Definition at line 603 of file IMU.cpp.
 
 
 
-References \_\-bDataReady, \_\-bDualChan, \_\-dataBuffer, \_\-failType, \_\-State, fNack, and sIdle.
+References \_\-bDataReady, \_\-bDualChan, \_\-dataBuffer, \_\-failType, \_\-numChans, \_\-State, fNack, and sIdle.
 
 
 \begin{DoxyCode}
 {
-    IMUPacket* pPkt;
-    
+    if (_numChans == 0) return pData;
+
     cli();
 
     *pData++ = 0xa5;
@@ -1047,11 +1087,11 @@ I temporarily set this to ErrRecover and then delay. If I am re-\/starting, then
 
 
 
-Definition at line 432 of file IMU.cpp.
+Definition at line 534 of file IMU.cpp.
 
 
 
-References \_\-bFailDetected, \_\-bRun, \_\-failCount, \_\-failType, \_\-pDBGPort2, \_\-previousState, FailRecovery(), fArbLost, pArbLost, ResetBusyTime(), sErrRecover, SetState(), and StartTransaction().
+References \_\-bFailDetected, \_\-bRun, \_\-failCount, \_\-failType, \_\-pDBGPort2, \_\-previousState, FailRecovery(), fArbLost, pArbLost, pBusErr, ResetBusyTime(), sErrRecover, SetState(), and StartTransaction().
 
 
 \begin{DoxyCode}
@@ -1059,6 +1099,10 @@ References \_\-bFailDetected, \_\-bRun, \_\-failCount, \_\-failType, \_\-pDBGPor
     if (_bRun == false) return;
 
     ResetBusyTime();
+    {
+        Mark marker(_pDBGPort2,pBusErr);
+        _delay_us(3);
+    }
     Mark marker(_pDBGPort2,pArbLost);
     _bFailDetected = true;
     ++_failCount;
@@ -1091,7 +1135,7 @@ I temporarily set this to ErrRecover and then delay. If I am re-\/starting, then
 
 
 
-Definition at line 401 of file IMU.cpp.
+Definition at line 499 of file IMU.cpp.
 
 
 
@@ -1103,6 +1147,10 @@ References \_\-bFailDetected, \_\-bRun, \_\-failCount, \_\-failType, \_\-pDBGPor
     if (_bRun == false) return;
 
     ResetBusyTime();
+    {
+        Mark marker(_pDBGPort2,pBusErr);
+        _delay_us(3);
+    }
     Mark marker(_pDBGPort2,pBusErr);
 
     _bFailDetected = true;
@@ -1140,11 +1188,11 @@ Keep failing.. just stop.
 
 
 
-Definition at line 369 of file IMU.cpp.
+Definition at line 463 of file IMU.cpp.
 
 
 
-References \_\-bRun, \_\-failType, \_\-nackCount, \_\-pDBGPort2, \_\-previousState, FailRecovery(), fNack, pNack, ResetBusyTime(), sErrRecover, SetState(), StartTransaction(), and Stop().
+References \_\-bRun, \_\-failType, \_\-nackCount, \_\-pDBGPort2, \_\-previousState, FailRecovery(), fNack, pBusErr, pNack, ResetBusyTime(), sErrRecover, SetState(), StartTransaction(), and Stop().
 
 
 \begin{DoxyCode}
@@ -1152,6 +1200,10 @@ References \_\-bRun, \_\-failType, \_\-nackCount, \_\-pDBGPort2, \_\-previousSta
     if (_bRun == false) return;
     
     ResetBusyTime();
+    {
+        Mark marker(_pDBGPort2,pBusErr);
+        _delay_us(3);
+    }
     Mark marker(_pDBGPort2,pNack);
 
     ++_nackCount;
@@ -1181,7 +1233,7 @@ References \_\-bRun, \_\-failType, \_\-nackCount, \_\-pDBGPort2, \_\-previousSta
 \label{class_i_m_u_ab4124ae29a64365787c2c03b3ab09c6c}
 Called be the master when the read is complete. Requires registration Expected Context: Med Lvl I2C Int. 
 
-Definition at line 352 of file IMU.cpp.
+Definition at line 446 of file IMU.cpp.
 
 
 
@@ -1210,7 +1262,7 @@ References \_\-bRun, \_\-pDBGPort2, pReadDn, ProcessTransaction(), ResetBusyTime
 \label{class_i_m_u_a71568969beb6ee7d4b596f8c0a91faf9}
 Called by the Master when the write is complete. Requires registration Expected Context: Med Lvl I2C Int. 
 
-Definition at line 338 of file IMU.cpp.
+Definition at line 432 of file IMU.cpp.
 
 
 
@@ -1239,7 +1291,7 @@ References \_\-bRun, \_\-pDBGPort2, ProcessTransaction(), pWriteDn, ResetBusyTim
 \label{class_i_m_u_a7f9a7744a4fa3ea40da008cabd5da7b7}
 
 
-Definition at line 187 of file IMU.h.
+Definition at line 185 of file IMU.h.
 
 
 
@@ -1250,6 +1302,33 @@ References \_\-pDBGPort2.
     {
         if (_pDBGPort2) _pDBGPort2->SetState((uint8_t) p);
     }
+\end{DoxyCode}
+\hypertarget{class_i_m_u_ac46c8e580371cf97e4625dda450f01fd}{
+\index{IMU@{IMU}!NextIMU@{NextIMU}}
+\index{NextIMU@{NextIMU}!IMU@{IMU}}
+\subsubsection[{NextIMU}]{\setlength{\rightskip}{0pt plus 5cm}void IMU::NextIMU (
+\begin{DoxyParamCaption}
+\item[{{\bf IMUBase} $\ast$}]{pNext}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_i_m_u_ac46c8e580371cf97e4625dda450f01fd}
+
+
+Implements \hyperlink{class_i_m_u_base_aa9c09bfd70f81b4a2df20cc5ae1474c3}{IMUBase}.
+
+
+
+Definition at line 103 of file IMU.cpp.
+
+
+
+References \_\-pNextIMU.
+
+
+\begin{DoxyCode}
+{
+    _pNextIMU = pNext;
+}
 \end{DoxyCode}
 \hypertarget{class_i_m_u_aefbd4e2f7f3928cf44c00a96d61c3546}{
 \index{IMU@{IMU}!ovf@{ovf}}
@@ -1266,7 +1345,7 @@ Implements \hyperlink{class_timer_notify_a12081e2ac25688544b6f0c3de4bd412d}{Time
 
 
 
-Definition at line 641 of file IMU.cpp.
+Definition at line 746 of file IMU.cpp.
 
 
 
@@ -1293,11 +1372,11 @@ Start the next transaction.
 
 
 
-Definition at line 260 of file IMU.cpp.
+Definition at line 348 of file IMU.cpp.
 
 
 
-References \_\-bDualChan, \_\-bUseGyro, \_\-State, PushData(), SetState(), sReadAcc1, sReadAcc2, sReadGyro1, sReadGyro2, StartTransaction(), StoreAccData(), StoreGyroData(), and sWait.
+References \_\-bDualChan, \_\-bUseGyro, \_\-pNextIMU, \_\-State, IMUBase::BeginRead(), PushData(), SetState(), sReadAcc1, sReadAcc2, sReadGyro1, sReadGyro2, StartTransaction(), StoreAccData(), StoreGyroData(), and sWait.
 
 
 
@@ -1322,6 +1401,9 @@ Referenced by I2CReadDone(), and I2CWriteDone().
                 }
             } else {
                 SetState(sWait);
+                if (_pNextIMU) {
+                    _pNextIMU->BeginRead();
+                }
             }
             break;
         case sReadGyro2:
@@ -1332,6 +1414,9 @@ Referenced by I2CReadDone(), and I2CWriteDone().
             StoreAccData(2);
             PushData(2);
             SetState(sWait);
+            if (_pNextIMU) {
+                _pNextIMU->BeginRead();
+            }
             break;
         default:
             break;
@@ -1355,7 +1440,7 @@ Push the data in the temporary buffer onto the appropriate fifo.
 
 
 
-Definition at line 486 of file IMU.cpp.
+Definition at line 594 of file IMU.cpp.
 
 
 
@@ -1368,12 +1453,52 @@ Referenced by ProcessTransaction().
 
 \begin{DoxyCode}
 {
-    //if (idx == 1) {
-    //    _rdFifo.push(IMUPacket(&_dataBuffer[0]));
-    //} else {
-    //    _rdFifo2.push(IMUPacket(&_dataBuffer[0]));
-    //}
     _bDataReady[idx-1] = true;
+}
+\end{DoxyCode}
+\hypertarget{class_i_m_u_a496602369b71a85051ba0506a8af70a1}{
+\index{IMU@{IMU}!QueryChannels@{QueryChannels}}
+\index{QueryChannels@{QueryChannels}!IMU@{IMU}}
+\subsubsection[{QueryChannels}]{\setlength{\rightskip}{0pt plus 5cm}void IMU::QueryChannels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i_m_u_a496602369b71a85051ba0506a8af70a1}
+
+
+Definition at line 120 of file IMU.cpp.
+
+
+
+References \_\-aID, \_\-bDualChan, \_\-gID, \_\-numChans, and \_\-pMas.
+
+
+
+Referenced by IMU().
+
+
+\begin{DoxyCode}
+{
+    _numChans = 0;
+    _bDualChan = 0;
+    // Check the first, lower ID.
+    int retc = _pMas->CheckID(0xD2);
+    if (retc == 0) {
+        _gID[_numChans] = 0xD2;
+        _aID[_numChans] = 0x32; // Always high bit.
+        _numChans++;
+    }
+    retc = _pMas->CheckID(0xD0);
+    if (retc == 0) {
+        _gID[_numChans] = 0xD0;
+        _aID[_numChans] = 0x30; // Always low bit.
+        _numChans++;
+    }
+    
+    if (_numChans > 1) {
+        _bDualChan = true;
+    }
 }
 \end{DoxyCode}
 \hypertarget{class_i_m_u_ab6c8ef618465524c88a021e2206b2de5}{
@@ -1390,7 +1515,7 @@ Referenced by ProcessTransaction().
 \label{class_i_m_u_ab6c8ef618465524c88a021e2206b2de5}
 
 
-Definition at line 661 of file IMU.cpp.
+Definition at line 766 of file IMU.cpp.
 
 
 
@@ -1420,7 +1545,7 @@ References \_\-pMas.
 \label{class_i_m_u_ad39e85995898b9251032c89a3587974c}
 
 
-Definition at line 681 of file IMU.cpp.
+Definition at line 786 of file IMU.cpp.
 
 
 
@@ -1448,7 +1573,7 @@ Referenced by StartTransaction().
 \label{class_i_m_u_a07362afd858bca1ce960f3809248e4e9}
 
 
-Definition at line 687 of file IMU.cpp.
+Definition at line 792 of file IMU.cpp.
 
 
 
@@ -1477,7 +1602,7 @@ Implements \hyperlink{class_i_m_u_base_a27fdd96992dfa8867943407fc400d071}{IMUBas
 
 
 
-Definition at line 75 of file IMU.cpp.
+Definition at line 153 of file IMU.cpp.
 
 
 
@@ -1506,7 +1631,7 @@ Referenced by FailRecovery(), and Run().
 \label{class_i_m_u_ab3992da77876e9b5cae8bc9d1334ff7b}
 
 
-Definition at line 201 of file IMU.h.
+Definition at line 190 of file IMU.h.
 
 
 
@@ -1537,7 +1662,7 @@ Implements \hyperlink{class_i_m_u_base_a78622fbfb40a5bbee5e83bb8a0780d04}{IMUBas
 
 
 
-Definition at line 82 of file IMU.cpp.
+Definition at line 160 of file IMU.cpp.
 
 
 
@@ -1560,7 +1685,7 @@ References \_\-pMas.
 \label{class_i_m_u_a89de27b845ce9e103436cfb7ae8e6441}
 
 
-Definition at line 211 of file IMU.h.
+Definition at line 200 of file IMU.h.
 
 
 
@@ -1594,7 +1719,7 @@ Implements \hyperlink{class_i_m_u_base_a6e65b709e0212f95299ce9fa464b4651}{IMUBas
 
 
 
-Definition at line 597 of file IMU.cpp.
+Definition at line 702 of file IMU.cpp.
 
 
 
@@ -1607,7 +1732,7 @@ Referenced by Start().
 
 \begin{DoxyCode}
 {
-    _pTimer->Counter(0);
+    if (_pTimer) _pTimer->Counter(0);
 }
 \end{DoxyCode}
 \hypertarget{class_i_m_u_aadf38b912ad23374c4ee8e40fb9f3638}{
@@ -1627,7 +1752,7 @@ This block only does something in the wait state. Hopefully the rest of the logi
 
 
 
-Definition at line 202 of file IMU.cpp.
+Definition at line 290 of file IMU.cpp.
 
 
 
@@ -1635,7 +1760,7 @@ References \_\-bRun, \_\-bUseGyro, \_\-pDBGPort2, \_\-pMas, \_\-State, BusyTimeo
 
 
 
-Referenced by ovf().
+Referenced by BeginRead(), and ovf().
 
 
 \begin{DoxyCode}
@@ -1678,11 +1803,11 @@ Implements \hyperlink{class_i_m_u_base_ad4f6b6562edc0e2b76591d0deca191d7}{IMUBas
 
 
 
-Definition at line 92 of file IMU.cpp.
+Definition at line 170 of file IMU.cpp.
 
 
 
-References \_\-Rate, and SetTimerPeriod().
+References \_\-Rate, Print::print(), and SetTimerPeriod().
 
 
 \begin{DoxyCode}
@@ -1699,6 +1824,8 @@ References \_\-Rate, and SetTimerPeriod().
     uint16_t gval = 1000/rate;
     gval = gval - 1;
     
+    if (pdbgserial) pdbgserial->print("Set Rate on IMU\n");
+    
     SetTimerPeriod();
 }
 \end{DoxyCode}
@@ -1713,7 +1840,7 @@ References \_\-Rate, and SetTimerPeriod().
 \label{class_i_m_u_afedf46bdad68cb4002af8bf46530d265}
 
 
-Definition at line 65 of file IMU.cpp.
+Definition at line 143 of file IMU.cpp.
 
 
 
@@ -1740,7 +1867,7 @@ Referenced by main().
 \label{class_i_m_u_a6f86c79e66c4262093c2d65fe3fee45c}
 
 
-Definition at line 70 of file IMU.cpp.
+Definition at line 148 of file IMU.cpp.
 
 
 
@@ -1767,7 +1894,7 @@ Referenced by main().
 \label{class_i_m_u_a5d80a28d98df12c536f525b56b7e5abe}
 
 
-Definition at line 180 of file IMU.h.
+Definition at line 178 of file IMU.h.
 
 
 
@@ -1800,15 +1927,11 @@ This will be 2us period
 
 
 
-Definition at line 580 of file IMU.cpp.
+Definition at line 685 of file IMU.cpp.
 
 
 
 References \_\-pTimer, TimerCntr::CCEnable(), TimerCntr::ClkSel(), TimerCntr::EventSetup(), TimerCntr::IntLvlA(), TimerCntr::IntLvlB(), TimerCntr::Notify(), SetTimerPeriod(), and TimerCntr::WaveformGenMode().
-
-
-
-Referenced by main().
 
 
 \begin{DoxyCode}
@@ -1836,7 +1959,7 @@ Referenced by main().
 \label{class_i_m_u_a3ce9934e64dff87e18b6cc3f3700f72f}
 
 
-Definition at line 602 of file IMU.cpp.
+Definition at line 707 of file IMU.cpp.
 
 
 
@@ -1861,7 +1984,7 @@ Referenced by SampleRate(), and SetTimer().
     if (timerTicks > 65000) {
         timerTicks = 65000;
     }
-    _pTimer->Period(timerTicks);
+    if (_pTimer) _pTimer->Period(timerTicks);
 }
 \end{DoxyCode}
 \hypertarget{class_i_m_u_a290737d42de965c15c8327edfc516ffd}{
@@ -1879,7 +2002,7 @@ Implements \hyperlink{class_i_m_u_base_a74d84beba0da335f49aa7ce94612cf13}{IMUBas
 
 
 
-Definition at line 114 of file IMU.cpp.
+Definition at line 194 of file IMU.cpp.
 
 
 
@@ -1892,11 +2015,14 @@ Referenced by Start().
 
 \begin{DoxyCode}
 {
+    if (_numChans == 0) return 0;
+    
     _bRun = false;
     Mark marker(_pDBGPort2,pSetup);
     
     if (_State != sIdle) {
-        pdbgserial->print("IMU Already Running.\n");
+        if (pdbgserial) 
+            pdbgserial->print("IMU Already Running.\n");
         return 0; // Already running
     }
     
@@ -1905,18 +2031,21 @@ Referenced by Start().
     
     // Start the process with Configure
     for (int x=0; x<_numChans;x++) {
-        pdbgserial->print("Configuring IMU\n");
+        if (pdbgserial) 
+            pdbgserial->print("Configuring IMU\n");
         int retc = Configure(x);
         if (retc < 0 ) {
             // Try reset mechanisms - none of which have
             // been found that work properly yet.
             SetState(sIdle);
-            pdbgserial->print("IMU Configure Failed.");
+            if (pdbgserial) 
+                pdbgserial->print("IMU Configure Failed.");
             return retc;
         }
     }
     SetState(sConfigured);
-    pdbgserial->print("IMU Configured.\n");
+    if (pdbgserial) 
+        pdbgserial->print("IMU Configured.\n");
 
     return 0;
 }
@@ -1936,16 +2065,18 @@ Implements \hyperlink{class_i_m_u_base_af31c2ed51cd36cc3230ebbb58757784a}{IMUBas
 
 
 
-Definition at line 153 of file IMU.cpp.
+Definition at line 239 of file IMU.cpp.
 
 
 
-References \_\-bDataReady, \_\-bRun, \_\-pDBGPort2, \_\-State, pBusErr, ResetFailStats(), ResetTimer(), sConfigured, SetState(), Setup(), and sWait.
+References \_\-bDataReady, \_\-bRun, \_\-numChans, \_\-pDBGPort2, \_\-State, pWriteDn, ResetFailStats(), ResetTimer(), sConfigured, SetState(), Setup(), and sWait.
 
 
 \begin{DoxyCode}
 {
-    Mark marker(_pDBGPort2,pBusErr);
+    if (_numChans == 0) return 0;
+    
+    Mark marker(_pDBGPort2,pWriteDn);
     
     int retc;
     if (_State != sConfigured) {
@@ -1977,7 +2108,7 @@ References \_\-bDataReady, \_\-bRun, \_\-pDBGPort2, \_\-State, pBusErr, ResetFai
 \label{class_i_m_u_a8dfecb837ea9fcf9d190423dca9beb7f}
 
 
-Definition at line 235 of file IMU.cpp.
+Definition at line 323 of file IMU.cpp.
 
 
 
@@ -1993,13 +2124,13 @@ Referenced by FailRecovery(), I2CArbLost(), I2CBusError(), I2CNack(), ProcessTra
     int retc = 0;
     switch(_State) {
     case sReadGyro1:
-        RdAsync(_gID[0], 0x1D, 2);
+        RdAsync(_gID[0], 0x1B, 8);
         break;
     case sReadAcc1:
         RdAsync(_aID[0], 0x80 | 0x28, 6);
         break;
     case sReadGyro2:
-        RdAsync(_gID[1], 0x1D, 6);
+        RdAsync(_gID[1], 0x1B, 8);
         break;
     case sReadAcc2:
         RdAsync(_aID[1], 0x80 | 0x28, 6);
@@ -2026,7 +2157,7 @@ Implements \hyperlink{class_i_m_u_base_a5b136166ec3849cbc1f93a13367eb08d}{IMUBas
 
 
 
-Definition at line 180 of file IMU.cpp.
+Definition at line 268 of file IMU.cpp.
 
 
 
@@ -2057,7 +2188,7 @@ Referenced by I2CNack().
 \label{class_i_m_u_ae9c290e496eb2a76aefc626c81fe4da9}
 Add the accelerometer data to the buffer I have the index there in case I need it later.. 
 
-Definition at line 480 of file IMU.cpp.
+Definition at line 588 of file IMU.cpp.
 
 
 
@@ -2084,7 +2215,7 @@ Referenced by ProcessTransaction().
 \label{class_i_m_u_a5b58d543be70886335e439a2b4f28a8e}
 Store the gyro read data while I get the Accelerometer data I have the index there in case I need it later.. 
 
-Definition at line 473 of file IMU.cpp.
+Definition at line 581 of file IMU.cpp.
 
 
 
@@ -2097,7 +2228,7 @@ Referenced by ProcessTransaction().
 
 \begin{DoxyCode}
 {
-    _pMas->ReadData(&_dataBuffer[idx-1][2],2);
+    _pMas->ReadData(&_dataBuffer[idx-1][0],8);
 }
 \end{DoxyCode}
 \hypertarget{class_i_m_u_a86f05be645d2096f0b2b3cfbe8ea0ce8}{
@@ -2115,7 +2246,7 @@ Implements \hyperlink{class_i_m_u_base_a9b4cc325e9858a8bb204733dc7906ec2}{IMUBas
 
 
 
-Definition at line 140 of file IMU.h.
+Definition at line 137 of file IMU.h.
 
 
 
@@ -2138,7 +2269,7 @@ References \_\-bUseGyro.
 \label{class_i_m_u_af80eef2eb22d08faf697dd708b18303c}
 
 
-Definition at line 653 of file IMU.cpp.
+Definition at line 758 of file IMU.cpp.
 
 
 
@@ -2170,7 +2301,7 @@ Referenced by CheckIDs(), and Configure().
 \label{class_i_m_u_a2c38589ebcb357dfc8f987a5d41c845b}
 
 
-Definition at line 671 of file IMU.cpp.
+Definition at line 776 of file IMU.cpp.
 
 
 
@@ -2183,7 +2314,7 @@ References \_\-pMas, buffer, and Print::print().
     bytes[0] = addr;
     bytes[1] = data;
     sprintf(buffer,"WrAsync to %d\n",ID);
-    pdbgserial->print(buffer);
+    if (pdbgserial) pdbgserial->print(buffer);
     return _pMas->WriteRead(ID, &bytes[0],2,0);
 }
 \end{DoxyCode}
@@ -2197,11 +2328,11 @@ References \_\-pMas, buffer, and Print::print().
 \label{class_i_m_u_a10141bdc27465c95de6c8285d1542d78}
 
 
-Definition at line 98 of file IMU.h.
+Definition at line 94 of file IMU.h.
 
 
 
-Referenced by CheckIDs(), Configure(), IMU(), and StartTransaction().
+Referenced by CheckIDs(), Configure(), IMU(), QueryChannels(), and StartTransaction().
 
 \hypertarget{class_i_m_u_a8a71f0728b2d849d1d8e54fcb58aad4e}{
 \index{IMU@{IMU}!\_\-bDataReady@{\_\-bDataReady}}
@@ -2210,11 +2341,11 @@ Referenced by CheckIDs(), Configure(), IMU(), and StartTransaction().
 \label{class_i_m_u_a8a71f0728b2d849d1d8e54fcb58aad4e}
 
 
-Definition at line 110 of file IMU.h.
+Definition at line 104 of file IMU.h.
 
 
 
-Referenced by DataReady(), GetPacketData(), PushData(), and Start().
+Referenced by DataReady(), GetPacketData(), IMU(), PushData(), and Start().
 
 \hypertarget{class_i_m_u_a62978e791838c3b4829e1d3d683e99b2}{
 \index{IMU@{IMU}!\_\-bDualChan@{\_\-bDualChan}}
@@ -2223,11 +2354,11 @@ Referenced by DataReady(), GetPacketData(), PushData(), and Start().
 \label{class_i_m_u_a62978e791838c3b4829e1d3d683e99b2}
 
 
-Definition at line 92 of file IMU.h.
+Definition at line 90 of file IMU.h.
 
 
 
-Referenced by DataReady(), GetPacketData(), IMU(), and ProcessTransaction().
+Referenced by DataReady(), GetPacketData(), IMU(), ProcessTransaction(), and QueryChannels().
 
 \hypertarget{class_i_m_u_a12238a84e20f54c5fe799e0b37feb0ea}{
 \index{IMU@{IMU}!\_\-bFailDetected@{\_\-bFailDetected}}
@@ -2236,7 +2367,7 @@ Referenced by DataReady(), GetPacketData(), IMU(), and ProcessTransaction().
 \label{class_i_m_u_a12238a84e20f54c5fe799e0b37feb0ea}
 
 
-Definition at line 117 of file IMU.h.
+Definition at line 110 of file IMU.h.
 
 
 
@@ -2249,7 +2380,7 @@ Referenced by I2CArbLost(), I2CBusError(), and ResetFailStats().
 \label{class_i_m_u_a547fe1fb8adb34917aa08663919b97df}
 
 
-Definition at line 114 of file IMU.h.
+Definition at line 107 of file IMU.h.
 
 
 
@@ -2262,7 +2393,7 @@ Referenced by I2CArbLost(), I2CBusError(), I2CNack(), I2CReadDone(), I2CWriteDon
 \label{class_i_m_u_a0cee90ebd5d0b57fa5ad3890c65108e2}
 
 
-Definition at line 106 of file IMU.h.
+Definition at line 100 of file IMU.h.
 
 
 
@@ -2275,11 +2406,11 @@ Referenced by IMU(), ProcessTransaction(), Run(), and UseGyro().
 \label{class_i_m_u_adce31ce2a3317918d73b47e94a2d9227}
 
 
-Definition at line 118 of file IMU.h.
+Definition at line 111 of file IMU.h.
 
 
 
-Referenced by BusyTimeout(), and ResetBusyTime().
+Referenced by BusyTimeout(), IMU(), and ResetBusyTime().
 
 \hypertarget{class_i_m_u_a4dbeaf17fd1ae9b41b5c3fe61706e5f1}{
 \index{IMU@{IMU}!\_\-ClkSel@{\_\-ClkSel}}
@@ -2288,7 +2419,7 @@ Referenced by BusyTimeout(), and ResetBusyTime().
 \label{class_i_m_u_a4dbeaf17fd1ae9b41b5c3fe61706e5f1}
 
 
-Definition at line 101 of file IMU.h.
+Definition at line 97 of file IMU.h.
 
 
 
@@ -2301,29 +2432,7 @@ Referenced by Configure(), and IMU().
 \label{class_i_m_u_a53aa928d2d68a5287da893bd157e7cbe}
 
 
-Definition at line 96 of file IMU.h.
-
-\hypertarget{class_i_m_u_a08a36cacd3d4d14b4aa834a657422b15}{
-\index{IMU@{IMU}!\_\-currChannel@{\_\-currChannel}}
-\index{\_\-currChannel@{\_\-currChannel}!IMU@{IMU}}
-\subsubsection[{\_\-currChannel}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf IMU::\_\-currChannel}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_i_m_u_a08a36cacd3d4d14b4aa834a657422b15}
-
-
-Definition at line 94 of file IMU.h.
-
-\hypertarget{class_i_m_u_aa9a352174cae0cd174cb91ef09a47fe4}{
-\index{IMU@{IMU}!\_\-currFifoReadLen@{\_\-currFifoReadLen}}
-\index{\_\-currFifoReadLen@{\_\-currFifoReadLen}!IMU@{IMU}}
-\subsubsection[{\_\-currFifoReadLen}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf IMU::\_\-currFifoReadLen}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_i_m_u_aa9a352174cae0cd174cb91ef09a47fe4}
-
-
-Definition at line 95 of file IMU.h.
-
-
-
-Referenced by DataAvail().
+Definition at line 92 of file IMU.h.
 
 \hypertarget{class_i_m_u_ab87a54288295d4d10d605cf6c21d4d0f}{
 \index{IMU@{IMU}!\_\-dataBuffer@{\_\-dataBuffer}}
@@ -2336,7 +2445,7 @@ This buffer is used to store data until we push it into the fifo.
 
 
 
-Definition at line 109 of file IMU.h.
+Definition at line 103 of file IMU.h.
 
 
 
@@ -2349,7 +2458,7 @@ Referenced by GetPacketData(), StoreAccData(), and StoreGyroData().
 \label{class_i_m_u_a3f9e6159234449cde8f5e72da8acf751}
 
 
-Definition at line 99 of file IMU.h.
+Definition at line 95 of file IMU.h.
 
 
 
@@ -2362,7 +2471,7 @@ Referenced by Configure(), and IMU().
 \label{class_i_m_u_a1e646aa38b84721fc650ef5d3388cc14}
 
 
-Definition at line 115 of file IMU.h.
+Definition at line 108 of file IMU.h.
 
 
 
@@ -2375,20 +2484,11 @@ Referenced by FailRecovery(), I2CArbLost(), I2CBusError(), and ResetFailStats().
 \label{class_i_m_u_a39ed63b67b50c67520c5f8e5a2c26b26}
 
 
-Definition at line 89 of file IMU.h.
+Definition at line 87 of file IMU.h.
 
 
 
-Referenced by FailRecovery(), GetPacketData(), I2CArbLost(), I2CBusError(), I2CNack(), and ResetFailStats().
-
-\hypertarget{class_i_m_u_a9f7f36da069258a5615886e098527100}{
-\index{IMU@{IMU}!\_\-fifoLen@{\_\-fifoLen}}
-\index{\_\-fifoLen@{\_\-fifoLen}!IMU@{IMU}}
-\subsubsection[{\_\-fifoLen}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf IMU::\_\-fifoLen}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_i_m_u_a9f7f36da069258a5615886e098527100}
-
-
-Definition at line 112 of file IMU.h.
+Referenced by FailRecovery(), GetPacketData(), I2CArbLost(), I2CBusError(), I2CNack(), IMU(), and ResetFailStats().
 
 \hypertarget{class_i_m_u_a059c02011a10bb90aecc9692ed345771}{
 \index{IMU@{IMU}!\_\-FullScale@{\_\-FullScale}}
@@ -2397,7 +2497,7 @@ Definition at line 112 of file IMU.h.
 \label{class_i_m_u_a059c02011a10bb90aecc9692ed345771}
 
 
-Definition at line 100 of file IMU.h.
+Definition at line 96 of file IMU.h.
 
 
 
@@ -2410,11 +2510,11 @@ Referenced by Configure(), and IMU().
 \label{class_i_m_u_a47ffe20a032e3a890cd3891793a60a40}
 
 
-Definition at line 97 of file IMU.h.
+Definition at line 93 of file IMU.h.
 
 
 
-Referenced by CheckIDs(), Configure(), IMU(), and StartTransaction().
+Referenced by CheckIDs(), Configure(), IMU(), QueryChannels(), and StartTransaction().
 
 \hypertarget{class_i_m_u_a30c8553ab21b5d6e618c2616f25dafb1}{
 \index{IMU@{IMU}!\_\-nackCount@{\_\-nackCount}}
@@ -2427,7 +2527,7 @@ used for recover logic
 
 
 
-Definition at line 116 of file IMU.h.
+Definition at line 109 of file IMU.h.
 
 
 
@@ -2440,11 +2540,11 @@ Referenced by FailRecovery(), I2CNack(), and ResetFailStats().
 \label{class_i_m_u_a27df580b4559aaf3234469bfe16eb158}
 
 
-Definition at line 93 of file IMU.h.
+Definition at line 91 of file IMU.h.
 
 
 
-Referenced by CheckIDs(), IMU(), and Setup().
+Referenced by CheckIDs(), DataReady(), GetPacketData(), IMU(), QueryChannels(), Setup(), and Start().
 
 \hypertarget{class_i_m_u_a83a2ffaf84cc04f17ff0301181c45366}{
 \index{IMU@{IMU}!\_\-pDBGPort@{\_\-pDBGPort}}
@@ -2453,7 +2553,7 @@ Referenced by CheckIDs(), IMU(), and Setup().
 \label{class_i_m_u_a83a2ffaf84cc04f17ff0301181c45366}
 
 
-Definition at line 119 of file IMU.h.
+Definition at line 112 of file IMU.h.
 
 
 
@@ -2466,7 +2566,7 @@ Referenced by IMU(), SetDebugPort(), and SetState().
 \label{class_i_m_u_a1cf5672a28049d5885a2958010188928}
 
 
-Definition at line 120 of file IMU.h.
+Definition at line 113 of file IMU.h.
 
 
 
@@ -2479,11 +2579,24 @@ Referenced by I2CArbLost(), I2CBusError(), I2CNack(), I2CReadDone(), I2CWriteDon
 \label{class_i_m_u_a466148932203b7250c83a4c5bb684ca1}
 
 
-Definition at line 91 of file IMU.h.
+Definition at line 89 of file IMU.h.
 
 
 
-Referenced by CheckIDs(), FailRecovery(), ForceStartStop(), IMU(), Rd(), RdAsync(), ReadWord(), Reset(), ResetDevices(), Run(), StoreAccData(), StoreGyroData(), Wr(), and WrAsync().
+Referenced by CheckIDs(), FailRecovery(), ForceStartStop(), IMU(), QueryChannels(), Rd(), RdAsync(), ReadWord(), Reset(), ResetDevices(), Run(), StoreAccData(), StoreGyroData(), Wr(), and WrAsync().
+
+\hypertarget{class_i_m_u_a72d5aa462d6627b458db76ca6567d130}{
+\index{IMU@{IMU}!\_\-pNextIMU@{\_\-pNextIMU}}
+\index{\_\-pNextIMU@{\_\-pNextIMU}!IMU@{IMU}}
+\subsubsection[{\_\-pNextIMU}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IMUBase}$\ast$ {\bf IMU::\_\-pNextIMU}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_i_m_u_a72d5aa462d6627b458db76ca6567d130}
+
+
+Definition at line 114 of file IMU.h.
+
+
+
+Referenced by BeginRead(), IMU(), NextIMU(), and ProcessTransaction().
 
 \hypertarget{class_i_m_u_aca284ca1bcf10458005d4ca630833ea9}{
 \index{IMU@{IMU}!\_\-previousState@{\_\-previousState}}
@@ -2492,11 +2605,11 @@ Referenced by CheckIDs(), FailRecovery(), ForceStartStop(), IMU(), Rd(), RdAsync
 \label{class_i_m_u_aca284ca1bcf10458005d4ca630833ea9}
 
 
-Definition at line 88 of file IMU.h.
+Definition at line 86 of file IMU.h.
 
 
 
-Referenced by FailRecovery(), I2CArbLost(), I2CBusError(), I2CNack(), and SetState().
+Referenced by FailRecovery(), I2CArbLost(), I2CBusError(), I2CNack(), IMU(), and SetState().
 
 \hypertarget{class_i_m_u_a16e73b1457a346aed16d4b61fae7f2c4}{
 \index{IMU@{IMU}!\_\-pTimer@{\_\-pTimer}}
@@ -2505,11 +2618,11 @@ Referenced by FailRecovery(), I2CArbLost(), I2CBusError(), I2CNack(), and SetSta
 \label{class_i_m_u_a16e73b1457a346aed16d4b61fae7f2c4}
 
 
-Definition at line 113 of file IMU.h.
+Definition at line 106 of file IMU.h.
 
 
 
-Referenced by ResetTimer(), SetTimer(), and SetTimerPeriod().
+Referenced by IMU(), ResetTimer(), SetTimer(), and SetTimerPeriod().
 
 \hypertarget{class_i_m_u_aafe9be107385c7ccedeb1539cf6d7fce}{
 \index{IMU@{IMU}!\_\-Rate@{\_\-Rate}}
@@ -2518,29 +2631,11 @@ Referenced by ResetTimer(), SetTimer(), and SetTimerPeriod().
 \label{class_i_m_u_aafe9be107385c7ccedeb1539cf6d7fce}
 
 
-Definition at line 102 of file IMU.h.
+Definition at line 98 of file IMU.h.
 
 
 
 Referenced by Configure(), IMU(), SampleRate(), and SetTimerPeriod().
-
-\hypertarget{class_i_m_u_a43cbdffbfb85749212ede7f78ab6f1e0}{
-\index{IMU@{IMU}!\_\-rdFifo@{\_\-rdFifo}}
-\index{\_\-rdFifo@{\_\-rdFifo}!IMU@{IMU}}
-\subsubsection[{\_\-rdFifo}]{\setlength{\rightskip}{0pt plus 5cm}IMUPacketFifo {\bf IMU::\_\-rdFifo}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_i_m_u_a43cbdffbfb85749212ede7f78ab6f1e0}
-
-
-Definition at line 103 of file IMU.h.
-
-\hypertarget{class_i_m_u_a8eb715f35f45943bedc2b9280c3f2cd3}{
-\index{IMU@{IMU}!\_\-rdFifo2@{\_\-rdFifo2}}
-\index{\_\-rdFifo2@{\_\-rdFifo2}!IMU@{IMU}}
-\subsubsection[{\_\-rdFifo2}]{\setlength{\rightskip}{0pt plus 5cm}IMUPacketFifo {\bf IMU::\_\-rdFifo2}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_i_m_u_a8eb715f35f45943bedc2b9280c3f2cd3}
-
-
-Definition at line 104 of file IMU.h.
 
 \hypertarget{class_i_m_u_a2e3c70d02cc2b3dd98ce8153d02cf04e}{
 \index{IMU@{IMU}!\_\-State@{\_\-State}}
@@ -2549,11 +2644,11 @@ Definition at line 104 of file IMU.h.
 \label{class_i_m_u_a2e3c70d02cc2b3dd98ce8153d02cf04e}
 
 
-Definition at line 87 of file IMU.h.
+Definition at line 85 of file IMU.h.
 
 
 
-Referenced by Busy(), GetPacketData(), IMU(), ProcessTransaction(), Run(), SetState(), Setup(), Start(), and StartTransaction().
+Referenced by BeginRead(), Busy(), GetPacketData(), IMU(), ProcessTransaction(), Run(), SetState(), Setup(), Start(), and StartTransaction().
 
 
 

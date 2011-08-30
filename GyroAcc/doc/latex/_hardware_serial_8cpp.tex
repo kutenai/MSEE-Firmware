@@ -38,8 +38,6 @@ struct \hyperlink{structring__buffer}{ring\_\-buffer}
 \item 
 \hyperlink{_hardware_serial_8cpp_a9dc131346dc4fc2529d04056dff35e02}{SERIAL\_\-ISR\_\-DEF} (USARTF0)
 \item 
-\hyperlink{_hardware_serial_8cpp_a6f12703aafce1cd7c9c6a675076e3472}{SERIAL\_\-ISR\_\-DEF} (USARTF1)
-\item 
 void \hyperlink{_hardware_serial_8cpp_ac661d0ebc0efa48a2b2aed9ccf86aa64}{store\_\-char} (unsigned char c, \hyperlink{structring__buffer}{ring\_\-buffer} $\ast$rx\_\-buffer)
 \item 
 static void \hyperlink{_hardware_serial_8cpp_aaec4e4f887a958cc22dd447565d7080b}{SetPointer} (USART\_\-t $\ast$usart, \hyperlink{class_hardware_serial}{HardwareSerial} $\ast$p)
@@ -54,7 +52,7 @@ static void \hyperlink{_hardware_serial_8cpp_aaec4e4f887a958cc22dd447565d7080b}{
 \label{_hardware_serial_8cpp_a739a2a1a0047c98ac1b18ecd25dac092}
 
 
-Definition at line 35 of file HardwareSerial.cpp.
+Definition at line 14 of file HardwareSerial.cpp.
 
 
 
@@ -84,7 +82,7 @@ ISR(usart##_TXC_vect) {\
 \end{DoxyCode}
 
 
-Definition at line 45 of file HardwareSerial.cpp.
+Definition at line 24 of file HardwareSerial.cpp.
 
 
 
@@ -116,15 +114,6 @@ Definition at line 45 of file HardwareSerial.cpp.
 \end{DoxyParamCaption}
 )}}
 \label{_hardware_serial_8cpp_ae92bc09145a7c575c384258f8c165d15}
-\hypertarget{_hardware_serial_8cpp_a6f12703aafce1cd7c9c6a675076e3472}{
-\index{HardwareSerial.cpp@{HardwareSerial.cpp}!SERIAL\_\-ISR\_\-DEF@{SERIAL\_\-ISR\_\-DEF}}
-\index{SERIAL\_\-ISR\_\-DEF@{SERIAL\_\-ISR\_\-DEF}!HardwareSerial.cpp@{HardwareSerial.cpp}}
-\subsubsection[{SERIAL\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}SERIAL\_\-ISR\_\-DEF (
-\begin{DoxyParamCaption}
-\item[{USARTF1}]{}
-\end{DoxyParamCaption}
-)}}
-\label{_hardware_serial_8cpp_a6f12703aafce1cd7c9c6a675076e3472}
 \hypertarget{_hardware_serial_8cpp_a9dc131346dc4fc2529d04056dff35e02}{
 \index{HardwareSerial.cpp@{HardwareSerial.cpp}!SERIAL\_\-ISR\_\-DEF@{SERIAL\_\-ISR\_\-DEF}}
 \index{SERIAL\_\-ISR\_\-DEF@{SERIAL\_\-ISR\_\-DEF}!HardwareSerial.cpp@{HardwareSerial.cpp}}
@@ -173,11 +162,11 @@ Definition at line 45 of file HardwareSerial.cpp.
 \label{_hardware_serial_8cpp_aaec4e4f887a958cc22dd447565d7080b}
 
 
-Definition at line 80 of file HardwareSerial.cpp.
+Definition at line 61 of file HardwareSerial.cpp.
 
 
 
-Referenced by HardwareSerial::begin(), HardwareSerial::begin2x(), HardwareSerial::end(), TimerCntr::TimerCntr(), and TimerCntr::$\sim$TimerCntr().
+Referenced by HardwareSerial::begin2x(), HardwareSerial::end(), HardwareSerial::HardwareSerial(), TimerCntr::TimerCntr(), HardwareSerial::$\sim$HardwareSerial(), and TimerCntr::$\sim$TimerCntr().
 
 
 \begin{DoxyCode}
@@ -199,8 +188,10 @@ Referenced by HardwareSerial::begin(), HardwareSerial::begin2x(), HardwareSerial
         USARTE1cp = p;
     } else if (usart ==  &USARTF0) {
         USARTF0cp = p;
+#if defined(USARTF1_RXC_vect)
     } else if (usart ==  &USARTF1) {
         USARTF1cp = p;
+#endif
     }
 }
 \end{DoxyCode}
@@ -216,7 +207,7 @@ Referenced by HardwareSerial::begin(), HardwareSerial::begin2x(), HardwareSerial
 \label{_hardware_serial_8cpp_ac661d0ebc0efa48a2b2aed9ccf86aa64}
 
 
-Definition at line 66 of file HardwareSerial.cpp.
+Definition at line 47 of file HardwareSerial.cpp.
 
 
 

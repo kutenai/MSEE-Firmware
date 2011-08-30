@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00003"></a>00003 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &quot;CmdProcessor.h&quot;</span>
 <a name="l00005"></a>00005 
-<a name="l00011"></a><a class="code" href="class_cmd_processor.html#a3594ccb1d9cb0f381315781ad3ac39dc">00011</a> <a class="code" href="class_cmd_processor.html#a3594ccb1d9cb0f381315781ad3ac39dc" title="Number of valid parameters.">CmdProcessor::CmdProcessor</a>(<a class="code" href="class_hardware_serial.html">HardwareSerial</a>* pHW)
+<a name="l00011"></a><a class="code" href="class_cmd_processor.html#a3594ccb1d9cb0f381315781ad3ac39dc">00011</a> <a class="code" href="class_cmd_processor.html#a3594ccb1d9cb0f381315781ad3ac39dc" title="Number of valid parameters.">CmdProcessor::CmdProcessor</a>(<a class="code" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a>* pHW)
 <a name="l00012"></a>00012 {
 <a name="l00013"></a>00013     <a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a> = pHW;
 <a name="l00014"></a>00014     
@@ -140,92 +140,101 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00075"></a>00075                 <a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>[<a class="code" href="class_cmd_processor.html#a6201596327a378c5317c1f6a8a9d5bc4" title="Current command.">_cmdPos</a>] = 0; <span class="comment">// Null terminate command</span>
 <a name="l00076"></a>00076                 <a class="code" href="class_cmd_processor.html#a56ce7cebb2a72262ba0d1ba0937739d5">processCmd</a>();
 <a name="l00077"></a>00077                 <span class="keywordflow">return</span> 1;
-<a name="l00078"></a>00078             }
-<a name="l00079"></a>00079         } <span class="keywordflow">else</span> {
-<a name="l00080"></a>00080             <a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>[<a class="code" href="class_cmd_processor.html#a6201596327a378c5317c1f6a8a9d5bc4" title="Current command.">_cmdPos</a>++] = c;
-<a name="l00081"></a>00081         }
-<a name="l00082"></a>00082     }
-<a name="l00083"></a>00083     <span class="keywordflow">return</span> 0;
-<a name="l00084"></a>00084 }
-<a name="l00085"></a>00085 
-<a name="l00090"></a><a class="code" href="class_cmd_processor.html#a56ce7cebb2a72262ba0d1ba0937739d5">00090</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a56ce7cebb2a72262ba0d1ba0937739d5">CmdProcessor::processCmd</a>()
-<a name="l00091"></a>00091 {
-<a name="l00092"></a>00092     <span class="comment">// See if the command delimiter exists in the</span>
-<a name="l00093"></a>00093     <span class="comment">// command. if it does not, then the command</span>
-<a name="l00094"></a>00094     <span class="comment">// is the entire string.</span>
-<a name="l00095"></a>00095     <span class="keywordflow">if</span> (strpbrk(<a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>)) {
-<a name="l00096"></a>00096         <a class="code" href="class_cmd_processor.html#a2017c885b275984549385ba246ec37f5" title="List of command tokens.">_pCmd</a> = strtok(<a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>);
-<a name="l00097"></a>00097         <span class="keywordtype">char</span>* pTok = strtok(0,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>);
-<a name="l00098"></a>00098         <span class="keywordtype">int</span> i = 0;
-<a name="l00099"></a>00099         <span class="keywordflow">while</span> (i &lt; 10 &amp;&amp; pTok) {
-<a name="l00100"></a>00100             <a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[i++] = pTok;
-<a name="l00101"></a>00101             pTok = strtok(0,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>);
-<a name="l00102"></a>00102         }
-<a name="l00103"></a>00103         <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a> = i;
-<a name="l00104"></a>00104         <a class="code" href="class_cmd_processor.html#a18b0886303779762a37096d6446aefa6" title="Current position during serial read.">_validCmd</a> = <span class="keyword">true</span>;
-<a name="l00105"></a>00105     } <span class="keywordflow">else</span> {
-<a name="l00106"></a>00106         <a class="code" href="class_cmd_processor.html#a2017c885b275984549385ba246ec37f5" title="List of command tokens.">_pCmd</a> = <a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>;
-<a name="l00107"></a>00107         <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a> = 0;
-<a name="l00108"></a>00108         <a class="code" href="class_cmd_processor.html#a18b0886303779762a37096d6446aefa6" title="Current position during serial read.">_validCmd</a> = <span class="keyword">true</span>;
-<a name="l00109"></a>00109     }
-<a name="l00110"></a>00110 }
-<a name="l00111"></a>00111 
-<a name="l00113"></a><a class="code" href="class_cmd_processor.html#ab6265f95bc945842d519de1aaf5874c9">00113</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#ab6265f95bc945842d519de1aaf5874c9" title="Clear the command status values so a new command can be started.">CmdProcessor::resetCmd</a>()
-<a name="l00114"></a>00114 {
-<a name="l00115"></a>00115     <a class="code" href="class_cmd_processor.html#a6201596327a378c5317c1f6a8a9d5bc4" title="Current command.">_cmdPos</a> = 0;
-<a name="l00116"></a>00116     <a class="code" href="class_cmd_processor.html#a18b0886303779762a37096d6446aefa6" title="Current position during serial read.">_validCmd</a> = <span class="keyword">false</span>;
-<a name="l00117"></a>00117     <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a> = 0;
-<a name="l00118"></a>00118 }
-<a name="l00119"></a>00119 
-<a name="l00121"></a><a class="code" href="class_cmd_processor.html#ad50f4ad388976a233cbb28877f87ed7e">00121</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_cmd_processor.html#ad50f4ad388976a233cbb28877f87ed7e" title="Return the command string.">CmdProcessor::getCmd</a>()
-<a name="l00122"></a>00122 {
-<a name="l00123"></a>00123     <span class="keywordflow">return</span> <a class="code" href="class_cmd_processor.html#a2017c885b275984549385ba246ec37f5" title="List of command tokens.">_pCmd</a>;
-<a name="l00124"></a>00124 }
-<a name="l00125"></a>00125 
-<a name="l00127"></a><a class="code" href="class_cmd_processor.html#acdf54848c152fe7d2f43b51b1e2e366d">00127</a> uint8_t <a class="code" href="class_cmd_processor.html#acdf54848c152fe7d2f43b51b1e2e366d" title="Return the number of parameters parsed from the current command.">CmdProcessor::paramCnt</a>()
-<a name="l00128"></a>00128 {
-<a name="l00129"></a>00129     <span class="keywordflow">return</span> <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>;
-<a name="l00130"></a>00130 }
-<a name="l00131"></a>00131 
-<a name="l00132"></a>00132 
-<a name="l00142"></a>00142 
-<a name="l00144"></a><a class="code" href="class_cmd_processor.html#a6ecb6c34b183926aeb224b660eb03b73">00144</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,uint16_t &amp;p)
-<a name="l00145"></a>00145 {
-<a name="l00146"></a>00146     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
-<a name="l00147"></a>00147         p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
-<a name="l00148"></a>00148     }
-<a name="l00149"></a>00149 }
-<a name="l00150"></a>00150 
-<a name="l00152"></a><a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de">00152</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,uint8_t &amp;p)
-<a name="l00153"></a>00153 {
-<a name="l00154"></a>00154     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
-<a name="l00155"></a>00155         p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
-<a name="l00156"></a>00156     }
-<a name="l00157"></a>00157 }
-<a name="l00158"></a>00158 
-<a name="l00159"></a><a class="code" href="class_cmd_processor.html#a8cac703be39a93f638732e67b361fea0">00159</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,<span class="keywordtype">int</span> &amp;p)
-<a name="l00160"></a>00160 {
-<a name="l00161"></a>00161     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
-<a name="l00162"></a>00162         p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
-<a name="l00163"></a>00163     }
-<a name="l00164"></a>00164 }
-<a name="l00165"></a>00165 
-<a name="l00167"></a><a class="code" href="class_cmd_processor.html#aa0a295be3ce1557d86c5cc98394c3da1">00167</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,<span class="keywordtype">double</span> &amp;p)
-<a name="l00168"></a>00168 {
-<a name="l00169"></a>00169     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
-<a name="l00170"></a>00170         uint8_t nScans;
-<a name="l00171"></a>00171         nScans = sscanf(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx],<span class="stringliteral">&quot;%lf&quot;</span>, &amp;p);
-<a name="l00172"></a>00172         <span class="comment">//p = atof(_pTokens[idx]);</span>
-<a name="l00173"></a>00173     }
-<a name="l00174"></a>00174 }
-<a name="l00175"></a>00175 
-<a name="l00177"></a><a class="code" href="class_cmd_processor.html#a3d0f2ffbbf0400d21c957da7c92109d5">00177</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,<span class="keywordtype">char</span>*&amp; p, uint8_t maxlen)
-<a name="l00178"></a>00178 {
-<a name="l00179"></a>00179     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
-<a name="l00180"></a>00180         strncpy(p,<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx],maxlen);
-<a name="l00181"></a>00181     }
-<a name="l00182"></a>00182 }
-<a name="l00183"></a>00183 
+<a name="l00078"></a>00078             } <span class="keywordflow">else</span> {
+<a name="l00079"></a>00079                 <a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a>-&gt;<a class="code" href="class_print.html#aa7b0a6dc63e3d27effd8459e3d443b83">print</a>(<span class="stringliteral">&quot;Ok\n&quot;</span>);
+<a name="l00080"></a>00080             }
+<a name="l00081"></a>00081         } <span class="keywordflow">else</span> {
+<a name="l00082"></a>00082             <a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>[<a class="code" href="class_cmd_processor.html#a6201596327a378c5317c1f6a8a9d5bc4" title="Current command.">_cmdPos</a>++] = c;
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084     }
+<a name="l00085"></a>00085     <span class="keywordflow">return</span> 0;
+<a name="l00086"></a>00086 }
+<a name="l00087"></a>00087 
+<a name="l00092"></a><a class="code" href="class_cmd_processor.html#a56ce7cebb2a72262ba0d1ba0937739d5">00092</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a56ce7cebb2a72262ba0d1ba0937739d5">CmdProcessor::processCmd</a>()
+<a name="l00093"></a>00093 {
+<a name="l00094"></a>00094     <span class="comment">// See if the command delimiter exists in the</span>
+<a name="l00095"></a>00095     <span class="comment">// command. if it does not, then the command</span>
+<a name="l00096"></a>00096     <span class="comment">// is the entire string.</span>
+<a name="l00097"></a>00097     <span class="keywordflow">if</span> (strpbrk(<a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>)) {
+<a name="l00098"></a>00098         <a class="code" href="class_cmd_processor.html#a2017c885b275984549385ba246ec37f5" title="List of command tokens.">_pCmd</a> = strtok(<a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>);
+<a name="l00099"></a>00099         <span class="keywordtype">char</span>* pTok = strtok(0,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>);
+<a name="l00100"></a>00100         <span class="keywordtype">int</span> i = 0;
+<a name="l00101"></a>00101         <span class="keywordflow">while</span> (i &lt; 10 &amp;&amp; pTok) {
+<a name="l00102"></a>00102             <a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[i++] = pTok;
+<a name="l00103"></a>00103             pTok = strtok(0,<a class="code" href="class_cmd_processor.html#a0f926649b612897af1cbee71d6a1a90a" title="Store command terminator.">_pCmdDelim</a>);
+<a name="l00104"></a>00104         }
+<a name="l00105"></a>00105         <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a> = i;
+<a name="l00106"></a>00106         <a class="code" href="class_cmd_processor.html#a18b0886303779762a37096d6446aefa6" title="Current position during serial read.">_validCmd</a> = <span class="keyword">true</span>;
+<a name="l00107"></a>00107     } <span class="keywordflow">else</span> {
+<a name="l00108"></a>00108         <a class="code" href="class_cmd_processor.html#a2017c885b275984549385ba246ec37f5" title="List of command tokens.">_pCmd</a> = <a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>;
+<a name="l00109"></a>00109         <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a> = 0;
+<a name="l00110"></a>00110         <a class="code" href="class_cmd_processor.html#a18b0886303779762a37096d6446aefa6" title="Current position during serial read.">_validCmd</a> = <span class="keyword">true</span>;
+<a name="l00111"></a>00111     }
+<a name="l00112"></a>00112 }
+<a name="l00113"></a>00113 
+<a name="l00115"></a><a class="code" href="class_cmd_processor.html#ab6265f95bc945842d519de1aaf5874c9">00115</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#ab6265f95bc945842d519de1aaf5874c9" title="Clear the command status values so a new command can be started.">CmdProcessor::resetCmd</a>()
+<a name="l00116"></a>00116 {
+<a name="l00117"></a>00117     <a class="code" href="class_cmd_processor.html#a6201596327a378c5317c1f6a8a9d5bc4" title="Current command.">_cmdPos</a> = 0;
+<a name="l00118"></a>00118     <a class="code" href="class_cmd_processor.html#a18b0886303779762a37096d6446aefa6" title="Current position during serial read.">_validCmd</a> = <span class="keyword">false</span>;
+<a name="l00119"></a>00119     <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a> = 0;
+<a name="l00120"></a>00120 }
+<a name="l00121"></a>00121 
+<a name="l00123"></a><a class="code" href="class_cmd_processor.html#ad50f4ad388976a233cbb28877f87ed7e">00123</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_cmd_processor.html#ad50f4ad388976a233cbb28877f87ed7e" title="Return the command string.">CmdProcessor::getCmd</a>()
+<a name="l00124"></a>00124 {
+<a name="l00125"></a>00125     <span class="keywordflow">return</span> <a class="code" href="class_cmd_processor.html#a2017c885b275984549385ba246ec37f5" title="List of command tokens.">_pCmd</a>;
+<a name="l00126"></a>00126 }
+<a name="l00127"></a>00127 
+<a name="l00129"></a><a class="code" href="class_cmd_processor.html#acdf54848c152fe7d2f43b51b1e2e366d">00129</a> uint8_t <a class="code" href="class_cmd_processor.html#acdf54848c152fe7d2f43b51b1e2e366d" title="Return the number of parameters parsed from the current command.">CmdProcessor::paramCnt</a>()
+<a name="l00130"></a>00130 {
+<a name="l00131"></a>00131     <span class="keywordflow">return</span> <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>;
+<a name="l00132"></a>00132 }
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 
+<a name="l00144"></a>00144 
+<a name="l00146"></a><a class="code" href="class_cmd_processor.html#a6ecb6c34b183926aeb224b660eb03b73">00146</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,uint16_t &amp;p)
+<a name="l00147"></a>00147 {
+<a name="l00148"></a>00148     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+<a name="l00149"></a>00149         p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
+<a name="l00150"></a>00150     }
+<a name="l00151"></a>00151 }
+<a name="l00152"></a>00152 
+<a name="l00154"></a><a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de">00154</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,uint8_t &amp;p)
+<a name="l00155"></a>00155 {
+<a name="l00156"></a>00156     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+<a name="l00157"></a>00157         p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
+<a name="l00158"></a>00158     }
+<a name="l00159"></a>00159 }
+<a name="l00160"></a>00160 
+<a name="l00161"></a><a class="code" href="class_cmd_processor.html#a8cac703be39a93f638732e67b361fea0">00161</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,<span class="keywordtype">int</span> &amp;p)
+<a name="l00162"></a>00162 {
+<a name="l00163"></a>00163     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+<a name="l00164"></a>00164         p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
+<a name="l00165"></a>00165     }
+<a name="l00166"></a>00166 }
+<a name="l00167"></a>00167 
+<a name="l00168"></a><a class="code" href="class_cmd_processor.html#abb99f82aa0e9c1c7023c334745e5b92d">00168</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,<span class="keywordtype">long</span> &amp;l)
+<a name="l00169"></a>00169 {
+<a name="l00170"></a>00170     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+<a name="l00171"></a>00171         l = atol(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
+<a name="l00172"></a>00172     }
+<a name="l00173"></a>00173 }
+<a name="l00174"></a>00174 
+<a name="l00176"></a><a class="code" href="class_cmd_processor.html#aa0a295be3ce1557d86c5cc98394c3da1">00176</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,<span class="keywordtype">double</span> &amp;p)
+<a name="l00177"></a>00177 {
+<a name="l00178"></a>00178     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+<a name="l00179"></a>00179         uint8_t nScans;
+<a name="l00180"></a>00180         nScans = sscanf(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx],<span class="stringliteral">&quot;%lf&quot;</span>, &amp;p);
+<a name="l00181"></a>00181         <span class="comment">//p = atof(_pTokens[idx]);</span>
+<a name="l00182"></a>00182     }
+<a name="l00183"></a>00183 }
+<a name="l00184"></a>00184 
+<a name="l00186"></a><a class="code" href="class_cmd_processor.html#a3d0f2ffbbf0400d21c957da7c92109d5">00186</a> <span class="keywordtype">void</span> <a class="code" href="class_cmd_processor.html#a904eb6afbd77b68ec05d9c9043d4e0de" title="Parse the index parameter into a unsigned 8 bit integer.">CmdProcessor::getParam</a>(uint8_t idx,<span class="keywordtype">char</span>*&amp; p, uint8_t maxlen)
+<a name="l00187"></a>00187 {
+<a name="l00188"></a>00188     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+<a name="l00189"></a>00189         strncpy(p,<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx],maxlen);
+<a name="l00190"></a>00190     }
+<a name="l00191"></a>00191 }
+<a name="l00192"></a>00192 
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">

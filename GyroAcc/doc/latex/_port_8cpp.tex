@@ -27,8 +27,6 @@
 \item 
 \hyperlink{_port_8cpp_a6857b09dab42360940128d667044f2cf}{PORT\_\-ISR\_\-DEF} (PORTF)
 \item 
-\hyperlink{_port_8cpp_a1b9a4b8cbc68480765347a71799fa781}{PORT\_\-ISR\_\-DEF} (PORTH)
-\item 
 static void \hyperlink{_port_8cpp_afaf5d589e6cb241cd3822efd8c9cbb05}{SetPointer} (PORT\_\-t $\ast$port, \hyperlink{class_port}{Port} $\ast$p)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
@@ -83,15 +81,6 @@ Definition at line 14 of file Port.cpp.
 \end{DoxyParamCaption}
 )}}
 \label{_port_8cpp_a3ebe560bb79787860a2c6294c1dfd4ff}
-\hypertarget{_port_8cpp_a1b9a4b8cbc68480765347a71799fa781}{
-\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
-\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
-\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
-\begin{DoxyParamCaption}
-\item[{PORTH}]{}
-\end{DoxyParamCaption}
-)}}
-\label{_port_8cpp_a1b9a4b8cbc68480765347a71799fa781}
 \hypertarget{_port_8cpp_a6857b09dab42360940128d667044f2cf}{
 \index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
 \index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
@@ -140,7 +129,7 @@ Definition at line 14 of file Port.cpp.
 \label{_port_8cpp_afaf5d589e6cb241cd3822efd8c9cbb05}
 
 
-Definition at line 31 of file Port.cpp.
+Definition at line 33 of file Port.cpp.
 
 
 
@@ -164,8 +153,10 @@ Referenced by Port::Port(), and Port::$\sim$Port().
         PORTEcp = p;
     } else if (port ==  &PORTF) {
         PORTFcp = p;
+#if defined (__AVR_ATxmega128A1__)
     } else if (port ==  &PORTH) {
         PORTHcp = p;
+#endif
     }
 }
 \end{DoxyCode}

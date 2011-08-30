@@ -111,6 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer_cntr.html#ae0b24888d24c907aad75ed985431f1a4">Counter</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer_cntr.html#a3f1c57b8f31a717b5de335cd56408029">Period</a> (uint16_t newPer)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer_cntr.html#a0b50451ff7454d77aff54ca3274c7b7c">Period</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer_cntr.html#a00b8456f413fc621b667bc0d2f825623">SetRate</a> (uint32_t rateHz)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer_cntr.html#aa4cead09b55956ef48dd19fcf7a2dea0">CCReg</a> (uint8_t idx, uint16_t newVal)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer_cntr.html#a8cedc6015da8a1082273071d2eb7c68b">CCReg</a> (uint8_t idx)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
@@ -139,9 +140,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00089">89</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00116">116</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
-<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>, <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00080">SetPointer()</a>.</p>
+<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>, <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00061">SetPointer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a> = pTC;
     <a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a> = <span class="keyword">false</span>;
@@ -167,9 +168,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00098">98</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00125">125</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
-<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>, <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00080">SetPointer()</a>.</p>
+<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>, <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00061">SetPointer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a> = (TC0_t*)pTC;
     <a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a> = <span class="keyword">true</span>;
@@ -194,9 +195,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00107">107</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00134">134</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
-<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00080">SetPointer()</a>.</p>
+<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00061">SetPointer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a>) {
         <a class="code" href="_hardware_serial_8cpp.html#aaec4e4f887a958cc22dd447565d7080b">SetPointer</a>((TC1_t*)<a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>,0);
@@ -224,46 +225,13 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Set the state of the 4 CCxEN bits in CTRLB. The 4 lower bits of mask will enable D, C, B or A if set to 1 </p>
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00123">123</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00150">150</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00685">IMU::SetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CTRLB = ((<a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CTRLB &amp; 0x0F) | (mask &lt;&lt; 4));
-}
-</pre></div>
-</div>
-</div>
-<a class="anchor" id="a8cedc6015da8a1082273071d2eb7c68b"></a><!-- doxytag: member="TimerCntr::CCReg" ref="a8cedc6015da8a1082273071d2eb7c68b" args="(uint8_t idx)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t TimerCntr::CCReg </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>idx</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00186">186</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
-
-<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, and <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
-<div class="fragment"><pre class="fragment">{
-    <span class="keywordflow">if</span> (idx == 0) {
-        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCA;
-    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (idx == 1) {
-        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCB;
-    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a> &amp;&amp; idx == 2) {
-        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCC;
-    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a> &amp;&amp; idx == 3) {
-        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCD;
-    }
-    <span class="keywordflow">return</span> 0;
 }
 </pre></div>
 </div>
@@ -293,7 +261,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00173">173</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00200">200</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, and <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -306,6 +274,39 @@ Private Attributes</h2></td></tr>
     } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a> &amp;&amp; idx == 3) {
         <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCD = newVal;
     }
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a8cedc6015da8a1082273071d2eb7c68b"></a><!-- doxytag: member="TimerCntr::CCReg" ref="a8cedc6015da8a1082273071d2eb7c68b" args="(uint8_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t TimerCntr::CCReg </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00213">213</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+
+<p>References <a class="el" href="_timer_cntr_8h_source.html#l00019">_bTC1</a>, and <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (idx == 0) {
+        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCA;
+    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (idx == 1) {
+        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCB;
+    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a> &amp;&amp; idx == 2) {
+        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCC;
+    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="class_timer_cntr.html#a568c634a1b85c88206408c5108500c7b">_bTC1</a> &amp;&amp; idx == 3) {
+        <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CCD;
+    }
+    <span class="keywordflow">return</span> 0;
 }
 </pre></div>
 </div>
@@ -325,7 +326,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00218">218</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00245">245</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>, and <a class="el" href="class_timer_notify.html#a2525b96a5e3ed4c4a039b296701f2b7e">TimerNotify::ccx()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -352,11 +353,11 @@ Private Attributes</h2></td></tr>
 
 <p>Set the clock source for this timer in CTRLA. </p>
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00117">117</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00144">144</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00685">IMU::SetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CTRLA = clksel; 
 }
@@ -378,11 +379,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00151">151</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00178">178</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00597">IMU::ResetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00702">IMU::ResetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CNT = newVal;
 }
@@ -403,7 +404,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00156">156</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00183">183</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -426,7 +427,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00206">206</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00233">233</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>, and <a class="el" href="class_timer_notify.html#a1b1d07d14c480883b6cda4d28b281978">TimerNotify::err()</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -461,11 +462,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00135">135</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00162">162</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00685">IMU::SetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CTRLD = act | src;
 }
@@ -497,11 +498,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00141">141</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00168">168</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00685">IMU::SetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;INTCTRLA = (errlvl &amp; 0x3) &lt;&lt; 2 | (ovflvl &amp; 0x3);
 }
@@ -523,11 +524,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00146">146</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00173">173</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00685">IMU::SetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;INTCTRLB = val;
 }
@@ -559,11 +560,11 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00200">200</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00227">227</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, and <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00685">IMU::SetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ab0667571f2dab6ca9f759d9b2c8ce59f">_pNotifyClient</a> = pClient;
     <a class="code" href="class_timer_cntr.html#a98b954b9492a11842e511fa21d0131cc">_pNotifyClientID</a> = id;
@@ -585,35 +586,12 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00212">212</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00239">239</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00020">_pNotifyClient</a>, <a class="el" href="_timer_cntr_8h_source.html#l00021">_pNotifyClientID</a>, and <a class="el" href="class_timer_notify.html#a12081e2ac25688544b6f0c3de4bd412d">TimerNotify::ovf()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="class_timer_cntr.html#ab0667571f2dab6ca9f759d9b2c8ce59f">_pNotifyClient</a>) 
         <a class="code" href="class_timer_cntr.html#ab0667571f2dab6ca9f759d9b2c8ce59f">_pNotifyClient</a>-&gt;<a class="code" href="class_timer_notify.html#a12081e2ac25688544b6f0c3de4bd412d">ovf</a>(<a class="code" href="class_timer_cntr.html#a98b954b9492a11842e511fa21d0131cc">_pNotifyClientID</a>);
-}
-</pre></div>
-</div>
-</div>
-<a class="anchor" id="a0b50451ff7454d77aff54ca3274c7b7c"></a><!-- doxytag: member="TimerCntr::Period" ref="a0b50451ff7454d77aff54ca3274c7b7c" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t TimerCntr::Period </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00167">167</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
-
-<p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
-<div class="fragment"><pre class="fragment">{
-    <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;PER;
 }
 </pre></div>
 </div>
@@ -633,13 +611,58 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00162">162</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00189">189</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00602">IMU::SetTimerPeriod()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00707">IMU::SetTimerPeriod()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;PER = newVal;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a0b50451ff7454d77aff54ca3274c7b7c"></a><!-- doxytag: member="TimerCntr::Period" ref="a0b50451ff7454d77aff54ca3274c7b7c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t TimerCntr::Period </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00194">194</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+
+<p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;PER;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a00b8456f413fc621b667bc0d2f825623"></a><!-- doxytag: member="TimerCntr::SetRate" ref="a00b8456f413fc621b667bc0d2f825623" args="(uint32_t rateHz)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TimerCntr::SetRate </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>rateHz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00251">251</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<div class="fragment"><pre class="fragment">                                      {
+    <span class="comment">//add an auto prescaler using 32 bit array</span>
 }
 </pre></div>
 </div>
@@ -660,11 +683,11 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Set the Waveform generator mode. Normal disables waveform generation. </p>
 
-<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00129">129</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_timer_cntr_8cpp_source.html#l00156">156</a> of file <a class="el" href="_timer_cntr_8cpp_source.html">TimerCntr.cpp</a>.</p>
 
 <p>References <a class="el" href="_timer_cntr_8h_source.html#l00018">_pTC</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00580">IMU::SetTimer()</a>.</p>
+<p>Referenced by <a class="el" href="_i_m_u_8cpp_source.html#l00685">IMU::SetTimer()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CTRLB = ((<a class="code" href="class_timer_cntr.html#ae29c58d2e9059e5b3cff07a26dcc5b91">_pTC</a>-&gt;CTRLB &amp; 0xF0) | wgmode);
 }
@@ -685,7 +708,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_timer_cntr_8h_source.html#l00019">19</a> of file <a class="el" href="_timer_cntr_8h_source.html">TimerCntr.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00173">CCReg()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00089">TimerCntr()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00107">~TimerCntr()</a>.</p>
+<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00200">CCReg()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00116">TimerCntr()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00134">~TimerCntr()</a>.</p>
 
 </div>
 </div>
@@ -702,7 +725,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_timer_cntr_8h_source.html#l00020">20</a> of file <a class="el" href="_timer_cntr_8h_source.html">TimerCntr.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00218">ccx()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00206">err()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00200">Notify()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00212">ovf()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00089">TimerCntr()</a>.</p>
+<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00245">ccx()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00233">err()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00227">Notify()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00239">ovf()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00116">TimerCntr()</a>.</p>
 
 </div>
 </div>
@@ -719,7 +742,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_timer_cntr_8h_source.html#l00021">21</a> of file <a class="el" href="_timer_cntr_8h_source.html">TimerCntr.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00218">ccx()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00206">err()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00200">Notify()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00212">ovf()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00089">TimerCntr()</a>.</p>
+<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00245">ccx()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00233">err()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00227">Notify()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00239">ovf()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00116">TimerCntr()</a>.</p>
 
 </div>
 </div>
@@ -736,7 +759,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_timer_cntr_8h_source.html#l00018">18</a> of file <a class="el" href="_timer_cntr_8h_source.html">TimerCntr.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00123">CCEnable()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00173">CCReg()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00117">ClkSel()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00151">Counter()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00135">EventSetup()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00141">IntLvlA()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00146">IntLvlB()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00162">Period()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00089">TimerCntr()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00129">WaveformGenMode()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00107">~TimerCntr()</a>.</p>
+<p>Referenced by <a class="el" href="_timer_cntr_8cpp_source.html#l00150">CCEnable()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00200">CCReg()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00144">ClkSel()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00178">Counter()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00162">EventSetup()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00168">IntLvlA()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00173">IntLvlB()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00189">Period()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00116">TimerCntr()</a>, <a class="el" href="_timer_cntr_8cpp_source.html#l00156">WaveformGenMode()</a>, and <a class="el" href="_timer_cntr_8cpp_source.html#l00134">~TimerCntr()</a>.</p>
 
 </div>
 </div>

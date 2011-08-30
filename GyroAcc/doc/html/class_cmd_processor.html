@@ -118,6 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the index parameter into a unsigned 8 bit integer.  <a href="#a904eb6afbd77b68ec05d9c9043d4e0de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cmd_processor.html#a6ecb6c34b183926aeb224b660eb03b73">getParam</a> (uint8_t idx, uint16_t &amp;p)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the index parameter into a unsigned 16 bit integer.  <a href="#a6ecb6c34b183926aeb224b660eb03b73"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cmd_processor.html#abb99f82aa0e9c1c7023c334745e5b92d">getParam</a> (uint8_t idx, long &amp;l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the index parameter into a unsigned 8 bit integer.  <a href="#abb99f82aa0e9c1c7023c334745e5b92d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cmd_processor.html#a8cac703be39a93f638732e67b361fea0">getParam</a> (uint8_t idx, int &amp;p)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the index parameter into a unsigned 8 bit integer.  <a href="#a8cac703be39a93f638732e67b361fea0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cmd_processor.html#aa0a295be3ce1557d86c5cc98394c3da1">getParam</a> (uint8_t idx, double &amp;f)</td></tr>
@@ -167,11 +169,11 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Number of valid parameters. </p>
-<p>Construct a new <a class="el" href="class_cmd_processor.html">CmdProcessor</a>. Pass in reference to the <a class="el" href="class_hardware_serial.html">HardwareSerial</a> class to use for command processing. Store the serial pointer and then initialize the internal data strings used during command input processing and output processing. </p>
+<p>Construct a new <a class="el" href="class_cmd_processor.html">CmdProcessor</a>. Pass in reference to the <a class="el" href="class_hardware_serial.html" title="HardwareSerial implementation.">HardwareSerial</a> class to use for command processing. Store the serial pointer and then initialize the internal data strings used during command input processing and output processing. </p>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00011">11</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
-<p>References <a class="el" href="_cmd_processor_8h_source.html#l00012">_pCmd</a>, <a class="el" href="_cmd_processor_8h_source.html#l00017">_pCmdDelim</a>, <a class="el" href="_cmd_processor_8h_source.html#l00013">_pCmdString</a>, <a class="el" href="_cmd_processor_8h_source.html#l00016">_pCmdTerm</a>, <a class="el" href="_cmd_processor_8h_source.html#l00010">_pHW</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00113">resetCmd()</a>.</p>
+<p>References <a class="el" href="_cmd_processor_8h_source.html#l00012">_pCmd</a>, <a class="el" href="_cmd_processor_8h_source.html#l00017">_pCmdDelim</a>, <a class="el" href="_cmd_processor_8h_source.html#l00013">_pCmdString</a>, <a class="el" href="_cmd_processor_8h_source.html#l00016">_pCmdTerm</a>, <a class="el" href="_cmd_processor_8h_source.html#l00010">_pHW</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00115">resetCmd()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a> = pHW;
     
@@ -204,7 +206,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00025">25</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
-<p>References <a class="el" href="_cmd_processor_8h_source.html#l00017">_pCmdDelim</a>, <a class="el" href="_cmd_processor_8h_source.html#l00013">_pCmdString</a>, <a class="el" href="_cmd_processor_8h_source.html#l00016">_pCmdTerm</a>, <a class="el" href="_cmd_processor_8h_source.html#l00010">_pHW</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00218">HardwareSerial::end()</a>.</p>
+<p>References <a class="el" href="_cmd_processor_8h_source.html#l00017">_pCmdDelim</a>, <a class="el" href="_cmd_processor_8h_source.html#l00013">_pCmdString</a>, <a class="el" href="_cmd_processor_8h_source.html#l00016">_pCmdTerm</a>, <a class="el" href="_cmd_processor_8h_source.html#l00010">_pHW</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00203">HardwareSerial::end()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a>) {
         <a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a>-&gt;<a class="code" href="class_hardware_serial.html#a0f86c41f580e04bdf30ea00e9014eacd">end</a>();
@@ -234,7 +236,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00068">68</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
-<p>References <a class="el" href="_cmd_processor_8h_source.html#l00014">_cmdPos</a>, <a class="el" href="_cmd_processor_8h_source.html#l00013">_pCmdString</a>, <a class="el" href="_cmd_processor_8h_source.html#l00016">_pCmdTerm</a>, <a class="el" href="_cmd_processor_8h_source.html#l00010">_pHW</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00228">HardwareSerial::available()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00090">processCmd()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00233">HardwareSerial::read()</a>.</p>
+<p>References <a class="el" href="_cmd_processor_8h_source.html#l00014">_cmdPos</a>, <a class="el" href="_cmd_processor_8h_source.html#l00013">_pCmdString</a>, <a class="el" href="_cmd_processor_8h_source.html#l00016">_pCmdTerm</a>, <a class="el" href="_cmd_processor_8h_source.html#l00010">_pHW</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00213">HardwareSerial::available()</a>, <a class="el" href="_print_8cpp_source.html#l00045">Print::print()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00092">processCmd()</a>, and <a class="el" href="_hardware_serial_8cpp_source.html#l00218">HardwareSerial::read()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">while</span> (<a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a>-&gt;<a class="code" href="class_hardware_serial.html#a10e05fa62dc473d0d8a7ee8184f504ba">available</a>() &gt; 0) {
         <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c = <a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a>-&gt;<a class="code" href="class_hardware_serial.html#a618696608a5fddcf3cb48ad6f044e756">read</a>();
@@ -244,6 +246,8 @@ Protected Attributes</h2></td></tr>
                 <a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>[<a class="code" href="class_cmd_processor.html#a6201596327a378c5317c1f6a8a9d5bc4" title="Current command.">_cmdPos</a>] = 0; <span class="comment">// Null terminate command</span>
                 <a class="code" href="class_cmd_processor.html#a56ce7cebb2a72262ba0d1ba0937739d5">processCmd</a>();
                 <span class="keywordflow">return</span> 1;
+            } <span class="keywordflow">else</span> {
+                <a class="code" href="class_cmd_processor.html#a8df6f12b27223c1f1876ea7221cd2413">_pHW</a>-&gt;<a class="code" href="class_print.html#aa7b0a6dc63e3d27effd8459e3d443b83">print</a>(<span class="stringliteral">&quot;Ok\n&quot;</span>);
             }
         } <span class="keywordflow">else</span> {
             <a class="code" href="class_cmd_processor.html#acc77d1f9a20e535e1073950001c0cc36" title="Command buffer.">_pCmdString</a>[<a class="code" href="class_cmd_processor.html#a6201596327a378c5317c1f6a8a9d5bc4" title="Current command.">_cmdPos</a>++] = c;
@@ -372,7 +376,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Return the command string. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00121">121</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00123">123</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00012">_pCmd</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -408,7 +412,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Parse the index parameter into a double. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00167">167</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00176">176</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -448,45 +452,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Parse the index parameter into a unsigned 8 bit integer. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00152">152</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
-
-<p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>.</p>
-<div class="fragment"><pre class="fragment">{
-    <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
-        p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
-    }
-}
-</pre></div>
-</div>
-</div>
-<a class="anchor" id="a8cac703be39a93f638732e67b361fea0"></a><!-- doxytag: member="CmdProcessor::getParam" ref="a8cac703be39a93f638732e67b361fea0" args="(uint8_t idx, int &amp;p)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CmdProcessor::getParam </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Parse the index parameter into a unsigned 8 bit integer. </p>
-
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00159">159</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00154">154</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -524,7 +490,45 @@ Protected Attributes</h2></td></tr>
 
 <p>Parse the index parameter into a unsigned 16 bit integer. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00144">144</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00146">146</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+
+<p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+        p = atoi(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
+    }
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a8cac703be39a93f638732e67b361fea0"></a><!-- doxytag: member="CmdProcessor::getParam" ref="a8cac703be39a93f638732e67b361fea0" args="(uint8_t idx, int &amp;p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CmdProcessor::getParam </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parse the index parameter into a unsigned 8 bit integer. </p>
+
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00161">161</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -568,12 +572,50 @@ Protected Attributes</h2></td></tr>
 
 <p>Parse the index parameter into a string with the length specified. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00177">177</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00186">186</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
         strncpy(p,<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx],maxlen);
+    }
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="abb99f82aa0e9c1c7023c334745e5b92d"></a><!-- doxytag: member="CmdProcessor::getParam" ref="abb99f82aa0e9c1c7023c334745e5b92d" args="(uint8_t idx, long &amp;l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CmdProcessor::getParam </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long &amp;&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parse the index parameter into a unsigned 8 bit integer. </p>
+
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00168">168</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+
+<p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (idx &lt; <a class="code" href="class_cmd_processor.html#aff0622d6e4fca6bf1352392936d6c5ea" title="Current command parameter delimiter.">_paramCnt</a>) {
+        l = atol(<a class="code" href="class_cmd_processor.html#a2b857367533cd33ba9a68746c71c5e3d" title="Store the serial object.">_pTokens</a>[idx]);
     }
 }
 </pre></div>
@@ -595,7 +637,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Return the number of parameters parsed from the current command. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00127">127</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00129">129</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>.</p>
 <div class="fragment"><pre class="fragment">{
@@ -619,7 +661,7 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Process the commands in the command buffer Split the command into parameters based on the command delimiter. The maximum number of command tokens is 10. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00090">90</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00092">92</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, <a class="el" href="_cmd_processor_8h_source.html#l00012">_pCmd</a>, <a class="el" href="_cmd_processor_8h_source.html#l00017">_pCmdDelim</a>, <a class="el" href="_cmd_processor_8h_source.html#l00013">_pCmdString</a>, <a class="el" href="_cmd_processor_8h_source.html#l00011">_pTokens</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00015">_validCmd</a>.</p>
 
@@ -663,7 +705,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Clear the command status values so a new command can be started. </p>
 
-<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00113">113</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_cmd_processor_8cpp_source.html#l00115">115</a> of file <a class="el" href="_cmd_processor_8cpp_source.html">CmdProcessor.cpp</a>.</p>
 
 <p>References <a class="el" href="_cmd_processor_8h_source.html#l00014">_cmdPos</a>, <a class="el" href="_cmd_processor_8h_source.html#l00018">_paramCnt</a>, and <a class="el" href="_cmd_processor_8h_source.html#l00015">_validCmd</a>.</p>
 
@@ -692,7 +734,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8h_source.html#l00014">14</a> of file <a class="el" href="_cmd_processor_8h_source.html">CmdProcessor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00068">checkCommands()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00113">resetCmd()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00068">checkCommands()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00115">resetCmd()</a>.</p>
 
 </div>
 </div>
@@ -711,7 +753,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8h_source.html#l00018">18</a> of file <a class="el" href="_cmd_processor_8h_source.html">CmdProcessor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00144">getParam()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00127">paramCnt()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00090">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00113">resetCmd()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00146">getParam()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00129">paramCnt()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00092">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00115">resetCmd()</a>.</p>
 
 </div>
 </div>
@@ -730,7 +772,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8h_source.html#l00012">12</a> of file <a class="el" href="_cmd_processor_8h_source.html">CmdProcessor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00011">CmdProcessor()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00121">getCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00090">processCmd()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00011">CmdProcessor()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00123">getCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00092">processCmd()</a>.</p>
 
 </div>
 </div>
@@ -749,7 +791,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8h_source.html#l00017">17</a> of file <a class="el" href="_cmd_processor_8h_source.html">CmdProcessor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00048">cmdDelim()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00011">CmdProcessor()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00090">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00025">~CmdProcessor()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00048">cmdDelim()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00011">CmdProcessor()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00092">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00025">~CmdProcessor()</a>.</p>
 
 </div>
 </div>
@@ -768,7 +810,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8h_source.html#l00013">13</a> of file <a class="el" href="_cmd_processor_8h_source.html">CmdProcessor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00068">checkCommands()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00011">CmdProcessor()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00090">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00025">~CmdProcessor()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00068">checkCommands()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00011">CmdProcessor()</a>, <a class="el" href="_cmd_processor_8cpp_source.html#l00092">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00025">~CmdProcessor()</a>.</p>
 
 </div>
 </div>
@@ -823,7 +865,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8h_source.html#l00011">11</a> of file <a class="el" href="_cmd_processor_8h_source.html">CmdProcessor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00144">getParam()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00090">processCmd()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00146">getParam()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00092">processCmd()</a>.</p>
 
 </div>
 </div>
@@ -842,7 +884,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_cmd_processor_8h_source.html#l00015">15</a> of file <a class="el" href="_cmd_processor_8h_source.html">CmdProcessor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00090">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00113">resetCmd()</a>.</p>
+<p>Referenced by <a class="el" href="_cmd_processor_8cpp_source.html#l00092">processCmd()</a>, and <a class="el" href="_cmd_processor_8cpp_source.html#l00115">resetCmd()</a>.</p>
 
 </div>
 </div>
