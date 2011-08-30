@@ -1,0 +1,57 @@
+\indexentry{AC\_\discretionary {-}{}{}struct@{AC\_\discretionary {-}{}{}struct}|hyperpage}{5}
+\indexentry{ADC\_\discretionary {-}{}{}CH\_\discretionary {-}{}{}struct@{ADC\_\discretionary {-}{}{}CH\_\discretionary {-}{}{}struct}|hyperpage}{5}
+\indexentry{ADC\_\discretionary {-}{}{}struct@{ADC\_\discretionary {-}{}{}struct}|hyperpage}{6}
+\indexentry{AES\_\discretionary {-}{}{}struct@{AES\_\discretionary {-}{}{}struct}|hyperpage}{7}
+\indexentry{AWEX\_\discretionary {-}{}{}struct@{AWEX\_\discretionary {-}{}{}struct}|hyperpage}{7}
+\indexentry{CFADac@{CFADac}|hyperpage}{7}
+\indexentry{CLK\_\discretionary {-}{}{}struct@{CLK\_\discretionary {-}{}{}struct}|hyperpage}{8}
+\indexentry{CmdProcessor@{CmdProcessor}|hyperpage}{8}
+\indexentry{DAC\_\discretionary {-}{}{}struct@{DAC\_\discretionary {-}{}{}struct}|hyperpage}{9}
+\indexentry{DFLL\_\discretionary {-}{}{}struct@{DFLL\_\discretionary {-}{}{}struct}|hyperpage}{9}
+\indexentry{DMA\_\discretionary {-}{}{}CH\_\discretionary {-}{}{}struct@{DMA\_\discretionary {-}{}{}CH\_\discretionary {-}{}{}struct}|hyperpage}{10}
+\indexentry{DMA\_\discretionary {-}{}{}struct@{DMA\_\discretionary {-}{}{}struct}|hyperpage}{10}
+\indexentry{EBI\_\discretionary {-}{}{}CS\_\discretionary {-}{}{}struct@{EBI\_\discretionary {-}{}{}CS\_\discretionary {-}{}{}struct}|hyperpage}{11}
+\indexentry{EBI\_\discretionary {-}{}{}struct@{EBI\_\discretionary {-}{}{}struct}|hyperpage}{11}
+\indexentry{EVSYS\_\discretionary {-}{}{}struct@{EVSYS\_\discretionary {-}{}{}struct}|hyperpage}{12}
+\indexentry{Fifo@{Fifo}|hyperpage}{13}
+\indexentry{HardwareSerial@{HardwareSerial}|hyperpage}{13}
+\indexentry{HIRES\_\discretionary {-}{}{}struct@{HIRES\_\discretionary {-}{}{}struct}|hyperpage}{14}
+\indexentry{I2C\_\discretionary {-}{}{}Master@{I2C\_\discretionary {-}{}{}Master}|hyperpage}{14}
+\indexentry{I2CNotify@{I2CNotify}|hyperpage}{15}
+\indexentry{I2CTransaction@{I2CTransaction}|hyperpage}{16}
+\indexentry{IMU@{IMU}|hyperpage}{16}
+\indexentry{IMUBase@{IMUBase}|hyperpage}{17}
+\indexentry{IMUDual@{IMUDual}|hyperpage}{18}
+\indexentry{IMUManager@{IMUManager}|hyperpage}{19}
+\indexentry{IRCOM\_\discretionary {-}{}{}struct@{IRCOM\_\discretionary {-}{}{}struct}|hyperpage}{20}
+\indexentry{MCU\_\discretionary {-}{}{}struct@{MCU\_\discretionary {-}{}{}struct}|hyperpage}{20}
+\indexentry{MyDriver@{MyDriver}|hyperpage}{20}
+\indexentry{NVM\_\discretionary {-}{}{}FUSES\_\discretionary {-}{}{}struct@{NVM\_\discretionary {-}{}{}FUSES\_\discretionary {-}{}{}struct}|hyperpage}{21}
+\indexentry{NVM\_\discretionary {-}{}{}LOCKBITS\_\discretionary {-}{}{}struct@{NVM\_\discretionary {-}{}{}LOCKBITS\_\discretionary {-}{}{}struct}|hyperpage}{21}
+\indexentry{NVM\_\discretionary {-}{}{}PROD\_\discretionary {-}{}{}SIGNATURES\_\discretionary {-}{}{}struct@{NVM\_\discretionary {-}{}{}PROD\_\discretionary {-}{}{}SIGNATURES\_\discretionary {-}{}{}struct}|hyperpage}{21}
+\indexentry{NVM\_\discretionary {-}{}{}struct@{NVM\_\discretionary {-}{}{}struct}|hyperpage}{23}
+\indexentry{OCD\_\discretionary {-}{}{}struct@{OCD\_\discretionary {-}{}{}struct}|hyperpage}{24}
+\indexentry{OSC\_\discretionary {-}{}{}struct@{OSC\_\discretionary {-}{}{}struct}|hyperpage}{24}
+\indexentry{PMIC\_\discretionary {-}{}{}struct@{PMIC\_\discretionary {-}{}{}struct}|hyperpage}{24}
+\indexentry{PORT\_\discretionary {-}{}{}struct@{PORT\_\discretionary {-}{}{}struct}|hyperpage}{24}
+\indexentry{PORTCFG\_\discretionary {-}{}{}struct@{PORTCFG\_\discretionary {-}{}{}struct}|hyperpage}{25}
+\indexentry{PR\_\discretionary {-}{}{}struct@{PR\_\discretionary {-}{}{}struct}|hyperpage}{26}
+\indexentry{Print@{Print}|hyperpage}{26}
+\indexentry{QuadDecoder@{QuadDecoder}|hyperpage}{27}
+\indexentry{ring\_\discretionary {-}{}{}buffer@{ring\_\discretionary {-}{}{}buffer}|hyperpage}{27}
+\indexentry{RST\_\discretionary {-}{}{}struct@{RST\_\discretionary {-}{}{}struct}|hyperpage}{28}
+\indexentry{RTC\_\discretionary {-}{}{}struct@{RTC\_\discretionary {-}{}{}struct}|hyperpage}{28}
+\indexentry{SLEEP\_\discretionary {-}{}{}struct@{SLEEP\_\discretionary {-}{}{}struct}|hyperpage}{28}
+\indexentry{SPI@{SPI}|hyperpage}{29}
+\indexentry{SPI\_\discretionary {-}{}{}hw@{SPI\_\discretionary {-}{}{}hw}|hyperpage}{29}
+\indexentry{SPI\_\discretionary {-}{}{}struct@{SPI\_\discretionary {-}{}{}struct}|hyperpage}{30}
+\indexentry{SPI\_\discretionary {-}{}{}sw@{SPI\_\discretionary {-}{}{}sw}|hyperpage}{30}
+\indexentry{TC0\_\discretionary {-}{}{}struct@{TC0\_\discretionary {-}{}{}struct}|hyperpage}{31}
+\indexentry{TC1\_\discretionary {-}{}{}struct@{TC1\_\discretionary {-}{}{}struct}|hyperpage}{32}
+\indexentry{tmElements\_\discretionary {-}{}{}t@{tmElements\_\discretionary {-}{}{}t}|hyperpage}{34}
+\indexentry{TWI\_\discretionary {-}{}{}MASTER\_\discretionary {-}{}{}struct@{TWI\_\discretionary {-}{}{}MASTER\_\discretionary {-}{}{}struct}|hyperpage}{34}
+\indexentry{TWI\_\discretionary {-}{}{}SLAVE\_\discretionary {-}{}{}struct@{TWI\_\discretionary {-}{}{}SLAVE\_\discretionary {-}{}{}struct}|hyperpage}{34}
+\indexentry{TWI\_\discretionary {-}{}{}struct@{TWI\_\discretionary {-}{}{}struct}|hyperpage}{35}
+\indexentry{USART\_\discretionary {-}{}{}struct@{USART\_\discretionary {-}{}{}struct}|hyperpage}{35}
+\indexentry{VPORT\_\discretionary {-}{}{}struct@{VPORT\_\discretionary {-}{}{}struct}|hyperpage}{36}
+\indexentry{WDT\_\discretionary {-}{}{}struct@{WDT\_\discretionary {-}{}{}struct}|hyperpage}{36}

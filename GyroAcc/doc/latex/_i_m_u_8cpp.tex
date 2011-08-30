@@ -1,0 +1,48 @@
+\hypertarget{_i_m_u_8cpp}{
+\section{IMU.cpp File Reference}
+\label{_i_m_u_8cpp}\index{IMU.cpp@{IMU.cpp}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$inttypes.h$>$}\par
+{\ttfamily \#include $<$util/delay.h$>$}\par
+{\ttfamily \#include $<$avr/io.h$>$}\par
+{\ttfamily \#include $<$avr/interrupt.h$>$}\par
+{\ttfamily \#include \char`\"{}HardwareSerial.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}IMUPacketFifo.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerCore.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}IMU.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Mark.h\char`\"{}}\par
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hardware_serial}{HardwareSerial} $\ast$ \hyperlink{_i_m_u_8cpp_a953e918236b1fd18b8f07bad1217ecbe}{pdbgserial}
+\item 
+static char \hyperlink{_i_m_u_8cpp_a38e7c3f1ce348a3ed20459d277245263}{buffer} \mbox{[}128\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_i_m_u_8cpp_a38e7c3f1ce348a3ed20459d277245263}{
+\index{IMU.cpp@{IMU.cpp}!buffer@{buffer}}
+\index{buffer@{buffer}!IMU.cpp@{IMU.cpp}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf buffer}\mbox{[}128\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_i_m_u_8cpp_a38e7c3f1ce348a3ed20459d277245263}
+
+
+Definition at line 16 of file IMU.cpp.
+
+
+
+Referenced by IMU::CheckIDs(), FifoTest(), main(), IMU::ReadWord(), and IMU::WrAsync().
+
+\hypertarget{_i_m_u_8cpp_a953e918236b1fd18b8f07bad1217ecbe}{
+\index{IMU.cpp@{IMU.cpp}!pdbgserial@{pdbgserial}}
+\index{pdbgserial@{pdbgserial}!IMU.cpp@{IMU.cpp}}
+\subsubsection[{pdbgserial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HardwareSerial}$\ast$ {\bf pdbgserial}}}
+\label{_i_m_u_8cpp_a953e918236b1fd18b8f07bad1217ecbe}
+
+
+Definition at line 31 of file GyroAcc.cpp.
+

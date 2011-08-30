@@ -1,0 +1,247 @@
+\hypertarget{_gyro_acc_8cpp}{
+\section{GyroAcc.cpp File Reference}
+\label{_gyro_acc_8cpp}\index{GyroAcc.cpp@{GyroAcc.cpp}}
+}
+{\ttfamily \#include $<$avr/io.h$>$}\par
+{\ttfamily \#include $<$avr/interrupt.h$>$}\par
+{\ttfamily \#include $<$util/delay.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}NewDel.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}clksystem.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}time.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}HardwareSerial.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}GyroCmdProcessor.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}I2C\_\-Master.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}IMU.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}IMUManager.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerCntr.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Port.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}MyDriver.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Revision.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_gyro_acc_8cpp_a896a4c37c6ecf8868ef0dc758e5a598c}{timer\_\-init} ()
+\begin{DoxyCompactList}\small\item\em Declared in TimerCore.cpp. \item\end{DoxyCompactList}\item 
+void \hyperlink{_gyro_acc_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init} ()
+\item 
+void \hyperlink{_gyro_acc_8cpp_a04545dccf7a169ce181b81c5376c9ec7}{processCmd} (\hyperlink{class_cmd_processor}{CmdProcessor} \&cmdproc)
+\item 
+int \hyperlink{_gyro_acc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hardware_serial}{HardwareSerial} $\ast$ \hyperlink{_gyro_acc_8cpp_a953e918236b1fd18b8f07bad1217ecbe}{pdbgserial} = 0
+\item 
+DebugPort $\ast$ \hyperlink{_gyro_acc_8cpp_ab6b6625a30d84db3519866cb8c32dd39}{pdbgport} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_gyro_acc_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{
+\index{GyroAcc.cpp@{GyroAcc.cpp}!init@{init}}
+\index{init@{init}!GyroAcc.cpp@{GyroAcc.cpp}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{_gyro_acc_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}
+
+
+Definition at line 23 of file GyroAcc.cpp.
+
+
+
+References clksystem\_\-init(), and timer\_\-init().
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+            {
+
+    clksystem_init();
+    timer_init();
+}
+\end{DoxyCode}
+\hypertarget{_gyro_acc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{
+\index{GyroAcc.cpp@{GyroAcc.cpp}!main@{main}}
+\index{main@{main}!GyroAcc.cpp@{GyroAcc.cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{_gyro_acc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Create timers for each of the \hyperlink{class_i_m_u}{IMU} Masters. I use the TCx1 timers which are less capable, but it hardly matters as these are just setting a timer callback.
+
+Sort of need to set this once to initizlize it.
+
+This bit just toggles the light 
+
+
+
+Definition at line 34 of file GyroAcc.cpp.
+
+
+
+References HardwareSerial::begin(), buffer, HardwareSerial::enable(), init(), pdbgport, Print::print(), IMU::SetDebugPort(), IMU::SetDebugPort2(), and IMU::SetTimer().
+
+
+\begin{DoxyCode}
+{
+    char    buffer[100];
+    init();
+
+    DebugPort dbgPort2(&PORTF);
+    dbgPort2.PinMask(0xF0,5);
+    dbgPort2.SetState(0);
+    
+    HardwareSerial dbgserial(&USARTE1, &PORTE, PIN6_bm, PIN7_bm);
+    dbgserial.begin(115200);
+    pdbgserial = &dbgserial;
+    dbgserial.enable(false);
+
+    // Instantiate a commad processor.
+    // Specify the USART, PORT, rxPin and txPin and the baud rate.
+    HardwareSerial cmdSerial(&USARTD0, &PORTD, PIN2_bm, PIN3_bm);
+    cmdSerial.begin(115200);
+    //cmdSerial.begin(489795);
+    
+    CCP = CCP_IOREG_gc;
+    MCU.MCUCR = MCU_JTAGD_bm;
+    DebugPort dbgPort(&PORTB);
+    dbgPort.PinMask(0xF0,4);
+    dbgPort.SetState(0xf);
+    dbgPort.SetState(0);
+    pdbgport = &dbgPort;
+
+
+    I2C_Master  *pMaster[4];
+    I2C_Master hand(&TWIC);
+    I2C_Master single(&TWID);
+    I2C_Master pair1(&TWIE);
+    I2C_Master pair2(&TWIF);
+
+    pMaster[0] = &hand;
+    pMaster[1] = &single; // Pinkie
+    pMaster[2] = &pair1;  // Ring + Middle
+    pMaster[3] = &pair2;  // Index + Thumb
+    
+    for (int x=0;x<4;x++) {
+        if (pMaster[x]) {
+            pMaster[x]->begin(400e3);
+        }
+    }
+
+    PMIC.CTRL |= PMIC_HILVLEN_bm | PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm;
+    sei();
+    //SREG |= CPU_I_bm;
+    
+    IMU     hand_imu(&hand,0xD2,0x32);              // Hand
+    IMU     single_imu(&single,0xD0,0x30);          // Pinkie
+    //IMU     pair1_imu(&pair1,0xD2,0x32,0xD0,0x30);  // Ring, Middle
+    IMU     pair1_imu(&pair1, 0xD0,0x30);  // Ring, Middle
+    //IMU     pair2_imu(&pair2,0xD2,0x32,0xD0,0x30);  // Index, Thumb
+    IMU     pair2_imu(&pair2,0xD2,0x32);  // Index, Thumb
+    
+    hand_imu.SetDebugPort(&dbgPort);
+    hand_imu.SetDebugPort2(&dbgPort2);
+    
+    TimerCntr   tcA(&TCC1);
+    TimerCntr   tcB(&TCD1);
+    TimerCntr   tcC(&TCE1);
+    TimerCntr   tcD(&TCE0);
+    
+    hand_imu.SetTimer(&tcA);
+    single_imu.SetTimer(&tcB);
+    pair1_imu.SetTimer(&tcC);
+    pair2_imu.SetTimer(&tcD);
+    
+    IMUManager imumgr(&cmdSerial);
+    imumgr.AddIMU(&hand_imu);
+    imumgr.AddIMU(&single_imu);
+    imumgr.AddIMU(&pair1_imu);
+    imumgr.AddIMU(&pair2_imu);
+    imumgr.SampleRate(10); 
+    
+    //dbgserial.print("Starting main loop.\n");
+    sprintf(buffer,"Welcome to Gyro Glove.\nRev %d.%d.%d Date: %02d/%02d/%04d Bui
+      lt at: %02d:%02d\n",
+        RevMajor, RevMinor, RevInc,
+        DateMonth, DateDay, DateYear,
+        TimeHour, TimeMin
+        );
+    cmdSerial.print(buffer);
+    
+    GyroCmdProcessor cmdproc(&cmdSerial,pMaster[0],&imumgr);
+    
+    TimerCntr mdtc(&TCD0);
+    MyDriver md;
+    md.SetTimer(&mdtc);
+    
+    while(1) {
+        cmdproc.Loop();        
+        imumgr.Loop();
+    }
+
+    return 0;
+}
+\end{DoxyCode}
+\hypertarget{_gyro_acc_8cpp_a04545dccf7a169ce181b81c5376c9ec7}{
+\index{GyroAcc.cpp@{GyroAcc.cpp}!processCmd@{processCmd}}
+\index{processCmd@{processCmd}!GyroAcc.cpp@{GyroAcc.cpp}}
+\subsubsection[{processCmd}]{\setlength{\rightskip}{0pt plus 5cm}void processCmd (
+\begin{DoxyParamCaption}
+\item[{{\bf CmdProcessor} \&}]{cmdproc}
+\end{DoxyParamCaption}
+)}}
+\label{_gyro_acc_8cpp_a04545dccf7a169ce181b81c5376c9ec7}
+\hypertarget{_gyro_acc_8cpp_a896a4c37c6ecf8868ef0dc758e5a598c}{
+\index{GyroAcc.cpp@{GyroAcc.cpp}!timer\_\-init@{timer\_\-init}}
+\index{timer\_\-init@{timer\_\-init}!GyroAcc.cpp@{GyroAcc.cpp}}
+\subsubsection[{timer\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{_gyro_acc_8cpp_a896a4c37c6ecf8868ef0dc758e5a598c}
+
+
+Declared in TimerCore.cpp. 
+
+
+
+Referenced by init().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_gyro_acc_8cpp_ab6b6625a30d84db3519866cb8c32dd39}{
+\index{GyroAcc.cpp@{GyroAcc.cpp}!pdbgport@{pdbgport}}
+\index{pdbgport@{pdbgport}!GyroAcc.cpp@{GyroAcc.cpp}}
+\subsubsection[{pdbgport}]{\setlength{\rightskip}{0pt plus 5cm}DebugPort$\ast$ {\bf pdbgport} = 0}}
+\label{_gyro_acc_8cpp_ab6b6625a30d84db3519866cb8c32dd39}
+
+
+Definition at line 32 of file GyroAcc.cpp.
+
+
+
+Referenced by main().
+
+\hypertarget{_gyro_acc_8cpp_a953e918236b1fd18b8f07bad1217ecbe}{
+\index{GyroAcc.cpp@{GyroAcc.cpp}!pdbgserial@{pdbgserial}}
+\index{pdbgserial@{pdbgserial}!GyroAcc.cpp@{GyroAcc.cpp}}
+\subsubsection[{pdbgserial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HardwareSerial}$\ast$ {\bf pdbgserial} = 0}}
+\label{_gyro_acc_8cpp_a953e918236b1fd18b8f07bad1217ecbe}
+
+
+Definition at line 31 of file GyroAcc.cpp.
+

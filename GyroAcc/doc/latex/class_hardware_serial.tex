@@ -1,0 +1,612 @@
+\hypertarget{class_hardware_serial}{
+\section{HardwareSerial Class Reference}
+\label{class_hardware_serial}\index{HardwareSerial@{HardwareSerial}}
+}
+
+
+{\ttfamily \#include $<$HardwareSerial.h$>$}
+
+Inheritance diagram for HardwareSerial:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hardware_serial}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hardware_serial_ab96331f0886097eb802a7839676ef645}{HardwareSerial} (USART\_\-t $\ast$usart, PORT\_\-t $\ast$port, uint8\_\-t in\_\-bm, uint8\_\-t out\_\-bm)
+\item 
+\hyperlink{class_hardware_serial_a1c7aae049aba33b03fe030960c1c4aa7}{$\sim$HardwareSerial} ()
+\item 
+void \hyperlink{class_hardware_serial_a11049d350f4cf4bfdaafb24bb2738556}{begin} (long baudrate, int8\_\-t bscale=0)
+\item 
+void \hyperlink{class_hardware_serial_adcfab60db442174cb53f005df6d2996d}{begin2x} (long baudrate, int8\_\-t bscale=0)
+\item 
+void \hyperlink{class_hardware_serial_a0f86c41f580e04bdf30ea00e9014eacd}{end} ()
+\item 
+uint8\_\-t \hyperlink{class_hardware_serial_a10e05fa62dc473d0d8a7ee8184f504ba}{available} (void)
+\item 
+int \hyperlink{class_hardware_serial_a618696608a5fddcf3cb48ad6f044e756}{read} (void)
+\item 
+void \hyperlink{class_hardware_serial_a1eeb094d8da77e0292f95f4498a5396f}{flush} (void)
+\item 
+virtual void \hyperlink{class_hardware_serial_aced05ab99953383a235ccfb366f5c98f}{write} (uint8\_\-t)
+\item 
+void \hyperlink{class_hardware_serial_a2e13244413a84a259cadab3fb452921a}{enable} (bool bEn)
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Interrupt Handlers}\par
+{\em There are three possible interrupts for the USART. Receive done, Transmit done and Data Register Ready. }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_hardware_serial_ac52002a727070c45b765d0dc55106cad}{rxc} ()
+\item 
+void \hyperlink{class_hardware_serial_ac33af9a86da3e3ae7ac1e2791c8eaf22}{dre} ()
+\item 
+void \hyperlink{class_hardware_serial_a82779b03507bc07f3bf2e090d3733015}{txc} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structring__buffer}{ring\_\-buffer} $\ast$ \hyperlink{class_hardware_serial_a9ee5f8b61e049f98dfd0b5ae53e97273}{\_\-rx\_\-buffer}
+\item 
+USART\_\-t $\ast$ \hyperlink{class_hardware_serial_a3a3bd56aa561ae7e1eb1fd252b5b69a0}{\_\-usart}
+\item 
+PORT\_\-t $\ast$ \hyperlink{class_hardware_serial_add54c7d986c6122e8e8c23303f5b4845}{\_\-port}
+\item 
+uint8\_\-t \hyperlink{class_hardware_serial_a8724fdfd3955eeff5d3ed535624ce79a}{\_\-in\_\-bm}
+\item 
+uint8\_\-t \hyperlink{class_hardware_serial_a751a284e15af72b026143a8091be1b70}{\_\-out\_\-bm}
+\item 
+uint8\_\-t \hyperlink{class_hardware_serial_acc6c13c76a56c8b4bb88c3385b7bc791}{\_\-bsel}
+\item 
+int8\_\-t \hyperlink{class_hardware_serial_a37dd406c01fd6432618925f0aeb329f3}{\_\-bscale}
+\item 
+long \hyperlink{class_hardware_serial_ae692ab4a0a8aad73c74a10066fa9da24}{\_\-baudrate}
+\item 
+bool \hyperlink{class_hardware_serial_a8040fbab1f9197a9935df23a4c5e9a3b}{\_\-bEn}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file HardwareSerial.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_hardware_serial_ab96331f0886097eb802a7839676ef645}{
+\index{HardwareSerial@{HardwareSerial}!HardwareSerial@{HardwareSerial}}
+\index{HardwareSerial@{HardwareSerial}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{HardwareSerial}]{\setlength{\rightskip}{0pt plus 5cm}HardwareSerial::HardwareSerial (
+\begin{DoxyParamCaption}
+\item[{USART\_\-t $\ast$}]{usart, }
+\item[{PORT\_\-t $\ast$}]{port, }
+\item[{uint8\_\-t}]{in\_\-bm, }
+\item[{uint8\_\-t}]{out\_\-bm}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_ab96331f0886097eb802a7839676ef645}
+
+
+Definition at line 129 of file HardwareSerial.cpp.
+
+
+
+References \_\-bEn, \_\-bsel, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-rx\_\-buffer, \_\-usart, and RX\_\-BUFFER\_\-SIZE.
+
+
+\begin{DoxyCode}
+{
+    _rx_buffer = (ring_buffer*)malloc(RX_BUFFER_SIZE+2*sizeof(int));
+    _usart     = usart;
+    _port      = port;
+    _in_bm     = in_bm;
+    _out_bm    = out_bm;
+    _bsel      = 0;
+    _bEn       = true;
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_a1c7aae049aba33b03fe030960c1c4aa7}{
+\index{HardwareSerial@{HardwareSerial}!$\sim$HardwareSerial@{$\sim$HardwareSerial}}
+\index{$\sim$HardwareSerial@{$\sim$HardwareSerial}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{$\sim$HardwareSerial}]{\setlength{\rightskip}{0pt plus 5cm}HardwareSerial::$\sim$HardwareSerial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a1c7aae049aba33b03fe030960c1c4aa7}
+
+
+Definition at line 144 of file HardwareSerial.cpp.
+
+
+
+References \_\-rx\_\-buffer, and end().
+
+
+\begin{DoxyCode}
+{
+    end();
+    free(_rx_buffer);
+    _rx_buffer = 0;
+}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hardware_serial_a10e05fa62dc473d0d8a7ee8184f504ba}{
+\index{HardwareSerial@{HardwareSerial}!available@{available}}
+\index{available@{available}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{available}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t HardwareSerial::available (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a10e05fa62dc473d0d8a7ee8184f504ba}
+
+
+Definition at line 228 of file HardwareSerial.cpp.
+
+
+
+References \_\-rx\_\-buffer, ring\_\-buffer::head, RX\_\-BUFFER\_\-SIZE, and ring\_\-buffer::tail.
+
+
+
+Referenced by CmdProcessor::checkCommands().
+
+
+\begin{DoxyCode}
+{
+    return (RX_BUFFER_SIZE + _rx_buffer->head - _rx_buffer->tail) % 
+      RX_BUFFER_SIZE;
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_a11049d350f4cf4bfdaafb24bb2738556}{
+\index{HardwareSerial@{HardwareSerial}!begin@{begin}}
+\index{begin@{begin}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::begin (
+\begin{DoxyParamCaption}
+\item[{long}]{baudrate, }
+\item[{int8\_\-t}]{bscale = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a11049d350f4cf4bfdaafb24bb2738556}
+
+
+Definition at line 153 of file HardwareSerial.cpp.
+
+
+
+References \_\-baudrate, \_\-bscale, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-usart, and SetPointer().
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    uint16_t BSEL;
+    _bscale = bscale;
+    _baudrate = baud;
+    
+    float fPER = F_CPU;
+    float fBaud = baud;
+    
+    _port->DIRCLR = _in_bm;  // input
+    _port->DIRSET = _out_bm; // output
+    
+    // set the baud rate
+    if (bscale >= 0) {
+        BSEL = fPER/((1 << bscale) * 16 * baud) - 1;
+        //BSEL = F_CPU / 16 / baud - 1;
+    } else {
+        bscale = -1 * bscale;
+        BSEL = (1 << bscale) * (fPER/(16.0 * fBaud) - 1);
+    }
+    
+    _usart->BAUDCTRLA = (uint8_t)BSEL;
+    _usart->BAUDCTRLB = ((bscale & 0xf) << 4) | ((BSEL & 0xf00) >> 8);
+    
+    
+    // enable Rx and Tx
+    _usart->CTRLB |= USART_RXEN_bm | USART_TXEN_bm;
+    // enable interrupt
+    _usart->CTRLA = USART_RXCINTLVL_LO_gc;
+    
+    // Char size, parity and stop bits: 8N1
+    _usart->CTRLC = USART_CHSIZE_8BIT_gc | USART_PMODE_DISABLED_gc;
+    SetPointer(_usart,this);
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_adcfab60db442174cb53f005df6d2996d}{
+\index{HardwareSerial@{HardwareSerial}!begin2x@{begin2x}}
+\index{begin2x@{begin2x}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{begin2x}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::begin2x (
+\begin{DoxyParamCaption}
+\item[{long}]{baudrate, }
+\item[{int8\_\-t}]{bscale = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_adcfab60db442174cb53f005df6d2996d}
+
+
+Definition at line 188 of file HardwareSerial.cpp.
+
+
+
+References \_\-baudrate, \_\-bscale, \_\-in\_\-bm, \_\-out\_\-bm, \_\-port, \_\-usart, and SetPointer().
+
+
+\begin{DoxyCode}
+{
+    uint16_t baud_setting;
+    _bscale = bscale;
+    _baudrate = baud;
+    
+    // TODO: Serial. Fix serial double clock.
+    long fPER = F_CPU * 4;
+    
+    _port->DIRCLR = _in_bm;  // input
+    _port->DIRSET = _out_bm; // output
+    
+    // set the baud rate using the 2X calculations
+    _usart->CTRLB |= 1 << 1; // the last 1 was the _u2x value
+    baud_setting = fPER / 8 / baud - 1;
+
+    _usart->BAUDCTRLA = (uint8_t)baud_setting;
+    _usart->BAUDCTRLB = baud_setting >> 8;
+    
+    
+    // enable Rx and Tx
+    _usart->CTRLB |= USART_RXEN_bm | USART_TXEN_bm;
+    // enable interrupt
+    _usart->CTRLA = (_usart->CTRLA & ~USART_RXCINTLVL_gm) | USART_RXCINTLVL_LO_gc
+      ;
+    
+    // Char size, parity and stop bits: 8N1
+    _usart->CTRLC = USART_CHSIZE_8BIT_gc | USART_PMODE_DISABLED_gc;
+    SetPointer(_usart,this);
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_ac33af9a86da3e3ae7ac1e2791c8eaf22}{
+\index{HardwareSerial@{HardwareSerial}!dre@{dre}}
+\index{dre@{dre}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{dre}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::dre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_ac33af9a86da3e3ae7ac1e2791c8eaf22}
+
+
+Definition at line 117 of file HardwareSerial.cpp.
+
+
+\begin{DoxyCode}
+{
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_a2e13244413a84a259cadab3fb452921a}{
+\index{HardwareSerial@{HardwareSerial}!enable@{enable}}
+\index{enable@{enable}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::enable (
+\begin{DoxyParamCaption}
+\item[{bool}]{bEn}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a2e13244413a84a259cadab3fb452921a}
+
+
+Definition at line 263 of file HardwareSerial.cpp.
+
+
+
+References \_\-bEn.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+{
+    _bEn = bEn;
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_a0f86c41f580e04bdf30ea00e9014eacd}{
+\index{HardwareSerial@{HardwareSerial}!end@{end}}
+\index{end@{end}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a0f86c41f580e04bdf30ea00e9014eacd}
+
+
+Definition at line 218 of file HardwareSerial.cpp.
+
+
+
+References \_\-usart, and SetPointer().
+
+
+
+Referenced by CmdProcessor::$\sim$CmdProcessor(), and $\sim$HardwareSerial().
+
+
+\begin{DoxyCode}
+{
+    SetPointer(_usart,(HardwareSerial*)0);
+    
+    // disable Rx and Tx
+    _usart->CTRLB &= ~(USART_RXEN_bm | USART_TXEN_bm);
+    // disable interrupt
+    _usart->CTRLA = (_usart->CTRLA & ~USART_RXCINTLVL_gm) | USART_RXCINTLVL_LO_gc
+      ;
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_a1eeb094d8da77e0292f95f4498a5396f}{
+\index{HardwareSerial@{HardwareSerial}!flush@{flush}}
+\index{flush@{flush}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{flush}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a1eeb094d8da77e0292f95f4498a5396f}
+
+
+Definition at line 245 of file HardwareSerial.cpp.
+
+
+
+References \_\-rx\_\-buffer, ring\_\-buffer::head, and ring\_\-buffer::tail.
+
+
+\begin{DoxyCode}
+{
+    // don't reverse this or there may be problems if the RX interrupt
+    // occurs after reading the value of rx_buffer_head but before writing
+    // the value to rx_buffer_tail; the previous value of rx_buffer_head
+    // may be written to rx_buffer_tail, making it appear as if the buffer
+    // were full, not empty.
+    _rx_buffer->head = _rx_buffer->tail;
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_a618696608a5fddcf3cb48ad6f044e756}{
+\index{HardwareSerial@{HardwareSerial}!read@{read}}
+\index{read@{read}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}int HardwareSerial::read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a618696608a5fddcf3cb48ad6f044e756}
+
+
+Definition at line 233 of file HardwareSerial.cpp.
+
+
+
+References \_\-rx\_\-buffer, ring\_\-buffer::buffer, ring\_\-buffer::head, RX\_\-BUFFER\_\-SIZE, and ring\_\-buffer::tail.
+
+
+
+Referenced by CmdProcessor::checkCommands().
+
+
+\begin{DoxyCode}
+{
+    // if the head isn't ahead of the tail, we don't have any characters
+    if (_rx_buffer->head == _rx_buffer->tail) {
+        return -1;
+    } else {
+        unsigned char c = _rx_buffer->buffer[_rx_buffer->tail];
+        _rx_buffer->tail = (_rx_buffer->tail + 1) % RX_BUFFER_SIZE;
+        return c;
+    }
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_ac52002a727070c45b765d0dc55106cad}{
+\index{HardwareSerial@{HardwareSerial}!rxc@{rxc}}
+\index{rxc@{rxc}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{rxc}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::rxc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_ac52002a727070c45b765d0dc55106cad}
+
+
+Definition at line 111 of file HardwareSerial.cpp.
+
+
+
+References \_\-rx\_\-buffer, \_\-usart, and store\_\-char().
+
+
+\begin{DoxyCode}
+{
+    unsigned char c = _usart->DATA;
+    store_char(c,_rx_buffer);
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_a82779b03507bc07f3bf2e090d3733015}{
+\index{HardwareSerial@{HardwareSerial}!txc@{txc}}
+\index{txc@{txc}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{txc}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::txc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_hardware_serial_a82779b03507bc07f3bf2e090d3733015}
+
+
+Definition at line 121 of file HardwareSerial.cpp.
+
+
+\begin{DoxyCode}
+{
+}
+\end{DoxyCode}
+\hypertarget{class_hardware_serial_aced05ab99953383a235ccfb366f5c98f}{
+\index{HardwareSerial@{HardwareSerial}!write@{write}}
+\index{write@{write}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void HardwareSerial::write (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_hardware_serial_aced05ab99953383a235ccfb366f5c98f}
+
+
+Implements \hyperlink{class_print_ad9393033793cfc17f3e37202ba244892}{Print}.
+
+
+
+Definition at line 255 of file HardwareSerial.cpp.
+
+
+
+References \_\-bEn, and \_\-usart.
+
+
+\begin{DoxyCode}
+{
+    if (_bEn) {
+        while ( !(_usart->STATUS & USART_DREIF_bm) );
+        _usart->DATA = c;
+    }
+}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_hardware_serial_ae692ab4a0a8aad73c74a10066fa9da24}{
+\index{HardwareSerial@{HardwareSerial}!\_\-baudrate@{\_\-baudrate}}
+\index{\_\-baudrate@{\_\-baudrate}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-baudrate}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf HardwareSerial::\_\-baudrate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_ae692ab4a0a8aad73c74a10066fa9da24}
+
+
+Definition at line 40 of file HardwareSerial.h.
+
+
+
+Referenced by begin(), and begin2x().
+
+\hypertarget{class_hardware_serial_a8040fbab1f9197a9935df23a4c5e9a3b}{
+\index{HardwareSerial@{HardwareSerial}!\_\-bEn@{\_\-bEn}}
+\index{\_\-bEn@{\_\-bEn}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-bEn}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf HardwareSerial::\_\-bEn}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_a8040fbab1f9197a9935df23a4c5e9a3b}
+
+
+Definition at line 41 of file HardwareSerial.h.
+
+
+
+Referenced by enable(), HardwareSerial(), and write().
+
+\hypertarget{class_hardware_serial_a37dd406c01fd6432618925f0aeb329f3}{
+\index{HardwareSerial@{HardwareSerial}!\_\-bscale@{\_\-bscale}}
+\index{\_\-bscale@{\_\-bscale}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-bscale}]{\setlength{\rightskip}{0pt plus 5cm}int8\_\-t {\bf HardwareSerial::\_\-bscale}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_a37dd406c01fd6432618925f0aeb329f3}
+
+
+Definition at line 39 of file HardwareSerial.h.
+
+
+
+Referenced by begin(), and begin2x().
+
+\hypertarget{class_hardware_serial_acc6c13c76a56c8b4bb88c3385b7bc791}{
+\index{HardwareSerial@{HardwareSerial}!\_\-bsel@{\_\-bsel}}
+\index{\_\-bsel@{\_\-bsel}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-bsel}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf HardwareSerial::\_\-bsel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_acc6c13c76a56c8b4bb88c3385b7bc791}
+
+
+Definition at line 38 of file HardwareSerial.h.
+
+
+
+Referenced by HardwareSerial().
+
+\hypertarget{class_hardware_serial_a8724fdfd3955eeff5d3ed535624ce79a}{
+\index{HardwareSerial@{HardwareSerial}!\_\-in\_\-bm@{\_\-in\_\-bm}}
+\index{\_\-in\_\-bm@{\_\-in\_\-bm}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-in\_\-bm}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf HardwareSerial::\_\-in\_\-bm}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_a8724fdfd3955eeff5d3ed535624ce79a}
+
+
+Definition at line 36 of file HardwareSerial.h.
+
+
+
+Referenced by begin(), begin2x(), and HardwareSerial().
+
+\hypertarget{class_hardware_serial_a751a284e15af72b026143a8091be1b70}{
+\index{HardwareSerial@{HardwareSerial}!\_\-out\_\-bm@{\_\-out\_\-bm}}
+\index{\_\-out\_\-bm@{\_\-out\_\-bm}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-out\_\-bm}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf HardwareSerial::\_\-out\_\-bm}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_a751a284e15af72b026143a8091be1b70}
+
+
+Definition at line 37 of file HardwareSerial.h.
+
+
+
+Referenced by begin(), begin2x(), and HardwareSerial().
+
+\hypertarget{class_hardware_serial_add54c7d986c6122e8e8c23303f5b4845}{
+\index{HardwareSerial@{HardwareSerial}!\_\-port@{\_\-port}}
+\index{\_\-port@{\_\-port}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-t$\ast$ {\bf HardwareSerial::\_\-port}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_add54c7d986c6122e8e8c23303f5b4845}
+
+
+Definition at line 35 of file HardwareSerial.h.
+
+
+
+Referenced by begin(), begin2x(), and HardwareSerial().
+
+\hypertarget{class_hardware_serial_a9ee5f8b61e049f98dfd0b5ae53e97273}{
+\index{HardwareSerial@{HardwareSerial}!\_\-rx\_\-buffer@{\_\-rx\_\-buffer}}
+\index{\_\-rx\_\-buffer@{\_\-rx\_\-buffer}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-rx\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ring\_\-buffer}$\ast$ {\bf HardwareSerial::\_\-rx\_\-buffer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_a9ee5f8b61e049f98dfd0b5ae53e97273}
+
+
+Definition at line 33 of file HardwareSerial.h.
+
+
+
+Referenced by available(), flush(), HardwareSerial(), read(), rxc(), and $\sim$HardwareSerial().
+
+\hypertarget{class_hardware_serial_a3a3bd56aa561ae7e1eb1fd252b5b69a0}{
+\index{HardwareSerial@{HardwareSerial}!\_\-usart@{\_\-usart}}
+\index{\_\-usart@{\_\-usart}!HardwareSerial@{HardwareSerial}}
+\subsubsection[{\_\-usart}]{\setlength{\rightskip}{0pt plus 5cm}USART\_\-t$\ast$ {\bf HardwareSerial::\_\-usart}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_hardware_serial_a3a3bd56aa561ae7e1eb1fd252b5b69a0}
+
+
+Definition at line 34 of file HardwareSerial.h.
+
+
+
+Referenced by begin(), begin2x(), end(), HardwareSerial(), rxc(), and write().
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_hardware_serial_8h}{HardwareSerial.h}\item 
+\hyperlink{_hardware_serial_8cpp}{HardwareSerial.cpp}\end{DoxyCompactItemize}

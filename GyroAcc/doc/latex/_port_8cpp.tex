@@ -1,0 +1,183 @@
+\hypertarget{_port_8cpp}{
+\section{Port.cpp File Reference}
+\label{_port_8cpp}\index{Port.cpp@{Port.cpp}}
+}
+{\ttfamily \#include $<$avr/io.h$>$}\par
+{\ttfamily \#include $<$inttypes.h$>$}\par
+{\ttfamily \#include $<$avr/interrupt.h$>$}\par
+{\ttfamily \#include \char`\"{}Port.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}HardwareSerial.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_port_8cpp_a98ed3f9bf909d32905f2c879381dc501}{PORT\_\-ISR\_\-DEF}(port)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_port_8cpp_a0b4786e623438d38a136c620851daee2}{PORT\_\-ISR\_\-DEF} (PORTA)
+\item 
+\hyperlink{_port_8cpp_a3ebe560bb79787860a2c6294c1dfd4ff}{PORT\_\-ISR\_\-DEF} (PORTB)
+\item 
+\hyperlink{_port_8cpp_a9569eec0497279f098a33c13bde289d3}{PORT\_\-ISR\_\-DEF} (PORTC)
+\item 
+\hyperlink{_port_8cpp_a994b06dc78c55a8c9e7b2883da7bb024}{PORT\_\-ISR\_\-DEF} (PORTD)
+\item 
+\hyperlink{_port_8cpp_a9bb0a9112275eaaaa6070b0b232c1b71}{PORT\_\-ISR\_\-DEF} (PORTE)
+\item 
+\hyperlink{_port_8cpp_a6857b09dab42360940128d667044f2cf}{PORT\_\-ISR\_\-DEF} (PORTF)
+\item 
+\hyperlink{_port_8cpp_a1b9a4b8cbc68480765347a71799fa781}{PORT\_\-ISR\_\-DEF} (PORTH)
+\item 
+static void \hyperlink{_port_8cpp_afaf5d589e6cb241cd3822efd8c9cbb05}{SetPointer} (PORT\_\-t $\ast$port, \hyperlink{class_port}{Port} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hardware_serial}{HardwareSerial} $\ast$ \hyperlink{_port_8cpp_a953e918236b1fd18b8f07bad1217ecbe}{pdbgserial}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_port_8cpp_a98ed3f9bf909d32905f2c879381dc501}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}\#define PORT\_\-ISR\_\-DEF(
+\begin{DoxyParamCaption}
+\item[{}]{port}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a98ed3f9bf909d32905f2c879381dc501}
+{\bfseries Value:}
+\begin{DoxyCode}
+static Port*  port##cp = 0;\
+ISR(port##_INT0_vect) {\
+    if (port##cp) port##cp->int0();\
+}\
+ISR(port##_INT1_vect) {\
+    if (port##cp) port##cp->int1();\
+}
+\end{DoxyCode}
+
+
+Definition at line 14 of file Port.cpp.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_port_8cpp_a0b4786e623438d38a136c620851daee2}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
+\begin{DoxyParamCaption}
+\item[{PORTA}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a0b4786e623438d38a136c620851daee2}
+\hypertarget{_port_8cpp_a3ebe560bb79787860a2c6294c1dfd4ff}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
+\begin{DoxyParamCaption}
+\item[{PORTB}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a3ebe560bb79787860a2c6294c1dfd4ff}
+\hypertarget{_port_8cpp_a1b9a4b8cbc68480765347a71799fa781}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
+\begin{DoxyParamCaption}
+\item[{PORTH}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a1b9a4b8cbc68480765347a71799fa781}
+\hypertarget{_port_8cpp_a6857b09dab42360940128d667044f2cf}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
+\begin{DoxyParamCaption}
+\item[{PORTF}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a6857b09dab42360940128d667044f2cf}
+\hypertarget{_port_8cpp_a9bb0a9112275eaaaa6070b0b232c1b71}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
+\begin{DoxyParamCaption}
+\item[{PORTE}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a9bb0a9112275eaaaa6070b0b232c1b71}
+\hypertarget{_port_8cpp_a994b06dc78c55a8c9e7b2883da7bb024}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
+\begin{DoxyParamCaption}
+\item[{PORTD}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a994b06dc78c55a8c9e7b2883da7bb024}
+\hypertarget{_port_8cpp_a9569eec0497279f098a33c13bde289d3}{
+\index{Port.cpp@{Port.cpp}!PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}}
+\index{PORT\_\-ISR\_\-DEF@{PORT\_\-ISR\_\-DEF}!Port.cpp@{Port.cpp}}
+\subsubsection[{PORT\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}PORT\_\-ISR\_\-DEF (
+\begin{DoxyParamCaption}
+\item[{PORTC}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_port_8cpp_a9569eec0497279f098a33c13bde289d3}
+\hypertarget{_port_8cpp_afaf5d589e6cb241cd3822efd8c9cbb05}{
+\index{Port.cpp@{Port.cpp}!SetPointer@{SetPointer}}
+\index{SetPointer@{SetPointer}!Port.cpp@{Port.cpp}}
+\subsubsection[{SetPointer}]{\setlength{\rightskip}{0pt plus 5cm}static void SetPointer (
+\begin{DoxyParamCaption}
+\item[{PORT\_\-t $\ast$}]{port, }
+\item[{{\bf Port} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_port_8cpp_afaf5d589e6cb241cd3822efd8c9cbb05}
+
+
+Definition at line 31 of file Port.cpp.
+
+
+
+Referenced by Port::Port(), and Port::$\sim$Port().
+
+
+\begin{DoxyCode}
+{
+    // Register this object with the appropriate
+    // pointer so that the ISR routines can call p
+    // class.
+    if(port == &PORTA) {
+        PORTAcp = p;
+    } else if (port == &PORTB) {
+        PORTBcp = p;
+    } else if (port ==  &PORTC) {
+        PORTCcp = p;
+    } else if (port ==  &PORTD) {
+        PORTDcp = p;
+    } else if (port ==  &PORTE) {
+        PORTEcp = p;
+    } else if (port ==  &PORTF) {
+        PORTFcp = p;
+    } else if (port ==  &PORTH) {
+        PORTHcp = p;
+    }
+}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_port_8cpp_a953e918236b1fd18b8f07bad1217ecbe}{
+\index{Port.cpp@{Port.cpp}!pdbgserial@{pdbgserial}}
+\index{pdbgserial@{pdbgserial}!Port.cpp@{Port.cpp}}
+\subsubsection[{pdbgserial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HardwareSerial}$\ast$ {\bf pdbgserial}}}
+\label{_port_8cpp_a953e918236b1fd18b8f07bad1217ecbe}
+
+
+Definition at line 31 of file GyroAcc.cpp.
+

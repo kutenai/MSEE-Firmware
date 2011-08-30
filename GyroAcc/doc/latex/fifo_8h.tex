@@ -1,0 +1,66 @@
+\hypertarget{fifo_8h}{
+\section{fifo.h File Reference}
+\label{fifo_8h}\index{fifo.h@{fifo.h}}
+}
+{\ttfamily \#include $<$inttypes.h$>$}\par
+{\ttfamily \#include \char`\"{}HardwareSerial.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fifo}{Fifo}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_fifo}{Fifo} Class for unsigned 8 bit values. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fifo_8h_a9a948b7bfe866c00cfb8e3a5fea891ad}{FifoTest} (\hyperlink{class_hardware_serial}{HardwareSerial} \&ds)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{fifo_8h_a9a948b7bfe866c00cfb8e3a5fea891ad}{
+\index{fifo.h@{fifo.h}!FifoTest@{FifoTest}}
+\index{FifoTest@{FifoTest}!fifo.h@{fifo.h}}
+\subsubsection[{FifoTest}]{\setlength{\rightskip}{0pt plus 5cm}void FifoTest (
+\begin{DoxyParamCaption}
+\item[{{\bf HardwareSerial} \&}]{ds}
+\end{DoxyParamCaption}
+)}}
+\label{fifo_8h_a9a948b7bfe866c00cfb8e3a5fea891ad}
+Test function to validate that the fifo works as expected. It is always a good idea to validate your data structures. Languages like Python or Perl have such validation built in, while C++ does not. This function can be used in a special build to run through some test cases and make sure that the fifo behaves as we exect, especially in the edge cases, such as when it gets full, wraps around, etc. 
+
+Definition at line 110 of file fifo.cpp.
+
+
+
+References buffer, Fifo::clear(), Fifo::count(), Fifo::pop(), Print::print(), and Fifo::push().
+
+
+\begin{DoxyCode}
+{
+    Fifo f1(20);
+    Fifo::FifoType x;
+    char    buffer[128];
+    
+    for (x=1;x<25;x++) {
+        f1.push(&x);
+        sprintf(buffer,"Fifo push %d count %d\n",x,f1.count());
+        ds.print(buffer);
+    }
+    f1.clear();
+    sprintf(buffer,"Fifo count %d\n",f1.count());
+    ds.print(buffer);
+    
+    for (x=0;x<10;x++) {
+        f1.push(&x);
+    }
+    sprintf(buffer,"Fifo count %d. Expected 10\n",f1.count());
+    ds.print(buffer);
+    
+    Fifo::FifoType y;
+    for (x=1;x<15;x++) {
+        f1.pop(&y);
+        sprintf(buffer,"Fifo pop %d count %d\n",y,f1.count());
+        ds.print(buffer);
+    }
+}
+\end{DoxyCode}

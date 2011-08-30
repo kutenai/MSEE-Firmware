@@ -1,0 +1,1734 @@
+Archive member included because of file (symbol)
+
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mulsi3.o)
+                              HardwareSerial.o (__mulsi3)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodqi4.o)
+                              IMUManager.o (__udivmodqi4)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodhi4.o)
+                              IMU.o (__udivmodhi4)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodhi4.o)
+                              HardwareSerial.o (__divmodhi4)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodsi4.o)
+                              GyroAcc.o (__udivmodsi4)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodsi4.o)
+                              IMU.o (__divmodsi4)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_exit.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o (exit)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clear_bss.o)
+                              GyroAcc.o (__do_clear_bss)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+                              TimerCore.o (__muldi3)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+                              HardwareSerial.o (__fixunssfsi)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+                              HardwareSerial.o (__subsf3)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+                              HardwareSerial.o (__mulsf3)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+                              HardwareSerial.o (__divsf3)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o) (__gesf2)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+                              Print.o (__ltsf2)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+                              HardwareSerial.o (__floatsisf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+                              Print.o (__fixsfsi)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o) (__thenan_sf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+                              Print.o (__floatunsisf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_prologue.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o) (__prologue_saves__)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_epilogue.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o) (__epilogue_restores__)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o) (__clzsi2)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o) (__pack_f)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o) (__unpack_f)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o) (__fpcmp_parts_f)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o) (__clz_tab)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+                              IMUPacketFifo.o (malloc)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atoi.o)
+                              CmdProcessor.o (atoi)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atol.o)
+                              CmdProcessor.o (atol)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+                              CmdProcessor.o (strtok)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memcpy.o)
+                              IMUManager.o (memcpy)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memset.o)
+                              IMU.o (memset)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr.o)
+                              CmdProcessor.o (strchr)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcmp.o)
+                              GyroCmdProcessor.o (strcmp)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcpy.o)
+                              IMUManager.o (strcpy)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strncpy.o)
+                              CmdProcessor.o (strncpy)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strpbrk.o)
+                              CmdProcessor.o (strpbrk)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok_r.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o) (strtok_r)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mulsi10.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atol.o) (__mulsi_const_10)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mul10.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atoi.o) (__mulhi_const_10)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+                              GyroAcc.o (sprintf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+                              CmdProcessor.o (sscanf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o) (vfprintf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o) (vfscanf)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(isspace.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o) (isspace)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr_P.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o) (strchr_P)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen_P.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o) (strnlen_P)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o) (strnlen)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o) (fgetc)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o) (fputc)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o) (ungetc)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ultoa_invert.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o) (__ultoa_invert)
+/usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(cty_isfalse.o)
+                              /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(isspace.o) (__ctype_isfalse)
+
+Allocating common symbols
+Common symbol       size              file
+
+__brkval            0x2               /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+__flp               0x2               /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00802000         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+LOAD GyroAcc.o
+LOAD IMU.o
+LOAD IMUManager.o
+LOAD IMUPacketFifo.o
+LOAD clksystem.o
+LOAD GyroCmdProcessor.o
+LOAD CmdProcessor.o
+LOAD HardwareSerial.o
+LOAD DebugPort.o
+LOAD I2C_Master.o
+LOAD NewDel.o
+LOAD Print.o
+LOAD Port.o
+LOAD cpp_hacks.o
+LOAD fifo.o
+LOAD TimerCntr.o
+LOAD TimerCore.o
+LOAD Time.o
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libprintf_flt.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libscanf_flt.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libm.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a
+LOAD /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0xa3d6
+ *(.vectors)
+ .vectors       0x00000000      0x1f4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x000001f4        0xc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+                0x00000200                . = ALIGN (0x2)
+                0x00000200                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000200        0x0 linker stubs
+ *(.trampolines*)
+                0x00000200                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000200                __ctors_start = .
+ *(.ctors)
+                0x00000200                __ctors_end = .
+                0x00000200                __dtors_start = .
+ *(.dtors)
+                0x00000200                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000200        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x00000200                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000200       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000218       0x1c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x00000218                __do_copy_data
+ .init4         0x00000234       0x10 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clear_bss.o)
+                0x00000234                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000244        0x8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ *(.init9)
+ *(.text)
+ .text          0x0000024c        0x4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+                0x0000024c                __vector_38
+                0x0000024c                __vector_1
+                0x0000024c                __vector_32
+                0x0000024c                __vector_71
+                0x0000024c                __vector_102
+                0x0000024c                __vector_24
+                0x0000024c                __vector_69
+                0x0000024c                __bad_interrupt
+                0x0000024c                __vector_72
+                0x0000024c                __vector_6
+                0x0000024c                __vector_110
+                0x0000024c                __vector_31
+                0x0000024c                __vector_74
+                0x0000024c                __vector_117
+                0x0000024c                __vector_39
+                0x0000024c                __vector_98
+                0x0000024c                __vector_68
+                0x0000024c                __vector_73
+                0x0000024c                __vector_11
+                0x0000024c                __vector_99
+                0x0000024c                __vector_7
+                0x0000024c                __vector_41
+                0x0000024c                __vector_100
+                0x0000024c                __vector_101
+                0x0000024c                __vector_109
+                0x0000024c                __vector_5
+                0x0000024c                __vector_113
+                0x0000024c                __vector_33
+                0x0000024c                __vector_115
+                0x0000024c                __vector_37
+                0x0000024c                __vector_95
+                0x0000024c                __vector_103
+                0x0000024c                __vector_4
+                0x0000024c                __vector_118
+                0x0000024c                __vector_9
+                0x0000024c                __vector_36
+                0x0000024c                __vector_70
+                0x0000024c                __vector_40
+                0x0000024c                __vector_94
+                0x0000024c                __vector_8
+                0x0000024c                __vector_116
+                0x0000024c                __vector_112
+                0x0000024c                __vector_111
+                0x0000024c                __vector_57
+                0x0000024c                __vector_10
+                0x0000024c                __vector_42
+                0x0000024c                __vector_87
+ .text          0x00000250      0x45c GyroAcc.o
+                0x00000252                MyDriver::ovf(unsigned char)
+                0x00000276                MyDriver::SetTimerPeriod()
+                0x00000250                MyDriver::err(unsigned char)
+                0x00000274                MyDriver::ccx(unsigned char, unsigned char)
+                0x00000336                main
+                0x0000032c                init()
+                0x000002a4                MyDriver::SetTimer(TimerCntr*)
+ .text          0x000006ac     0x16a6 IMU.o
+                0x00001268                IMU::Setup()
+                0x00001830                IMU::ForceStartStop()
+                0x00001a1e                IMU::IMU(I2C_Master*, unsigned char, unsigned char)
+                0x000006ca                IMU::SetDebugPort2(DebugPort*)
+                0x00000724                non-virtual thunk to IMU::err(unsigned char)
+                0x00001616                non-virtual thunk to IMU::I2CNack()
+                0x000007f4                IMU::StartTransaction()
+                0x00000f72                IMU::SetState(IMU::StateType)
+                0x00000b60                IMU::SetTimer(TimerCntr*)
+                0x0000072c                IMU::ReadWord(unsigned int*)
+                0x00001c54                IMU::IMU(I2C_Master*)
+                0x00001846                IMU::ResetDevices()
+                0x00000726                IMU::err(unsigned char)
+                0x000006ac                IMU::UseGyro(bool)
+                0x000007be                IMU::RdAsync(unsigned char, unsigned char, unsigned char)
+                0x00000f8c                IMU::ProcessTransaction()
+                0x00001384                IMU::FailRecovery()
+                0x0000161e                IMU::I2CNack()
+                0x0000119a                IMU::Start()
+                0x00000b02                IMU::SampleRate(unsigned int)
+                0x00001102                non-virtual thunk to IMU::I2CWriteDone()
+                0x0000188a                IMU::IMU(I2C_Master*, unsigned char, unsigned char, unsigned char, unsigned char)
+                0x00000940                IMU::Wr(unsigned char, unsigned char, unsigned char)
+                0x0000075e                IMU::StoreAccData(unsigned char)
+                0x00001aba                IMU::IMU(I2C_Master*, unsigned char, unsigned char)
+                0x0000078e                IMU::StoreGyroData(unsigned char)
+                0x000006be                IMU::SetDebugPort(DebugPort*)
+                0x0000072a                IMU::ccx(unsigned char, unsigned char)
+                0x000008d6                IMU::Rd(unsigned char, unsigned char, unsigned char, unsigned char*)
+                0x00001402                IMU::I2CArbLost()
+                0x00000be4                IMU::CheckIDs(HardwareSerial*)
+                0x00001720                IMU::Run()
+                0x000006b2                IMU::NextIMU(IMUBase*)
+                0x0000084c                IMU::WrAsync(unsigned char, unsigned char, unsigned char)
+                0x0000106a                non-virtual thunk to IMU::I2CReadDone()
+                0x00000dd6                IMU::QueryChannels()
+                0x000017f2                IMU::ovf(unsigned char)
+                0x00000e34                IMU::GetPacketData(unsigned char*)
+                0x00001b56                IMU::IMU(I2C_Master*)
+                0x00000f3e                Mark::Mark(DebugPort*, unsigned char)
+                0x0000110a                IMU::I2CWriteDone()
+                0x000013fa                non-virtual thunk to IMU::I2CArbLost()
+                0x00000964                IMU::Configure(unsigned char)
+                0x00001072                IMU::I2CReadDone()
+                0x0000103e                IMU::Stop()
+                0x00001508                non-virtual thunk to IMU::I2CBusError()
+                0x000006d6                IMU::Busy()
+                0x00001510                IMU::I2CBusError()
+                0x00000728                non-virtual thunk to IMU::ccx(unsigned char, unsigned char)
+                0x000017ea                non-virtual thunk to IMU::ovf(unsigned char)
+                0x00000aae                IMU::SetTimerPeriod()
+                0x00001852                IMU::Reset()
+                0x00000b48                IMU::ResetTimer()
+                0x000017f8                IMU::BeginRead()
+                0x0000105c                Mark::~Mark()
+                0x00001954                IMU::IMU(I2C_Master*, unsigned char, unsigned char, unsigned char, unsigned char)
+                0x000006e0                IMU::DataReady()
+                0x00000714                IMU::PushData(unsigned char)
+ .text          0x00001d52      0xad8 IMUManager.o
+                0x00002372                IMUManager::err(unsigned char)
+                0x00001e74                IMUManager::ToggleLed()
+                0x00002638                IMUManager::SendPacket(bool)
+                0x00001fc4                IMUManager::AddIMU(IMUBase*)
+                0x000021f4                IMUManager::CheckIDs(HardwareSerial*, int)
+                0x00001e26                IMUManager::LedOn()
+                0x000020ca                IMUManager::Stop()
+                0x0000232c                IMUManager::DiscardData()
+                0x000025b8                IMUManager::SetTimer(TimerCntr*)
+                0x00002722                IMUManager::Loop()
+                0x0000230a                IMUManager::Run()
+                0x00002460                IMUManager::SampleRate(unsigned int)
+                0x00001dae                IMUManager::IMUManager(HardwareSerial*)
+                0x00002080                IMUManager::Start()
+                0x00001e94                IMUManager::ShowLedStart()
+                0x00002036                IMUManager::Setup()
+                0x0000226a                IMUManager::DataReady()
+                0x00001e48                IMUManager::PacketLedIndicator()
+                0x00001d52                IMUManager::IMUManager(HardwareSerial*)
+                0x000022fe                IMUManager::StreamWatchdog()
+                0x00001f24                IMUManager::ShowLedStop()
+                0x00002178                IMUManager::ResetDevices()
+                0x00002374                IMUManager::ovf(unsigned char)
+                0x000022b8                IMUManager::IMUUseGyro(bool)
+                0x00001e0a                IMUManager::SetBlueLed(PORT_struct*, unsigned char)
+                0x000027aa                IMUManager::StreamStart(bool)
+                0x0000212a                IMUManager::Reset()
+                0x0000237c                IMUManager::SetTimerPeriod()
+                0x00001e38                IMUManager::LedOff()
+                0x000021b6                IMUManager::ForceStartStop()
+                0x0000237a                IMUManager::ccx(unsigned char, unsigned char)
+ .text          0x0000282a      0x1ee IMUPacketFifo.o
+                0x000029ee                IMUPacketFifo::IMUPacketFifo(unsigned char)
+                0x0000283a                IMUPacketFifo::count()
+                0x000028f0                IMUPacketFifo::push(IMUPacket const&)
+                0x000028ac                IMUPacketFifo::pop(IMUPacket**)
+                0x0000282a                IMUPacketFifo::clear()
+                0x000029c4                IMUPacketFifo::IMUPacketFifo(unsigned char)
+                0x00002894                IMUPacketFifo::empty()
+                0x0000295a                IMUPacketFifo::push(IMUPacket*)
+                0x0000286c                IMUPacketFifo::full()
+ .text          0x00002a18       0xa8 clksystem.o
+                0x00002a18                CCPWrite(unsigned char volatile*, unsigned char)
+                0x00002a40                clksystem_init()
+ .text          0x00002ac0      0x7da GyroCmdProcessor.o
+                0x000031d2                GyroCmdProcessor::GyroCmdProcessor(HardwareSerial*, I2C_Master**, IMUManager*)
+                0x000031cc                GyroCmdProcessor::~GyroCmdProcessor()
+                0x00002ac0                GyroCmdProcessor::Loop()
+                0x000031c6                GyroCmdProcessor::~GyroCmdProcessor()
+                0x00003236                GyroCmdProcessor::GyroCmdProcessor(HardwareSerial*, I2C_Master**, IMUManager*)
+ .text          0x0000329a      0x404 CmdProcessor.o
+                0x00003350                CmdProcessor::getParam(unsigned char, long&)
+                0x000035e6                CmdProcessor::CmdProcessor(HardwareSerial*)
+                0x000032b4                CmdProcessor::getCmd()
+                0x0000341a                CmdProcessor::processCmd()
+                0x000032aa                CmdProcessor::resetCmd()
+                0x000032c2                CmdProcessor::getParam(unsigned char, char*&, unsigned char)
+                0x00003386                CmdProcessor::getParam(unsigned char, int&)
+                0x00003548                CmdProcessor::cmdTerm(char*)
+                0x000032bc                CmdProcessor::paramCnt()
+                0x00003502                CmdProcessor::cmdDelim(char const*)
+                0x000034a0                CmdProcessor::checkCommands()
+                0x0000329a                CmdProcessor::cmdTerm()
+                0x000033b8                CmdProcessor::getParam(unsigned char, unsigned char&)
+                0x000032f8                CmdProcessor::getParam(unsigned char, double&)
+                0x000032a2                CmdProcessor::cmdDelim()
+                0x0000363e                CmdProcessor::~CmdProcessor()
+                0x0000366e                CmdProcessor::~CmdProcessor()
+                0x000033e8                CmdProcessor::getParam(unsigned char, unsigned int&)
+                0x0000358e                CmdProcessor::CmdProcessor(HardwareSerial*)
+ .text          0x0000369e      0xa5c HardwareSerial.o
+                0x000037e8                __vector_63
+                0x00003c10                __vector_28
+                0x00004002                HardwareSerial::~HardwareSerial()
+                0x000039d6                __vector_119
+                0x00003b2c                __vector_91
+                0x0000402e                HardwareSerial::HardwareSerial(USART_struct*, PORT_struct*, unsigned char, unsigned char)
+                0x000037ca                __vector_62
+                0x00003fd6                HardwareSerial::~HardwareSerial()
+                0x00003f28                HardwareSerial::available()
+                0x00003fb8                HardwareSerial::write(unsigned char)
+                0x00003734                __vector_90
+                0x00003964                __vector_122
+                0x0000390c                HardwareSerial::rxc()
+                0x00003752                __vector_92
+                0x000036f8                __vector_30
+                0x00003c82                __vector_25
+                0x00003770                __vector_93
+                0x00003a48                __vector_61
+                0x00003fa0                HardwareSerial::flush()
+                0x00003842                __vector_123
+                0x00004094                HardwareSerial::HardwareSerial(USART_struct*, PORT_struct*, unsigned char, unsigned char)
+                0x00003eea                HardwareSerial::end()
+                0x00003b9e                __vector_88
+                0x00003e2a                HardwareSerial::begin2x(long, signed char)
+                0x000036bc                __vector_27
+                0x00003716                __vector_89
+                0x00003fd0                HardwareSerial::enable(bool)
+                0x00003aba                __vector_58
+                0x000036da                __vector_29
+                0x000037ac                __vector_60
+                0x00003824                __vector_121
+                0x00003cf6                HardwareSerial::txc()
+                0x00003cf4                HardwareSerial::dre()
+                0x0000369e                __vector_26
+                0x00003cf8                HardwareSerial::begin(long, signed char)
+                0x00003860                __vector_124
+                0x00003f50                HardwareSerial::read()
+                0x0000378e                __vector_59
+                0x00003806                __vector_120
+ .text          0x000040fa       0x9c DebugPort.o
+                0x000040fa                DebugPort::SetState(unsigned char)
+                0x0000417e                DebugPort::DebugPort(PORT_struct*)
+                0x00004128                DebugPort::PinMask(unsigned char, unsigned char)
+                0x00004166                DebugPort::DebugPort(PORT_struct*)
+ .text          0x00004196     0x1094 I2C_Master.o
+                0x00004d54                I2C_Master::begin(unsigned long)
+                0x0000425c                I2C_Master::CleanRegs()
+                0x000041d2                __vector_75
+                0x00004fa0                I2C_Master::ReadData(unsigned char*, unsigned char)
+                0x00004ec6                I2C_Master::I2C_Master(TWI_struct*)
+                0x00004196                __vector_12
+                0x000042b6                I2C_Master::Reserve(void*)
+                0x0000481e                __vector_46
+                0x0000513c                I2C_Master::CheckID(unsigned char)
+                0x00004902                I2C_Master::slave_int()
+                0x0000473a                __vector_107
+                0x0000440e                I2C_Master::WigglePin(unsigned char, unsigned char, unsigned char)
+                0x000041b4                __vector_45
+                0x000042dc                I2C_Master::Result()
+                0x00004d36                I2C_Master::~I2C_Master()
+                0x0000511e                I2C_Master::Read(unsigned char, unsigned char)
+                0x00004890                __vector_13
+                0x00005130                I2C_Master::Write(unsigned char, unsigned char*, unsigned char)
+                0x000046a8                I2C_Master::ErrorHandler()
+                0x00004cd4                I2C_Master::loop()
+                0x0000429e                I2C_Master::nReadBytes()
+                0x00004278                I2C_Master::ReadData(unsigned char)
+                0x0000426a                I2C_Master::busState()
+                0x000047ac                __vector_76
+                0x00004254                I2C_Master::NotifyMe(I2CNotify*)
+                0x000042ae                I2C_Master::isReserved()
+                0x000041f0                __vector_106
+                0x000046e4                I2C_Master::master_int()
+                0x0000451a                I2C_Master::WriteHandler()
+                0x000042f0                I2C_Master::ForceStartStop()
+                0x000042a4                I2C_Master::busy()
+                0x00004b2a                I2C_Master::showstate()
+                0x00004cf4                I2C_Master::end()
+                0x00004ddc                I2C_Master::I2C_Master(TWI_struct*)
+                0x000042e2                I2C_Master::Stop()
+                0x00004904                I2C_Master::dumpregs()
+                0x00004d18                I2C_Master::~I2C_Master()
+                0x00004b98                I2C_Master::testack(unsigned char)
+                0x00005100                I2C_Master::ReadSync(unsigned char, unsigned char)
+                0x000042d6                I2C_Master::State()
+                0x00004676                I2C_Master::ArbHandler()
+                0x000045cc                I2C_Master::ReadHandler()
+                0x00004fd6                I2C_Master::WriteRead(unsigned char, unsigned char*, unsigned char, unsigned char)
+                0x00005094                I2C_Master::WriteReadSync(unsigned char, unsigned char*, unsigned char, unsigned char)
+                0x00005112                I2C_Master::WriteSync(unsigned char, unsigned char*, unsigned char)
+ .text          0x0000522a       0x18 NewDel.o
+                0x00005236                operator new[](unsigned int)
+                0x00005230                operator delete(void*)
+                0x0000522a                operator delete[](void*)
+                0x0000523c                operator new(unsigned int)
+ .text          0x00005242      0x530 Print.o
+                0x00005542                Print::println(unsigned int, int)
+                0x000054fe                Print::println()
+                0x000055d4                Print::println(int, int)
+                0x000052c0                Print::printNumber(unsigned long, unsigned char)
+                0x00005272                Print::write(unsigned char const*, unsigned int)
+                0x00005756                Print::print(double, int)
+                0x000054da                Print::print(char, int)
+                0x00005242                Print::write(char const*)
+                0x0000563e                Print::printFloat(double, unsigned char)
+                0x000054b4                Print::print(int, int)
+                0x00005424                Print::print(unsigned char, int)
+                0x000055a8                Print::println(char const*)
+                0x00005574                Print::println(unsigned char, int)
+                0x0000560a                Print::println(char, int)
+                0x00005402                Print::print(unsigned int, int)
+                0x000052b0                Print::print(char const*)
+                0x000053e4                Print::print(unsigned long, int)
+                0x000055be                Print::println(long, int)
+                0x0000575c                Print::println(double, int)
+                0x00005448                Print::print(long, int)
+                0x0000552c                Print::println(unsigned long, int)
+ .text          0x00005772      0x83c Port.o
+                0x000058d8                __vector_104
+                0x00005e5e                __vector_67
+                0x0000581e                Port::~Port()
+                0x00005f00                Port::SetPinsLow(unsigned char)
+                0x00005aa0                __vector_34
+                0x00005edc                Port::SetPinsAsInput(unsigned char)
+                0x00005dec                __vector_35
+                0x00005d7a                __vector_3
+                0x00005c24                __vector_105
+                0x000057fe                Port::Port(PORT_struct*)
+                0x00005b84                Port::int1()
+                0x00005838                Port::int0()
+                0x00005f68                Port::InterruptMask(unsigned char, unsigned char)
+                0x00005f0c                Port::GetPins()
+                0x00005f18                Port::InterruptLevel(unsigned char, unsigned char)
+                0x000059bc                __vector_64
+                0x0000594a                __vector_43
+                0x00005ee8                Port::SetPinsAsOutput(unsigned char)
+                0x00005ef4                Port::SetPinsHigh(unsigned char)
+                0x00005866                __vector_96
+                0x00005c96                __vector_44
+                0x00005a2e                __vector_2
+                0x00005ed0                Port::SetDir(unsigned char)
+                0x0000580e                Port::~Port()
+                0x00005b12                __vector_66
+                0x000057ee                Port::Port(PORT_struct*)
+                0x00005f7c                Port::PinControl(unsigned char, bool, bool, PORT_OPC_enum, PORT_ISC_enum)
+                0x00005bb2                __vector_97
+                0x00005d08                __vector_65
+                0x0000582e                Port::Notify(PortNotify*, unsigned char)
+ .text          0x00005fae       0x20 cpp_hacks.o
+                0x00005fcc                __cxa_pure_virtual
+                0x00005fc2                __cxa_guard_release
+                0x00005fca                __cxa_guard_abort
+                0x00005fae                __cxa_guard_acquire
+ .text          0x00005fce      0x3a6 fifo.o
+                0x00006048                Fifo::push(unsigned char*)
+                0x00006006                Fifo::full()
+                0x00005fce                Fifo::clear()
+                0x00006138                FifoTest(HardwareSerial&)
+                0x00006112                Fifo::Fifo(unsigned char)
+                0x00006030                Fifo::empty()
+                0x0000634e                Fifo::Fifo(unsigned char)
+                0x000060bc                Fifo::pop(unsigned char*)
+                0x00005fde                Fifo::count()
+ .text          0x00006374     0x113e TimerCntr.o
+                0x00006ece                __vector_22
+                0x0000665c                TimerCntr::CCReg(unsigned char)
+                0x00006b7e                __vector_77
+                0x00006604                TimerCntr::Period()
+                0x000065cc                TimerCntr::IntLvlB(unsigned char)
+                0x000066be                TimerCntr::err()
+                0x00006cfe                __vector_55
+                0x000063b6                TimerCntr::TimerCntr(TC0_struct*)
+                0x00007186                __vector_81
+                0x000066b4                TimerCntr::Notify(TimerNotify*, unsigned char)
+                0x000068ac                __vector_78
+                0x000064f6                TimerCntr::~TimerCntr()
+                0x00006e5a                __vector_23
+                0x00006578                TimerCntr::CCEnable(unsigned char)
+                0x00006990                TimerCntr::ovf()
+                0x000066e4                __vector_54
+                0x0000656c                TimerCntr::ClkSel(TC_CLKSEL_enum)
+                0x000073ca                __vector_17
+                0x000072e2                __vector_19
+                0x00006c8a                __vector_56
+                0x000065d8                TimerCntr::Counter(unsigned int)
+                0x00006374                TimerCntr::TimerCntr(TC0_struct*)
+                0x0000709e                __vector_49
+                0x00006d72                __vector_86
+                0x000065ae                TimerCntr::IntLvlA(unsigned char, unsigned char)
+                0x00006b0c                __vector_47
+                0x00006f42                __vector_52
+                0x00006480                TimerCntr::~TimerCntr()
+                0x00006c62                TimerCntr::ccx(unsigned char)
+                0x00007112                __vector_82
+                0x0000643c                TimerCntr::TimerCntr(TC1_struct*)
+                0x00006fb6                __vector_51
+                0x000067c8                __vector_21
+                0x0000691e                __vector_15
+                0x0000726e                __vector_79
+                0x00006a28                __vector_83
+                0x000063f8                TimerCntr::TimerCntr(TC1_struct*)
+                0x00006de6                __vector_85
+                0x0000683a                __vector_48
+                0x0000658e                TimerCntr::WaveformGenMode(TC_WGMODE_enum)
+                0x000065a0                TimerCntr::EventSetup(TC_EVACT_enum, TC_EVSEL_enum)
+                0x000071fa                __vector_80
+                0x00006614                TimerCntr::CCReg(unsigned char, unsigned int)
+                0x00006bf0                __vector_14
+                0x00006756                __vector_84
+                0x000069b6                __vector_53
+                0x0000702a                __vector_50
+                0x0000743e                __vector_16
+                0x000065f6                TimerCntr::Period(unsigned int)
+                0x00007356                __vector_18
+                0x000065e6                TimerCntr::Counter()
+                0x00006a9a                __vector_20
+ .text          0x000074b2      0x59a TimerCore.o
+                0x00007906                delay(unsigned long)
+                0x00007562                __vector_114
+                0x000075c0                millis()
+                0x00007638                micros_huge()
+                0x000074b2                timer_init()
+                0x00007a08                delayMicroseconds(unsigned long)
+                0x000074ea                __vector_108
+                0x00007832                micros()
+ .text          0x00007a4c      0x80a Time.o
+                0x00007f88                setTime(int, int, int, int, int, int)
+                0x00007cba                weekday(unsigned long)
+                0x00007c9c                year(unsigned long)
+                0x00008106                weekday()
+                0x00007cea                hourFormat12(unsigned long)
+                0x00008146                isPM()
+                0x00007d12                hour(unsigned long)
+                0x00008150                isAM()
+                0x00007cae                month(unsigned long)
+                0x00007c50                refreshCache(unsigned long)
+                0x00007f22                setSyncInterval(unsigned long)
+                0x000080be                setSyncProvider(unsigned long (*)())
+                0x0000817e                nowold()
+                0x00007fca                now(int)
+                0x00008116                day()
+                0x00007cd2                second(unsigned long)
+                0x00007f34                setTime(unsigned long)
+                0x00007d34                isAM(unsigned long)
+                0x00007ef2                adjustTime(long)
+                0x000080ec                year()
+                0x00007cc6                day(unsigned long)
+                0x000080b4                now()
+                0x00007d44                makeTime(tmElements_t&)
+                0x00008164                hourFormat12()
+                0x000080f6                month()
+                0x00007a4c                breakTime(unsigned long, tmElements_t&)
+                0x00007cde                minute(unsigned long)
+                0x00008136                minute()
+                0x00008126                second()
+                0x0000816e                hour()
+                0x00007d1e                isPM(unsigned long)
+                0x00007f1c                timeStatus()
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mulsi3.o)
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodqi4.o)
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodhi4.o)
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodhi4.o)
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodsi4.o)
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodsi4.o)
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_exit.o)
+ .text          0x00008256        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clear_bss.o)
+ .text          0x00008256      0x1f6 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+                0x00008256                __muldi3
+ .text          0x0000844c       0x58 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+                0x0000844c                __fixunssfsi
+ .text          0x000084a4      0x354 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+                0x0000873c                __subsf3
+                0x0000879e                __addsf3
+ .text          0x000087f8      0x1f4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+                0x000087f8                __mulsf3
+ .text          0x000089ec      0x158 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+                0x000089ec                __divsf3
+ .text          0x00008b44       0x60 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+                0x00008b44                __gesf2
+ .text          0x00008ba4       0x60 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+                0x00008ba4                __ltsf2
+ .text          0x00008c04       0xbc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+                0x00008c04                __floatsisf
+ .text          0x00008cc0       0xa8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+                0x00008cc0                __fixsfsi
+ .text          0x00008d68        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+ .text          0x00008d68       0xf2 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+                0x00008d68                __floatunsisf
+ .text          0x00008e5a        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_prologue.o)
+ .text          0x00008e5a        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_epilogue.o)
+ .text          0x00008e5a       0x9e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+                0x00008e5a                __clzsi2
+ .text          0x00008ef8      0x1aa /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+                0x00008ef8                __pack_f
+ .text          0x000090a2       0xf0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+                0x000090a2                __unpack_f
+ .text          0x00009192       0xb2 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+                0x00009192                __fpcmp_parts_f
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atoi.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atol.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memcpy.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memset.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcmp.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcpy.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strncpy.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strpbrk.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok_r.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mulsi10.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mul10.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(isspace.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr_P.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen_P.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ultoa_invert.o)
+ .text          0x00009244        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(cty_isfalse.o)
+                0x00009244                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00009244       0x3e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mulsi3.o)
+                0x00009244                __mulsi3
+ .text.libgcc   0x00009282       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodqi4.o)
+                0x00009282                __udivmodqi4
+ .text.libgcc   0x0000929a       0x28 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodhi4.o)
+                0x0000929a                __udivmodhi4
+ .text.libgcc   0x000092c2       0x26 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodhi4.o)
+                0x000092c2                __divmodhi4
+                0x000092c2                _div
+ .text.libgcc   0x000092e8       0x44 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodsi4.o)
+                0x000092e8                __udivmodsi4
+ .text.libgcc   0x0000932c       0x36 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodsi4.o)
+                0x0000932c                __divmodsi4
+ .text.libgcc   0x00009362        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_exit.o)
+ .text.libgcc   0x00009362        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00009362       0x38 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_prologue.o)
+                0x00009362                __prologue_saves__
+ .text.libgcc   0x0000939a       0x36 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_epilogue.o)
+                0x0000939a                __epilogue_restores__
+ .text.avr-libc
+                0x000093d0      0x20a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+                0x000093d0                malloc
+                0x0000952a                free
+ .text.avr-libc
+                0x000095da       0x3c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atoi.o)
+                0x000095da                atoi
+ .text.avr-libc
+                0x00009616       0x4e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atol.o)
+                0x00009616                atol
+ .text.avr-libc
+                0x00009664        0xa /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+                0x00009664                strtok
+ .text.avr-libc
+                0x0000966e       0x12 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memcpy.o)
+                0x0000966e                memcpy
+ .text.avr-libc
+                0x00009680        0xe /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memset.o)
+                0x00009680                memset
+ .text.avr-libc
+                0x0000968e       0x16 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr.o)
+                0x0000968e                strchr
+ .text.avr-libc
+                0x000096a4       0x12 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcmp.o)
+                0x000096a4                strcmp
+ .text.avr-libc
+                0x000096b6        0xe /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcpy.o)
+                0x000096b6                strcpy
+ .text.avr-libc
+                0x000096c4       0x1e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strncpy.o)
+                0x000096c4                strncpy
+ .text.avr-libc
+                0x000096e2       0x1c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strpbrk.o)
+                0x000096e2                strpbrk
+ .text.avr-libc
+                0x000096fe       0x4e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok_r.o)
+                0x000096fe                strtok_r
+ .text.avr-libc
+                0x0000974c       0x2a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mulsi10.o)
+                0x0000974c                __mulsi_const_10
+ .text.avr-libc
+                0x00009776       0x10 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mul10.o)
+                0x00009776                __mulhi_const_10
+ .text.avr-libc
+                0x00009786       0x56 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+                0x00009786                sprintf
+ .text.avr-libc
+                0x000097dc       0x3a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+                0x000097dc                sscanf
+ .text.avr-libc
+                0x00009816      0x400 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+                0x00009816                vfprintf
+ .text.avr-libc
+                0x00009c16      0x598 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+                0x00009f68                vfscanf
+ .text.avr-libc
+                0x0000a1ae       0x10 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(isspace.o)
+                0x0000a1ae                isspace
+ .text.avr-libc
+                0x0000a1be       0x16 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr_P.o)
+                0x0000a1be                strchr_P
+ .text.avr-libc
+                0x0000a1d4       0x16 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen_P.o)
+                0x0000a1d4                strnlen_P
+ .text.avr-libc
+                0x0000a1ea       0x16 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen.o)
+                0x0000a1ea                strnlen
+ .text.avr-libc
+                0x0000a200       0x84 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+                0x0000a200                fgetc
+ .text.avr-libc
+                0x0000a284       0x58 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+                0x0000a284                fputc
+ .text.avr-libc
+                0x0000a2dc       0x34 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+                0x0000a2dc                ungetc
+ .text.avr-libc
+                0x0000a310       0xbc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ultoa_invert.o)
+                0x0000a310                __ultoa_invert
+ .text.avr-libc
+                0x0000a3cc        0x6 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(cty_isfalse.o)
+                0x0000a3d0                __ctype_istrue
+                0x0000a3cc                __ctype_isfalse
+                0x0000a3d2                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000a3d2        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_exit.o)
+                0x0000a3d2                exit
+                0x0000a3d2                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000a3d2        0x4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000a3d6                _etext = .
+
+.data           0x00802000      0x62a load address 0x0000a3d6
+                0x00802000                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00802000        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ .data          0x00802000       0x7d GyroAcc.o
+                0x00802073                vtable for TimerNotify
+                0x00802065                vtable for MyDriver
+ .data          0x0080207d      0x14c IMU.o
+                0x008021b1                vtable for I2CNotify
+                0x00802145                vtable for IMU
+                0x0080218f                vtable for IMUBase
+ .data          0x008021c9       0x41 IMUManager.o
+                0x008021f6                vtable for IMUManager
+ .data          0x0080220a        0x0 IMUPacketFifo.o
+ .data          0x0080220a        0x0 clksystem.o
+ .data          0x0080220a      0x135 GyroCmdProcessor.o
+ .data          0x0080233f        0xa CmdProcessor.o
+ .data          0x00802349        0xa HardwareSerial.o
+                0x00802349                vtable for HardwareSerial
+ .data          0x00802353        0x0 DebugPort.o
+ .data          0x00802353      0x154 I2C_Master.o
+ .data          0x008024a7        0x0 NewDel.o
+ .data          0x008024a7        0xc Print.o
+                0x008024a9                vtable for Print
+ .data          0x008024b3        0x0 Port.o
+ .data          0x008024b3        0x0 cpp_hacks.o
+ .data          0x008024b3       0x58 fifo.o
+ .data          0x0080250b        0x0 TimerCntr.o
+ .data          0x0080250b        0x0 TimerCore.o
+ .data          0x0080250b       0x10 Time.o
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mulsi3.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodqi4.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodhi4.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodhi4.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodsi4.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodsi4.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_exit.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clear_bss.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .data          0x0080251b        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .data          0x0080251b        0x8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+                0x0080251b                __thenan_sf
+ .data          0x00802523        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .data          0x00802523        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_prologue.o)
+ .data          0x00802523        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_epilogue.o)
+ .data          0x00802523        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .data          0x00802523        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .data          0x00802523        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .data          0x00802523        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00802523      0x100 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+                0x00802523                __clz_tab
+ .data          0x00802623        0x6 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+                0x00802625                __malloc_heap_start
+                0x00802627                __malloc_heap_end
+                0x00802623                __malloc_margin
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atoi.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atol.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memcpy.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memset.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcmp.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcpy.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strncpy.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strpbrk.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok_r.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mulsi10.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mul10.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(isspace.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr_P.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen_P.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ultoa_invert.o)
+ .data          0x00802629        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(cty_isfalse.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080262a                . = ALIGN (0x2)
+ *fill*         0x00802629        0x1 00
+                0x0080262a                _edata = .
+                0x0080262a                PROVIDE (__data_end, .)
+
+.bss            0x0080262a      0x5e3
+                0x0080262a                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080262a        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ .bss           0x0080262a        0x4 GyroAcc.o
+                0x0080262a                pdbgserial
+                0x0080262c                pdbgport
+ .bss           0x0080262e       0x86 IMU.o
+ .bss           0x008026b4       0xff IMUManager.o
+ .bss           0x008027b3        0x0 IMUPacketFifo.o
+ .bss           0x008027b3        0x0 clksystem.o
+ .bss           0x008027b3      0x400 GyroCmdProcessor.o
+ .bss           0x00802bb3        0x0 CmdProcessor.o
+ .bss           0x00802bb3       0x10 HardwareSerial.o
+ .bss           0x00802bc3        0x0 DebugPort.o
+ .bss           0x00802bc3        0x8 I2C_Master.o
+ .bss           0x00802bcb        0x0 NewDel.o
+ .bss           0x00802bcb        0x0 Print.o
+ .bss           0x00802bcb        0xe Port.o
+ .bss           0x00802bd9        0x0 cpp_hacks.o
+ .bss           0x00802bd9        0x0 fifo.o
+ .bss           0x00802bd9        0xc TimerCntr.o
+ .bss           0x00802be5        0x8 TimerCore.o
+                0x00802be9                seconds_count
+                0x00802be5                millis_count
+ .bss           0x00802bed       0x1a Time.o
+                0x00802bed                getTimePtr
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mulsi3.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodqi4.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodhi4.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodhi4.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_udivmodsi4.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_divmodsi4.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_exit.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clear_bss.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_prologue.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_epilogue.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atoi.o)
+ .bss           0x00802c07        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atol.o)
+ .bss           0x00802c07        0x2 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memcpy.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memset.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcmp.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcpy.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strncpy.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strpbrk.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok_r.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mulsi10.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mul10.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(isspace.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr_P.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen_P.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ultoa_invert.o)
+ .bss           0x00802c09        0x0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(cty_isfalse.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00802c09        0x4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+                0x00802c09                __brkval
+                0x00802c0b                __flp
+                0x00802c0d                PROVIDE (__bss_end, .)
+                0x0000a3d6                __data_load_start = LOADADDR (.data)
+                0x0000aa00                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00802c0d        0x0
+                0x00802c0d                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00802c0d                PROVIDE (__noinit_end, .)
+                0x00802c0d                _end = .
+                0x00802c0d                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x19e0
+ *(.stab)
+ .stab          0x00000000      0x7a4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+ .stab          0x000007a4      0x174 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atoi.o)
+                                0x180 (size before relaxing)
+ .stab          0x00000918      0x1e0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(atol.o)
+                                0x1ec (size before relaxing)
+ .stab          0x00000af8       0x84 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memcpy.o)
+                                 0x90 (size before relaxing)
+ .stab          0x00000b7c       0x6c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(memset.o)
+                                 0x78 (size before relaxing)
+ .stab          0x00000be8       0x9c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr.o)
+                                 0xa8 (size before relaxing)
+ .stab          0x00000c84       0x84 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcmp.o)
+                                 0x90 (size before relaxing)
+ .stab          0x00000d08       0x6c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strcpy.o)
+                                 0x78 (size before relaxing)
+ .stab          0x00000d74       0xcc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strncpy.o)
+                                 0xd8 (size before relaxing)
+ .stab          0x00000e40       0xc0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strpbrk.o)
+                                 0xcc (size before relaxing)
+ .stab          0x00000f00      0x204 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok_r.o)
+                                0x210 (size before relaxing)
+ .stab          0x00001104      0x114 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mulsi10.o)
+                                0x120 (size before relaxing)
+ .stab          0x00001218       0x78 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(mul10.o)
+                                 0x84 (size before relaxing)
+ .stab          0x00001290       0x9c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(isspace.o)
+                                 0xa8 (size before relaxing)
+ .stab          0x0000132c       0x9c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strchr_P.o)
+                                 0xa8 (size before relaxing)
+ .stab          0x000013c8       0x9c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen_P.o)
+                                 0xa8 (size before relaxing)
+ .stab          0x00001464       0x9c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strnlen.o)
+                                 0xa8 (size before relaxing)
+ .stab          0x00001500      0x480 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ultoa_invert.o)
+                                0x48c (size before relaxing)
+ .stab          0x00001980       0x60 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(cty_isfalse.o)
+                                 0x6c (size before relaxing)
+
+.stabstr        0x00000000      0x704
+ *(.stabstr)
+ .stabstr       0x00000000      0x704 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/crtx128a1.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x550
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 GyroAcc.o
+ .debug_aranges
+                0x00000020       0x20 IMU.o
+ .debug_aranges
+                0x00000040       0x20 IMUManager.o
+ .debug_aranges
+                0x00000060       0x20 IMUPacketFifo.o
+ .debug_aranges
+                0x00000080       0x20 clksystem.o
+ .debug_aranges
+                0x000000a0       0x20 GyroCmdProcessor.o
+ .debug_aranges
+                0x000000c0       0x20 CmdProcessor.o
+ .debug_aranges
+                0x000000e0       0x20 HardwareSerial.o
+ .debug_aranges
+                0x00000100       0x20 DebugPort.o
+ .debug_aranges
+                0x00000120       0x20 I2C_Master.o
+ .debug_aranges
+                0x00000140       0x20 NewDel.o
+ .debug_aranges
+                0x00000160       0x20 Print.o
+ .debug_aranges
+                0x00000180       0x20 Port.o
+ .debug_aranges
+                0x000001a0       0x20 cpp_hacks.o
+ .debug_aranges
+                0x000001c0       0x20 fifo.o
+ .debug_aranges
+                0x000001e0       0x20 TimerCntr.o
+ .debug_aranges
+                0x00000200       0x20 TimerCore.o
+ .debug_aranges
+                0x00000220       0x20 Time.o
+ .debug_aranges
+                0x00000240       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .debug_aranges
+                0x00000260       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .debug_aranges
+                0x00000280       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .debug_aranges
+                0x000002a0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_aranges
+                0x000002c0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .debug_aranges
+                0x000002e0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .debug_aranges
+                0x00000300       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .debug_aranges
+                0x00000320       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .debug_aranges
+                0x00000340       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .debug_aranges
+                0x00000360       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .debug_aranges
+                0x00000380       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .debug_aranges
+                0x000003a0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .debug_aranges
+                0x000003c0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .debug_aranges
+                0x000003e0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_aranges
+                0x00000400       0x28 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_aranges
+                0x00000428       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_aranges
+                0x00000448       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_aranges
+                0x00000468       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .debug_aranges
+                0x00000488       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_aranges
+                0x000004a8       0x48 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_aranges
+                0x000004f0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_aranges
+                0x00000510       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_aranges
+                0x00000530       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+
+.debug_pubnames
+                0x00000000     0x2250
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xaa GyroAcc.o
+ .debug_pubnames
+                0x000000aa      0x392 IMU.o
+ .debug_pubnames
+                0x0000043c      0x328 IMUManager.o
+ .debug_pubnames
+                0x00000764       0xfe IMUPacketFifo.o
+ .debug_pubnames
+                0x00000862       0x32 clksystem.o
+ .debug_pubnames
+                0x00000894       0xcb GyroCmdProcessor.o
+ .debug_pubnames
+                0x0000095f      0x228 CmdProcessor.o
+ .debug_pubnames
+                0x00000b87      0x342 HardwareSerial.o
+ .debug_pubnames
+                0x00000ec9       0x73 DebugPort.o
+ .debug_pubnames
+                0x00000f3c      0x43c I2C_Master.o
+ .debug_pubnames
+                0x00001378       0x62 NewDel.o
+ .debug_pubnames
+                0x000013da      0x194 Print.o
+ .debug_pubnames
+                0x0000156e      0x226 Port.o
+ .debug_pubnames
+                0x00001794       0x6f cpp_hacks.o
+ .debug_pubnames
+                0x00001803       0x99 fifo.o
+ .debug_pubnames
+                0x0000189c      0x3f2 TimerCntr.o
+ .debug_pubnames
+                0x00001c8e       0xac TimerCore.o
+ .debug_pubnames
+                0x00001d3a      0x198 Time.o
+ .debug_pubnames
+                0x00001ed2       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .debug_pubnames
+                0x00001ef1       0x23 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .debug_pubnames
+                0x00001f14       0x2c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .debug_pubnames
+                0x00001f40       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_pubnames
+                0x00001f5f       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .debug_pubnames
+                0x00001f7e       0x1e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .debug_pubnames
+                0x00001f9c       0x1e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .debug_pubnames
+                0x00001fba       0x22 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .debug_pubnames
+                0x00001fdc       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .debug_pubnames
+                0x00001ffc       0x22 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+ .debug_pubnames
+                0x0000201e       0x24 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .debug_pubnames
+                0x00002042       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .debug_pubnames
+                0x00002061       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .debug_pubnames
+                0x00002080       0x21 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .debug_pubnames
+                0x000020a1       0x26 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_pubnames
+                0x000020c7       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+ .debug_pubnames
+                0x000020e7       0x7f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_pubnames
+                0x00002166       0x1d /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_pubnames
+                0x00002183       0x1e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_pubnames
+                0x000021a1       0x1d /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .debug_pubnames
+                0x000021be       0x1f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_pubnames
+                0x000021dd       0x1e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_pubnames
+                0x000021fb       0x1c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_pubnames
+                0x00002217       0x1c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_pubnames
+                0x00002233       0x1d /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+
+.debug_info     0x00000000    0x15e7e
+ *(.debug_info)
+ .debug_info    0x00000000     0x278e GyroAcc.o
+ .debug_info    0x0000278e     0x3b0b IMU.o
+ .debug_info    0x00006299     0x2575 IMUManager.o
+ .debug_info    0x0000880e      0x542 IMUPacketFifo.o
+ .debug_info    0x00008d50      0x34d clksystem.o
+ .debug_info    0x0000909d     0x1537 GyroCmdProcessor.o
+ .debug_info    0x0000a5d4      0x7ea CmdProcessor.o
+ .debug_info    0x0000adbe      0xcaf HardwareSerial.o
+ .debug_info    0x0000ba6d      0x5fb DebugPort.o
+ .debug_info    0x0000c068     0x19be I2C_Master.o
+ .debug_info    0x0000da26       0xf8 NewDel.o
+ .debug_info    0x0000db1e      0xb40 Print.o
+ .debug_info    0x0000e65e      0xa17 Port.o
+ .debug_info    0x0000f075       0xca cpp_hacks.o
+ .debug_info    0x0000f13f      0x41f fifo.o
+ .debug_info    0x0000f55e     0x1804 TimerCntr.o
+ .debug_info    0x00010d62      0xfb2 TimerCore.o
+ .debug_info    0x00011d14      0x88d Time.o
+ .debug_info    0x000125a1      0x206 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .debug_info    0x000127a7       0xb1 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .debug_info    0x00012858      0x47a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .debug_info    0x00012cd2      0x485 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_info    0x00013157      0x3fc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .debug_info    0x00013553      0x27f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .debug_info    0x000137d2      0x27f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .debug_info    0x00013a51      0x207 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .debug_info    0x00013c58      0x2b0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .debug_info    0x00013f08      0x12c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+ .debug_info    0x00014034      0x206 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .debug_info    0x0001423a      0x117 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .debug_info    0x00014351      0x2df /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .debug_info    0x00014630      0x251 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .debug_info    0x00014881      0x210 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_info    0x00014a91       0xa9 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+ .debug_info    0x00014b3a      0x208 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_info    0x00014d42       0x91 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_info    0x00014dd3      0x1b4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_info    0x00014f87      0x1b3 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .debug_info    0x0001513a      0x34a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_info    0x00015484      0x5bb /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_info    0x00015a3f      0x16b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_info    0x00015baa      0x16a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_info    0x00015d14      0x16a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000     0x4c29
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x42d GyroAcc.o
+ .debug_abbrev  0x0000042d      0x62c IMU.o
+ .debug_abbrev  0x00000a59      0x4e1 IMUManager.o
+ .debug_abbrev  0x00000f3a      0x1c3 IMUPacketFifo.o
+ .debug_abbrev  0x000010fd      0x14d clksystem.o
+ .debug_abbrev  0x0000124a      0x2d5 GyroCmdProcessor.o
+ .debug_abbrev  0x0000151f      0x1f9 CmdProcessor.o
+ .debug_abbrev  0x00001718      0x360 HardwareSerial.o
+ .debug_abbrev  0x00001a78      0x1d3 DebugPort.o
+ .debug_abbrev  0x00001c4b      0x3fe I2C_Master.o
+ .debug_abbrev  0x00002049       0xa6 NewDel.o
+ .debug_abbrev  0x000020ef      0x205 Print.o
+ .debug_abbrev  0x000022f4      0x20c Port.o
+ .debug_abbrev  0x00002500       0x97 cpp_hacks.o
+ .debug_abbrev  0x00002597      0x1c9 fifo.o
+ .debug_abbrev  0x00002760      0x278 TimerCntr.o
+ .debug_abbrev  0x000029d8      0x19f TimerCore.o
+ .debug_abbrev  0x00002b77      0x29d Time.o
+ .debug_abbrev  0x00002e14       0xf0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .debug_abbrev  0x00002f04       0x5d /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .debug_abbrev  0x00002f61      0x1ea /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .debug_abbrev  0x0000314b      0x21b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_abbrev  0x00003366      0x216 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .debug_abbrev  0x0000357c      0x15a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .debug_abbrev  0x000036d6      0x15a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .debug_abbrev  0x00003830      0x148 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .debug_abbrev  0x00003978      0x17f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .debug_abbrev  0x00003af7       0xad /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+ .debug_abbrev  0x00003ba4      0x157 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .debug_abbrev  0x00003cfb       0xc4 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .debug_abbrev  0x00003dbf      0x1c0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .debug_abbrev  0x00003f7f      0x154 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .debug_abbrev  0x000040d3      0x13b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_abbrev  0x0000420e       0x6a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+ .debug_abbrev  0x00004278      0x10f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_abbrev  0x00004387       0x77 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_abbrev  0x000043fe      0x10e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_abbrev  0x0000450c       0xff /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .debug_abbrev  0x0000460b      0x184 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_abbrev  0x0000478f      0x209 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_abbrev  0x00004998       0xdb /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_abbrev  0x00004a73       0xdb /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_abbrev  0x00004b4e       0xdb /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+
+.debug_line     0x00000000     0x8cd6
+ *(.debug_line)
+ .debug_line    0x00000000      0x520 GyroAcc.o
+ .debug_line    0x00000520     0x14c0 IMU.o
+ .debug_line    0x000019e0      0xa51 IMUManager.o
+ .debug_line    0x00002431      0x256 IMUPacketFifo.o
+ .debug_line    0x00002687      0x22e clksystem.o
+ .debug_line    0x000028b5      0x559 GyroCmdProcessor.o
+ .debug_line    0x00002e0e      0x43c CmdProcessor.o
+ .debug_line    0x0000324a      0x6cc HardwareSerial.o
+ .debug_line    0x00003916      0x1fa DebugPort.o
+ .debug_line    0x00003b10      0xfa1 I2C_Master.o
+ .debug_line    0x00004ab1      0x102 NewDel.o
+ .debug_line    0x00004bb3      0x47c Print.o
+ .debug_line    0x0000502f      0x45e Port.o
+ .debug_line    0x0000548d       0xb2 cpp_hacks.o
+ .debug_line    0x0000553f      0x2c5 fifo.o
+ .debug_line    0x00005804      0x773 TimerCntr.o
+ .debug_line    0x00005f77      0x2c5 TimerCore.o
+ .debug_line    0x0000623c      0x63c Time.o
+ .debug_line    0x00006878       0xa5 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .debug_line    0x0000691d       0x9d /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .debug_line    0x000069ba      0x2a5 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .debug_line    0x00006c5f      0x22f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_line    0x00006e8e      0x1cb /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .debug_line    0x00007059       0xc9 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .debug_line    0x00007122       0xc9 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .debug_line    0x000071eb      0x12b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .debug_line    0x00007316       0xff /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .debug_line    0x00007415       0x86 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+ .debug_line    0x0000749b      0x129 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .debug_line    0x000075c4       0x9b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .debug_line    0x0000765f      0x180 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .debug_line    0x000077df      0x141 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .debug_line    0x00007920      0x12d /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_line    0x00007a4d       0x72 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+ .debug_line    0x00007abf      0x2b3 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_line    0x00007d72       0x81 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_line    0x00007df3      0x12f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_line    0x00007f22      0x120 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .debug_line    0x00008042      0x482 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_line    0x000084c4      0x55c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_line    0x00008a20      0x117 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_line    0x00008b37       0xd7 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_line    0x00008c0e       0xc8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+
+.debug_frame    0x00000000     0x1c60
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x80 GyroAcc.o
+ .debug_frame   0x00000080      0x3b0 IMU.o
+ .debug_frame   0x00000430      0x200 IMUManager.o
+ .debug_frame   0x00000630       0xa0 IMUPacketFifo.o
+ .debug_frame   0x000006d0       0x30 clksystem.o
+ .debug_frame   0x00000700       0x60 GyroCmdProcessor.o
+ .debug_frame   0x00000760      0x140 CmdProcessor.o
+ .debug_frame   0x000008a0      0x290 HardwareSerial.o
+ .debug_frame   0x00000b30       0x50 DebugPort.o
+ .debug_frame   0x00000b80      0x2f0 I2C_Master.o
+ .debug_frame   0x00000e70       0x50 NewDel.o
+ .debug_frame   0x00000ec0      0x160 Print.o
+ .debug_frame   0x00001020      0x200 Port.o
+ .debug_frame   0x00001220       0x50 cpp_hacks.o
+ .debug_frame   0x00001270       0xa0 fifo.o
+ .debug_frame   0x00001310      0x350 TimerCntr.o
+ .debug_frame   0x00001660       0x90 TimerCore.o
+ .debug_frame   0x000016f0      0x210 Time.o
+ .debug_frame   0x00001900       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .debug_frame   0x00001920       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .debug_frame   0x00001940       0x40 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .debug_frame   0x00001980       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_frame   0x000019a0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .debug_frame   0x000019c0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .debug_frame   0x000019e0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .debug_frame   0x00001a00       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .debug_frame   0x00001a20       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .debug_frame   0x00001a40       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .debug_frame   0x00001a60       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .debug_frame   0x00001a80       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .debug_frame   0x00001aa0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .debug_frame   0x00001ac0       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_frame   0x00001ae0       0x30 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_frame   0x00001b10       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_frame   0x00001b30       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_frame   0x00001b50       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .debug_frame   0x00001b70       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_frame   0x00001b90       0x70 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_frame   0x00001c00       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_frame   0x00001c20       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_frame   0x00001c40       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+
+.debug_str      0x00000000     0x483b
+ *(.debug_str)
+ .debug_str     0x00000000     0x19f6 GyroAcc.o
+                               0x1b7d (size before relaxing)
+ .debug_str     0x000019f6      0x9a5 IMU.o
+                               0x2039 (size before relaxing)
+ .debug_str     0x0000239b      0x58c IMUManager.o
+                               0x151a (size before relaxing)
+ .debug_str     0x00002927      0x1a0 IMUPacketFifo.o
+                                0x2bc (size before relaxing)
+ .debug_str     0x00002ac7      0x2d0 clksystem.o
+                                0x3ef (size before relaxing)
+ .debug_str     0x00002d97       0x3c GyroCmdProcessor.o
+                               0x107b (size before relaxing)
+ .debug_str     0x00002dd3       0x2e CmdProcessor.o
+                                0x39b (size before relaxing)
+ .debug_str     0x00002e01      0x4f1 HardwareSerial.o
+                                0x74a (size before relaxing)
+ .debug_str     0x000032f2       0x23 DebugPort.o
+                                0x560 (size before relaxing)
+ .debug_str     0x00003315      0x33a I2C_Master.o
+                                0xd14 (size before relaxing)
+ .debug_str     0x0000364f       0x6f NewDel.o
+                                 0xd6 (size before relaxing)
+ .debug_str     0x000036be      0x22b Print.o
+                                0x334 (size before relaxing)
+ .debug_str     0x000038e9      0x158 Port.o
+                                0x65e (size before relaxing)
+ .debug_str     0x00003a41       0x6d cpp_hacks.o
+                                 0xc0 (size before relaxing)
+ .debug_str     0x00003aae       0x9d fifo.o
+                                0x1bc (size before relaxing)
+ .debug_str     0x00003b4b      0x1cd TimerCntr.o
+                                0xb66 (size before relaxing)
+ .debug_str     0x00003d18      0x1db TimerCore.o
+                                0x813 (size before relaxing)
+ .debug_str     0x00003ef3      0x308 Time.o
+                                0x406 (size before relaxing)
+ .debug_str     0x000041fb       0xff /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+                                0x17d (size before relaxing)
+ .debug_str     0x000042fa       0x14 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+                                0x13c (size before relaxing)
+ .debug_str     0x0000430e      0x147 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+                                0x24e (size before relaxing)
+ .debug_str     0x00004455       0x27 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+                                0x207 (size before relaxing)
+ .debug_str     0x0000447c       0x35 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+                                0x210 (size before relaxing)
+ .debug_str     0x000044b1        0x8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+                                0x1dd (size before relaxing)
+ .debug_str     0x000044b9        0x8 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+                                0x1dd (size before relaxing)
+ .debug_str     0x000044c1       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+                                0x1c3 (size before relaxing)
+ .debug_str     0x000044d9        0xa /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+                                0x1e6 (size before relaxing)
+ .debug_str     0x00000000      0x14b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_thenan_sf.o)
+ .debug_str     0x000044e3        0xe /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+                                0x1bf (size before relaxing)
+ .debug_str     0x000044f1       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+                                0x14f (size before relaxing)
+ .debug_str     0x00004511       0x10 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+                                0x1e5 (size before relaxing)
+ .debug_str     0x00004521        0xb /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+                                0x1c7 (size before relaxing)
+ .debug_str     0x0000452c       0x10 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+                                0x1ab (size before relaxing)
+ .debug_str     0x00000000      0x132 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clz.o)
+ .debug_str     0x0000453c      0x10b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+                                0x18a (size before relaxing)
+ .debug_str     0x00004647       0x2b /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+                                 0xb0 (size before relaxing)
+ .debug_str     0x00004672       0x5a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+                                0x154 (size before relaxing)
+ .debug_str     0x000046cc       0x24 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+                                0x152 (size before relaxing)
+ .debug_str     0x000046f0       0x5f /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+                                0x19e (size before relaxing)
+ .debug_str     0x0000474f       0x84 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+                                0x1c4 (size before relaxing)
+ .debug_str     0x000047d3       0x22 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+                                0x12e (size before relaxing)
+ .debug_str     0x000047f5       0x22 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+                                0x12e (size before relaxing)
+ .debug_str     0x00004817       0x24 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+                                0x130 (size before relaxing)
+
+.debug_loc      0x00000000     0x7378
+ *(.debug_loc)
+ .debug_loc     0x00000000       0xd0 GyroAcc.o
+ .debug_loc     0x000000d0      0xed0 IMU.o
+ .debug_loc     0x00000fa0      0xaab IMUManager.o
+ .debug_loc     0x00001a4b      0x226 IMUPacketFifo.o
+ .debug_loc     0x00001c71       0x50 clksystem.o
+ .debug_loc     0x00001cc1      0x7b7 GyroCmdProcessor.o
+ .debug_loc     0x00002478      0x604 CmdProcessor.o
+ .debug_loc     0x00002a7c      0x3e6 HardwareSerial.o
+ .debug_loc     0x00002e62      0x149 DebugPort.o
+ .debug_loc     0x00002fab      0xdf5 I2C_Master.o
+ .debug_loc     0x00003da0       0x60 NewDel.o
+ .debug_loc     0x00003e00      0xaeb Print.o
+ .debug_loc     0x000048eb      0x217 Port.o
+ .debug_loc     0x00004b02       0x50 cpp_hacks.o
+ .debug_loc     0x00004b52      0x2d5 fifo.o
+ .debug_loc     0x00004e27      0x37c TimerCntr.o
+ .debug_loc     0x000051a3      0x103 TimerCore.o
+ .debug_loc     0x000052a6      0x471 Time.o
+ .debug_loc     0x00005717       0xcc /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_muldi3.o)
+ .debug_loc     0x000057e3       0x34 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fixunssfsi.o)
+ .debug_loc     0x00005817      0x32a /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_addsub_sf.o)
+ .debug_loc     0x00005b41      0x104 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_loc     0x00005c45       0xc0 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_div_sf.o)
+ .debug_loc     0x00005d05       0x3c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_ge_sf.o)
+ .debug_loc     0x00005d41       0x3c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_lt_sf.o)
+ .debug_loc     0x00005d7d       0xac /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_si_to_sf.o)
+ .debug_loc     0x00005e29       0x7e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_sf_to_si.o)
+ .debug_loc     0x00005ea7       0x4c /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_usi_to_sf.o)
+ .debug_loc     0x00005ef3       0x94 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_clzsi2.o)
+ .debug_loc     0x00005f87      0x13e /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_pack_sf.o)
+ .debug_loc     0x000060c5       0xac /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_unpack_sf.o)
+ .debug_loc     0x00006171       0x50 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_loc     0x000061c1      0x288 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_loc     0x00006449       0x30 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_loc     0x00006479       0x24 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_loc     0x0000649d      0x479 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_loc     0x00006916      0x922 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_loc     0x00007238       0x80 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_loc     0x000072b8       0x60 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_loc     0x00007318       0x60 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(GyroAcc.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x338
+ .debug_ranges  0x00000000       0x18 IMU.o
+ .debug_ranges  0x00000018       0x18 IMUManager.o
+ .debug_ranges  0x00000030       0x18 clksystem.o
+ .debug_ranges  0x00000048      0x180 I2C_Master.o
+ .debug_ranges  0x000001c8       0x50 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/avrxmega7/libgcc.a(_mul_sf.o)
+ .debug_ranges  0x00000218       0x20 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(malloc.o)
+ .debug_ranges  0x00000238       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(strtok.o)
+ .debug_ranges  0x00000250       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sprintf.o)
+ .debug_ranges  0x00000268       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(sscanf.o)
+ .debug_ranges  0x00000280       0x30 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfprintf_std.o)
+ .debug_ranges  0x000002b0       0x40 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(vfscanf_std.o)
+ .debug_ranges  0x000002f0       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fgetc.o)
+ .debug_ranges  0x00000308       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(fputc.o)
+ .debug_ranges  0x00000320       0x18 /usr/local/CrossPack-AVR-20100115/lib/gcc/avr/4.3.3/../../../../avr/lib/avrxmega7/libc.a(ungetc.o)

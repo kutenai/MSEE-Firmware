@@ -1,0 +1,62 @@
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}AC\_\discretionary {-}{}{}struct Struct Reference}{5}{section.3.1}
+\contentsline {section}{\numberline {3.2}ADC\_\discretionary {-}{}{}CH\_\discretionary {-}{}{}struct Struct Reference}{5}{section.3.2}
+\contentsline {section}{\numberline {3.3}ADC\_\discretionary {-}{}{}struct Struct Reference}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}AES\_\discretionary {-}{}{}struct Struct Reference}{7}{section.3.4}
+\contentsline {section}{\numberline {3.5}AWEX\_\discretionary {-}{}{}struct Struct Reference}{7}{section.3.5}
+\contentsline {section}{\numberline {3.6}CFADac Class Reference}{7}{section.3.6}
+\contentsline {section}{\numberline {3.7}CLK\_\discretionary {-}{}{}struct Struct Reference}{8}{section.3.7}
+\contentsline {section}{\numberline {3.8}CmdProcessor Class Reference}{8}{section.3.8}
+\contentsline {section}{\numberline {3.9}DAC\_\discretionary {-}{}{}struct Struct Reference}{9}{section.3.9}
+\contentsline {section}{\numberline {3.10}DFLL\_\discretionary {-}{}{}struct Struct Reference}{9}{section.3.10}
+\contentsline {section}{\numberline {3.11}DMA\_\discretionary {-}{}{}CH\_\discretionary {-}{}{}struct Struct Reference}{10}{section.3.11}
+\contentsline {section}{\numberline {3.12}DMA\_\discretionary {-}{}{}struct Struct Reference}{10}{section.3.12}
+\contentsline {section}{\numberline {3.13}EBI\_\discretionary {-}{}{}CS\_\discretionary {-}{}{}struct Struct Reference}{11}{section.3.13}
+\contentsline {section}{\numberline {3.14}EBI\_\discretionary {-}{}{}struct Struct Reference}{11}{section.3.14}
+\contentsline {section}{\numberline {3.15}EVSYS\_\discretionary {-}{}{}struct Struct Reference}{12}{section.3.15}
+\contentsline {section}{\numberline {3.16}Fifo Class Reference}{13}{section.3.16}
+\contentsline {section}{\numberline {3.17}HardwareSerial Class Reference}{13}{section.3.17}
+\contentsline {section}{\numberline {3.18}HIRES\_\discretionary {-}{}{}struct Struct Reference}{14}{section.3.18}
+\contentsline {section}{\numberline {3.19}I2C\_\discretionary {-}{}{}Master Class Reference}{14}{section.3.19}
+\contentsline {section}{\numberline {3.20}I2CNotify Class Reference}{15}{section.3.20}
+\contentsline {section}{\numberline {3.21}I2CTransaction Class Reference}{16}{section.3.21}
+\contentsline {section}{\numberline {3.22}IMU Class Reference}{16}{section.3.22}
+\contentsline {section}{\numberline {3.23}IMUBase Class Reference}{17}{section.3.23}
+\contentsline {section}{\numberline {3.24}IMUDual Class Reference}{18}{section.3.24}
+\contentsline {section}{\numberline {3.25}IMUManager Class Reference}{19}{section.3.25}
+\contentsline {section}{\numberline {3.26}IRCOM\_\discretionary {-}{}{}struct Struct Reference}{20}{section.3.26}
+\contentsline {section}{\numberline {3.27}MCU\_\discretionary {-}{}{}struct Struct Reference}{20}{section.3.27}
+\contentsline {section}{\numberline {3.28}MyDriver Class Reference}{20}{section.3.28}
+\contentsline {section}{\numberline {3.29}NVM\_\discretionary {-}{}{}FUSES\_\discretionary {-}{}{}struct Struct Reference}{21}{section.3.29}
+\contentsline {section}{\numberline {3.30}NVM\_\discretionary {-}{}{}LOCKBITS\_\discretionary {-}{}{}struct Struct Reference}{21}{section.3.30}
+\contentsline {section}{\numberline {3.31}NVM\_\discretionary {-}{}{}PROD\_\discretionary {-}{}{}SIGNATURES\_\discretionary {-}{}{}struct Struct Reference}{21}{section.3.31}
+\contentsline {section}{\numberline {3.32}NVM\_\discretionary {-}{}{}struct Struct Reference}{23}{section.3.32}
+\contentsline {section}{\numberline {3.33}OCD\_\discretionary {-}{}{}struct Struct Reference}{24}{section.3.33}
+\contentsline {section}{\numberline {3.34}OSC\_\discretionary {-}{}{}struct Struct Reference}{24}{section.3.34}
+\contentsline {section}{\numberline {3.35}PMIC\_\discretionary {-}{}{}struct Struct Reference}{24}{section.3.35}
+\contentsline {section}{\numberline {3.36}PORT\_\discretionary {-}{}{}struct Struct Reference}{24}{section.3.36}
+\contentsline {section}{\numberline {3.37}PORTCFG\_\discretionary {-}{}{}struct Struct Reference}{25}{section.3.37}
+\contentsline {section}{\numberline {3.38}PR\_\discretionary {-}{}{}struct Struct Reference}{26}{section.3.38}
+\contentsline {section}{\numberline {3.39}Print Class Reference}{26}{section.3.39}
+\contentsline {section}{\numberline {3.40}QuadDecoder Class Reference}{27}{section.3.40}
+\contentsline {section}{\numberline {3.41}ring\_\discretionary {-}{}{}buffer Struct Reference}{27}{section.3.41}
+\contentsline {section}{\numberline {3.42}RST\_\discretionary {-}{}{}struct Struct Reference}{28}{section.3.42}
+\contentsline {section}{\numberline {3.43}RTC\_\discretionary {-}{}{}struct Struct Reference}{28}{section.3.43}
+\contentsline {section}{\numberline {3.44}SLEEP\_\discretionary {-}{}{}struct Struct Reference}{28}{section.3.44}
+\contentsline {section}{\numberline {3.45}SPI Class Reference}{29}{section.3.45}
+\contentsline {section}{\numberline {3.46}SPI\_\discretionary {-}{}{}hw Class Reference}{29}{section.3.46}
+\contentsline {section}{\numberline {3.47}SPI\_\discretionary {-}{}{}struct Struct Reference}{30}{section.3.47}
+\contentsline {section}{\numberline {3.48}SPI\_\discretionary {-}{}{}sw Class Reference}{30}{section.3.48}
+\contentsline {section}{\numberline {3.49}TC0\_\discretionary {-}{}{}struct Struct Reference}{31}{section.3.49}
+\contentsline {section}{\numberline {3.50}TC1\_\discretionary {-}{}{}struct Struct Reference}{32}{section.3.50}
+\contentsline {section}{\numberline {3.51}tmElements\_\discretionary {-}{}{}t Struct Reference}{34}{section.3.51}
+\contentsline {section}{\numberline {3.52}TWI\_\discretionary {-}{}{}MASTER\_\discretionary {-}{}{}struct Struct Reference}{34}{section.3.52}
+\contentsline {section}{\numberline {3.53}TWI\_\discretionary {-}{}{}SLAVE\_\discretionary {-}{}{}struct Struct Reference}{34}{section.3.53}
+\contentsline {section}{\numberline {3.54}TWI\_\discretionary {-}{}{}struct Struct Reference}{35}{section.3.54}
+\contentsline {section}{\numberline {3.55}USART\_\discretionary {-}{}{}struct Struct Reference}{35}{section.3.55}
+\contentsline {section}{\numberline {3.56}VPORT\_\discretionary {-}{}{}struct Struct Reference}{36}{section.3.56}
+\contentsline {section}{\numberline {3.57}WDT\_\discretionary {-}{}{}struct Struct Reference}{36}{section.3.57}

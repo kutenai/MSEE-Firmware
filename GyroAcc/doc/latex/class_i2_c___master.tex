@@ -1,0 +1,508 @@
+\hypertarget{class_i2_c___master}{
+\section{I2C\_\-Master Class Reference}
+\label{class_i2_c___master}\index{I2C\_\-Master@{I2C\_\-Master}}
+}
+
+
+{\ttfamily \#include $<$I2C\_\-Master.h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfa}{DriverState} \{ \par
+\hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa106aa4b7a5940d89eb0414d4419b7252}{sIdle}, 
+\hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaab58465e81001fa18fb18c0d575767f7e}{sBusy}, 
+\hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaad6c2f557ff2a47e40ee8061d03be3f93}{sError}, 
+\hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa41c5bf228154f500d9197840312b463a}{sArb}, 
+\par
+\hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa970ed8159f92e1649d52945f3fe9fa42}{sIDScan}, 
+\hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaae3c5c4fcc4da0df6dd866b32cd5f9184}{sIDCheck}
+ \}
+\item 
+enum \hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53}{DriverResult} \{ \par
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a7dae97140a932eb04e7635a82410d01a}{rOk}, 
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a3349653f86b539abedde983ec058ce53}{rFail}, 
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a023a5a4f20d8a675a5a6e34bbd0fc604}{rArbLost}, 
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a81be58e3f6f6d9163ca90015b05d5fd4}{rBussErr}, 
+\par
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a18ea143f7ebbd2b621932e7f92247766}{rNack}, 
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a09fccc41550be0f8eb95f6d309d8544a}{rBufferOverrun}, 
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a72ca41d27dd6cb0c1a992deb9880edf6}{rUnknown}, 
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53a95b91cb8ec3040830ebcc159e50774c6}{rTimeout}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i2_c___master_a6d45344a3c34e58da098283992adcab8}{I2C\_\-Master} (\hyperlink{struct_t_w_i__struct}{TWI\_\-t} $\ast$twi)
+\item 
+\hyperlink{class_i2_c___master_aa02eab973159049903e056283c5fba90}{$\sim$I2C\_\-Master} ()
+\item 
+void \hyperlink{class_i2_c___master_a4e6323d0c9dc60723d850c3783008319}{begin} (uint32\_\-t freq)
+\item 
+void \hyperlink{class_i2_c___master_a6a2768a5a33d3186d263e1e11468e023}{end} ()
+\item 
+int \hyperlink{class_i2_c___master_a843137596436601c2b504cd42f9542e3}{Write} (uint8\_\-t ID, uint8\_\-t $\ast$Data, uint8\_\-t nBytes)
+\item 
+int \hyperlink{class_i2_c___master_ad2b29c2c12ec81aacf953a4ed5a88fc5}{WriteSync} (uint8\_\-t ID, uint8\_\-t $\ast$Data, uint8\_\-t nBytes)
+\item 
+int \hyperlink{class_i2_c___master_a49a2ffdc0b3e5f4893ca6239a72a91ef}{Read} (uint8\_\-t ID, uint8\_\-t nBytes)
+\item 
+int \hyperlink{class_i2_c___master_a7a065f18c4879991e3296e3f395dc091}{ReadSync} (uint8\_\-t ID, uint8\_\-t nBytes)
+\item 
+int \hyperlink{class_i2_c___master_a93a751d52078aa83c5c45286e9083124}{WriteRead} (uint8\_\-t ID, uint8\_\-t $\ast$wrData, uint8\_\-t nWriteBytes, uint8\_\-t nReadBytes)
+\item 
+int \hyperlink{class_i2_c___master_ad154a78a6027048c0a63406ce38ec59b}{WriteReadSync} (uint8\_\-t ID, uint8\_\-t $\ast$wrData, uint8\_\-t nWriteBytes, uint8\_\-t nReadBytes)
+\item 
+void \hyperlink{class_i2_c___master_a6ed9c2eb68a0a17e5bf2d44a1f3fe3a8}{master\_\-int} ()
+\item 
+void \hyperlink{class_i2_c___master_ad651f27948fadda68b817cc309bd347e}{slave\_\-int} ()
+\item 
+void \hyperlink{class_i2_c___master_a6f98d7fb1d99f496e839e5d5f3c319d0}{WriteHandler} ()
+\item 
+void \hyperlink{class_i2_c___master_ae1bd396452977a2edb841fa6f84919a7}{ReadHandler} ()
+\item 
+void \hyperlink{class_i2_c___master_a83f7567e7c6b76c022b780e96396a844}{ArbHandler} ()
+\item 
+void \hyperlink{class_i2_c___master_a242358ce8f170a38db3624ac55c6510f}{ErrorHandler} ()
+\item 
+void \hyperlink{class_i2_c___master_aa311bbb226b4c52c52ff87de83d601ee}{MasterFinished} ()
+\item 
+int \hyperlink{class_i2_c___master_a3dc61a8ad5256ce3aa7219553cbf2f5f}{testack} (uint8\_\-t ID)
+\item 
+void \hyperlink{class_i2_c___master_a7f45b6d95a4d67b5da5ae81173cf2210}{dumpregs} ()
+\item 
+\hyperlink{class_i2_c___master_aff65d5186eee9d33563619432439cb53}{I2C\_\-Master::DriverResult} \hyperlink{class_i2_c___master_a24bc6480db778c51e2e1abbacac57a20}{Result} ()
+\item 
+\hyperlink{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfa}{I2C\_\-Master::DriverState} \hyperlink{class_i2_c___master_a386dc5886d43b456fae8fa0457ad0fa6}{State} ()
+\item 
+uint8\_\-t \hyperlink{class_i2_c___master_ab7c8dd50c0e931fb20a73e42b2c2202a}{ReadData} (uint8\_\-t $\ast$pData, uint8\_\-t maxcnt)
+\item 
+uint8\_\-t \hyperlink{class_i2_c___master_a80cb8c3fd55735eea7dbfc90ad7ef5a4}{ReadData} (uint8\_\-t index)
+\item 
+uint8\_\-t \hyperlink{class_i2_c___master_a62531dd810c1e96ae92657feb6c74bef}{nReadBytes} ()
+\item 
+bool \hyperlink{class_i2_c___master_a2be70722a626800b0ebeb3cfde946843}{CheckID} (uint8\_\-t ID)
+\item 
+void \hyperlink{class_i2_c___master_a0e878755be5246de239e897cf60be401}{Stop} ()
+\item 
+void \hyperlink{class_i2_c___master_af4d34826036a7c9f3ed040d65997f180}{loop} ()
+\item 
+bool \hyperlink{class_i2_c___master_aa8b792984d9e4f42da45f38dbb6e8941}{busy} ()
+\item 
+void $\ast$ \hyperlink{class_i2_c___master_ae868b0bca33e7495f4d964ee6708393c}{isReserved} ()
+\item 
+bool \hyperlink{class_i2_c___master_a0ef6ebd851b05a8dc8e75fa3b349c09b}{Reserve} (void $\ast$)
+\item 
+void \hyperlink{class_i2_c___master_a608731d8ae2cf3c9141dd4579f74d5f7}{NotifyMe} (\hyperlink{class_i2_c_notify}{I2CNotify} $\ast$pMe)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\_\-t \hyperlink{class_i2_c___master_a386c969250428002f3aeaffeb6933b13}{busState} ()
+\item 
+void \hyperlink{class_i2_c___master_a50b47d3c18d7aaa0602df3833c6a299e}{showstate} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53}{
+\index{I2C\_\-Master@{I2C\_\-Master}!DriverResult@{DriverResult}}
+\index{DriverResult@{DriverResult}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{DriverResult}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I2C\_\-Master::DriverResult}}}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{rOk@{rOk}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rOk@{rOk}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a7dae97140a932eb04e7635a82410d01a}{
+rOk}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a7dae97140a932eb04e7635a82410d01a}
+}]\index{rFail@{rFail}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rFail@{rFail}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a3349653f86b539abedde983ec058ce53}{
+rFail}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a3349653f86b539abedde983ec058ce53}
+}]\index{rArbLost@{rArbLost}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rArbLost@{rArbLost}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a023a5a4f20d8a675a5a6e34bbd0fc604}{
+rArbLost}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a023a5a4f20d8a675a5a6e34bbd0fc604}
+}]\index{rBussErr@{rBussErr}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rBussErr@{rBussErr}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a81be58e3f6f6d9163ca90015b05d5fd4}{
+rBussErr}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a81be58e3f6f6d9163ca90015b05d5fd4}
+}]\index{rNack@{rNack}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rNack@{rNack}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a18ea143f7ebbd2b621932e7f92247766}{
+rNack}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a18ea143f7ebbd2b621932e7f92247766}
+}]\index{rBufferOverrun@{rBufferOverrun}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rBufferOverrun@{rBufferOverrun}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a09fccc41550be0f8eb95f6d309d8544a}{
+rBufferOverrun}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a09fccc41550be0f8eb95f6d309d8544a}
+}]\index{rUnknown@{rUnknown}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rUnknown@{rUnknown}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a72ca41d27dd6cb0c1a992deb9880edf6}{
+rUnknown}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a72ca41d27dd6cb0c1a992deb9880edf6}
+}]\index{rTimeout@{rTimeout}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!rTimeout@{rTimeout}}\item[{\em 
+\hypertarget{class_i2_c___master_aff65d5186eee9d33563619432439cb53a95b91cb8ec3040830ebcc159e50774c6}{
+rTimeout}
+\label{class_i2_c___master_aff65d5186eee9d33563619432439cb53a95b91cb8ec3040830ebcc159e50774c6}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfa}{
+\index{I2C\_\-Master@{I2C\_\-Master}!DriverState@{DriverState}}
+\index{DriverState@{DriverState}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{DriverState}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I2C\_\-Master::DriverState}}}
+\label{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfa}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{sIdle@{sIdle}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!sIdle@{sIdle}}\item[{\em 
+\hypertarget{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa106aa4b7a5940d89eb0414d4419b7252}{
+sIdle}
+\label{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa106aa4b7a5940d89eb0414d4419b7252}
+}]\index{sBusy@{sBusy}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!sBusy@{sBusy}}\item[{\em 
+\hypertarget{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaab58465e81001fa18fb18c0d575767f7e}{
+sBusy}
+\label{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaab58465e81001fa18fb18c0d575767f7e}
+}]\index{sError@{sError}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!sError@{sError}}\item[{\em 
+\hypertarget{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaad6c2f557ff2a47e40ee8061d03be3f93}{
+sError}
+\label{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaad6c2f557ff2a47e40ee8061d03be3f93}
+}]\index{sArb@{sArb}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!sArb@{sArb}}\item[{\em 
+\hypertarget{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa41c5bf228154f500d9197840312b463a}{
+sArb}
+\label{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa41c5bf228154f500d9197840312b463a}
+}]\index{sIDScan@{sIDScan}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!sIDScan@{sIDScan}}\item[{\em 
+\hypertarget{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa970ed8159f92e1649d52945f3fe9fa42}{
+sIDScan}
+\label{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaa970ed8159f92e1649d52945f3fe9fa42}
+}]\index{sIDCheck@{sIDCheck}!I2C\_\-Master@{I2C\_\-Master}}\index{I2C\_\-Master@{I2C\_\-Master}!sIDCheck@{sIDCheck}}\item[{\em 
+\hypertarget{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaae3c5c4fcc4da0df6dd866b32cd5f9184}{
+sIDCheck}
+\label{class_i2_c___master_aaa6720f57770cfe755cb3d6dfc665cfaae3c5c4fcc4da0df6dd866b32cd5f9184}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_i2_c___master_a6d45344a3c34e58da098283992adcab8}{
+\index{I2C\_\-Master@{I2C\_\-Master}!I2C\_\-Master@{I2C\_\-Master}}
+\index{I2C\_\-Master@{I2C\_\-Master}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{I2C\_\-Master}]{\setlength{\rightskip}{0pt plus 5cm}I2C\_\-Master::I2C\_\-Master (
+\begin{DoxyParamCaption}
+\item[{{\bf TWI\_\-t} $\ast$}]{twi}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a6d45344a3c34e58da098283992adcab8}
+\hypertarget{class_i2_c___master_aa02eab973159049903e056283c5fba90}{
+\index{I2C\_\-Master@{I2C\_\-Master}!$\sim$I2C\_\-Master@{$\sim$I2C\_\-Master}}
+\index{$\sim$I2C\_\-Master@{$\sim$I2C\_\-Master}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{$\sim$I2C\_\-Master}]{\setlength{\rightskip}{0pt plus 5cm}I2C\_\-Master::$\sim$I2C\_\-Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_aa02eab973159049903e056283c5fba90}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i2_c___master_a83f7567e7c6b76c022b780e96396a844}{
+\index{I2C\_\-Master@{I2C\_\-Master}!ArbHandler@{ArbHandler}}
+\index{ArbHandler@{ArbHandler}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{ArbHandler}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::ArbHandler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a83f7567e7c6b76c022b780e96396a844}
+\hypertarget{class_i2_c___master_a4e6323d0c9dc60723d850c3783008319}{
+\index{I2C\_\-Master@{I2C\_\-Master}!begin@{begin}}
+\index{begin@{begin}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::begin (
+\begin{DoxyParamCaption}
+\item[{uint32\_\-t}]{freq}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a4e6323d0c9dc60723d850c3783008319}
+\hypertarget{class_i2_c___master_a386c969250428002f3aeaffeb6933b13}{
+\index{I2C\_\-Master@{I2C\_\-Master}!busState@{busState}}
+\index{busState@{busState}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{busState}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t I2C\_\-Master::busState (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_i2_c___master_a386c969250428002f3aeaffeb6933b13}
+\hypertarget{class_i2_c___master_aa8b792984d9e4f42da45f38dbb6e8941}{
+\index{I2C\_\-Master@{I2C\_\-Master}!busy@{busy}}
+\index{busy@{busy}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{busy}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C\_\-Master::busy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_aa8b792984d9e4f42da45f38dbb6e8941}
+\hypertarget{class_i2_c___master_a2be70722a626800b0ebeb3cfde946843}{
+\index{I2C\_\-Master@{I2C\_\-Master}!CheckID@{CheckID}}
+\index{CheckID@{CheckID}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{CheckID}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C\_\-Master::CheckID (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a2be70722a626800b0ebeb3cfde946843}
+\hypertarget{class_i2_c___master_a7f45b6d95a4d67b5da5ae81173cf2210}{
+\index{I2C\_\-Master@{I2C\_\-Master}!dumpregs@{dumpregs}}
+\index{dumpregs@{dumpregs}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{dumpregs}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::dumpregs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a7f45b6d95a4d67b5da5ae81173cf2210}
+\hypertarget{class_i2_c___master_a6a2768a5a33d3186d263e1e11468e023}{
+\index{I2C\_\-Master@{I2C\_\-Master}!end@{end}}
+\index{end@{end}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a6a2768a5a33d3186d263e1e11468e023}
+\hypertarget{class_i2_c___master_a242358ce8f170a38db3624ac55c6510f}{
+\index{I2C\_\-Master@{I2C\_\-Master}!ErrorHandler@{ErrorHandler}}
+\index{ErrorHandler@{ErrorHandler}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{ErrorHandler}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::ErrorHandler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a242358ce8f170a38db3624ac55c6510f}
+\hypertarget{class_i2_c___master_ae868b0bca33e7495f4d964ee6708393c}{
+\index{I2C\_\-Master@{I2C\_\-Master}!isReserved@{isReserved}}
+\index{isReserved@{isReserved}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{isReserved}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ I2C\_\-Master::isReserved (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_ae868b0bca33e7495f4d964ee6708393c}
+\hypertarget{class_i2_c___master_af4d34826036a7c9f3ed040d65997f180}{
+\index{I2C\_\-Master@{I2C\_\-Master}!loop@{loop}}
+\index{loop@{loop}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_af4d34826036a7c9f3ed040d65997f180}
+\hypertarget{class_i2_c___master_a6ed9c2eb68a0a17e5bf2d44a1f3fe3a8}{
+\index{I2C\_\-Master@{I2C\_\-Master}!master\_\-int@{master\_\-int}}
+\index{master\_\-int@{master\_\-int}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{master\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::master\_\-int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a6ed9c2eb68a0a17e5bf2d44a1f3fe3a8}
+\hypertarget{class_i2_c___master_aa311bbb226b4c52c52ff87de83d601ee}{
+\index{I2C\_\-Master@{I2C\_\-Master}!MasterFinished@{MasterFinished}}
+\index{MasterFinished@{MasterFinished}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{MasterFinished}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::MasterFinished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_aa311bbb226b4c52c52ff87de83d601ee}
+\hypertarget{class_i2_c___master_a608731d8ae2cf3c9141dd4579f74d5f7}{
+\index{I2C\_\-Master@{I2C\_\-Master}!NotifyMe@{NotifyMe}}
+\index{NotifyMe@{NotifyMe}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{NotifyMe}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::NotifyMe (
+\begin{DoxyParamCaption}
+\item[{{\bf I2CNotify} $\ast$}]{pMe}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a608731d8ae2cf3c9141dd4579f74d5f7}
+\hypertarget{class_i2_c___master_a62531dd810c1e96ae92657feb6c74bef}{
+\index{I2C\_\-Master@{I2C\_\-Master}!nReadBytes@{nReadBytes}}
+\index{nReadBytes@{nReadBytes}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{nReadBytes}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t I2C\_\-Master::nReadBytes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a62531dd810c1e96ae92657feb6c74bef}
+\hypertarget{class_i2_c___master_a49a2ffdc0b3e5f4893ca6239a72a91ef}{
+\index{I2C\_\-Master@{I2C\_\-Master}!Read@{Read}}
+\index{Read@{Read}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}int I2C\_\-Master::Read (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID, }
+\item[{uint8\_\-t}]{nBytes}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a49a2ffdc0b3e5f4893ca6239a72a91ef}
+\hypertarget{class_i2_c___master_ab7c8dd50c0e931fb20a73e42b2c2202a}{
+\index{I2C\_\-Master@{I2C\_\-Master}!ReadData@{ReadData}}
+\index{ReadData@{ReadData}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{ReadData}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t I2C\_\-Master::ReadData (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t $\ast$}]{pData, }
+\item[{uint8\_\-t}]{maxcnt}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_ab7c8dd50c0e931fb20a73e42b2c2202a}
+\hypertarget{class_i2_c___master_a80cb8c3fd55735eea7dbfc90ad7ef5a4}{
+\index{I2C\_\-Master@{I2C\_\-Master}!ReadData@{ReadData}}
+\index{ReadData@{ReadData}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{ReadData}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t I2C\_\-Master::ReadData (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{index}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a80cb8c3fd55735eea7dbfc90ad7ef5a4}
+\hypertarget{class_i2_c___master_ae1bd396452977a2edb841fa6f84919a7}{
+\index{I2C\_\-Master@{I2C\_\-Master}!ReadHandler@{ReadHandler}}
+\index{ReadHandler@{ReadHandler}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{ReadHandler}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::ReadHandler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_ae1bd396452977a2edb841fa6f84919a7}
+\hypertarget{class_i2_c___master_a7a065f18c4879991e3296e3f395dc091}{
+\index{I2C\_\-Master@{I2C\_\-Master}!ReadSync@{ReadSync}}
+\index{ReadSync@{ReadSync}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{ReadSync}]{\setlength{\rightskip}{0pt plus 5cm}int I2C\_\-Master::ReadSync (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID, }
+\item[{uint8\_\-t}]{nBytes}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a7a065f18c4879991e3296e3f395dc091}
+\hypertarget{class_i2_c___master_a0ef6ebd851b05a8dc8e75fa3b349c09b}{
+\index{I2C\_\-Master@{I2C\_\-Master}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{Reserve}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C\_\-Master::Reserve (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pThis}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a0ef6ebd851b05a8dc8e75fa3b349c09b}
+\hypertarget{class_i2_c___master_a24bc6480db778c51e2e1abbacac57a20}{
+\index{I2C\_\-Master@{I2C\_\-Master}!Result@{Result}}
+\index{Result@{Result}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I2C\_\-Master::DriverResult} I2C\_\-Master::Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a24bc6480db778c51e2e1abbacac57a20}
+\hypertarget{class_i2_c___master_a50b47d3c18d7aaa0602df3833c6a299e}{
+\index{I2C\_\-Master@{I2C\_\-Master}!showstate@{showstate}}
+\index{showstate@{showstate}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{showstate}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::showstate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_i2_c___master_a50b47d3c18d7aaa0602df3833c6a299e}
+\hypertarget{class_i2_c___master_ad651f27948fadda68b817cc309bd347e}{
+\index{I2C\_\-Master@{I2C\_\-Master}!slave\_\-int@{slave\_\-int}}
+\index{slave\_\-int@{slave\_\-int}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{slave\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::slave\_\-int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_ad651f27948fadda68b817cc309bd347e}
+\hypertarget{class_i2_c___master_a386dc5886d43b456fae8fa0457ad0fa6}{
+\index{I2C\_\-Master@{I2C\_\-Master}!State@{State}}
+\index{State@{State}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I2C\_\-Master::DriverState} I2C\_\-Master::State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a386dc5886d43b456fae8fa0457ad0fa6}
+\hypertarget{class_i2_c___master_a0e878755be5246de239e897cf60be401}{
+\index{I2C\_\-Master@{I2C\_\-Master}!Stop@{Stop}}
+\index{Stop@{Stop}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a0e878755be5246de239e897cf60be401}
+\hypertarget{class_i2_c___master_a3dc61a8ad5256ce3aa7219553cbf2f5f}{
+\index{I2C\_\-Master@{I2C\_\-Master}!testack@{testack}}
+\index{testack@{testack}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{testack}]{\setlength{\rightskip}{0pt plus 5cm}int I2C\_\-Master::testack (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a3dc61a8ad5256ce3aa7219553cbf2f5f}
+\hypertarget{class_i2_c___master_a843137596436601c2b504cd42f9542e3}{
+\index{I2C\_\-Master@{I2C\_\-Master}!Write@{Write}}
+\index{Write@{Write}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}int I2C\_\-Master::Write (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID, }
+\item[{uint8\_\-t $\ast$}]{Data, }
+\item[{uint8\_\-t}]{nBytes}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a843137596436601c2b504cd42f9542e3}
+\hypertarget{class_i2_c___master_a6f98d7fb1d99f496e839e5d5f3c319d0}{
+\index{I2C\_\-Master@{I2C\_\-Master}!WriteHandler@{WriteHandler}}
+\index{WriteHandler@{WriteHandler}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{WriteHandler}]{\setlength{\rightskip}{0pt plus 5cm}void I2C\_\-Master::WriteHandler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a6f98d7fb1d99f496e839e5d5f3c319d0}
+\hypertarget{class_i2_c___master_a93a751d52078aa83c5c45286e9083124}{
+\index{I2C\_\-Master@{I2C\_\-Master}!WriteRead@{WriteRead}}
+\index{WriteRead@{WriteRead}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{WriteRead}]{\setlength{\rightskip}{0pt plus 5cm}int I2C\_\-Master::WriteRead (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID, }
+\item[{uint8\_\-t $\ast$}]{wrData, }
+\item[{uint8\_\-t}]{nWriteBytes, }
+\item[{uint8\_\-t}]{nReadBytes}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_a93a751d52078aa83c5c45286e9083124}
+\hypertarget{class_i2_c___master_ad154a78a6027048c0a63406ce38ec59b}{
+\index{I2C\_\-Master@{I2C\_\-Master}!WriteReadSync@{WriteReadSync}}
+\index{WriteReadSync@{WriteReadSync}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{WriteReadSync}]{\setlength{\rightskip}{0pt plus 5cm}int I2C\_\-Master::WriteReadSync (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID, }
+\item[{uint8\_\-t $\ast$}]{wrData, }
+\item[{uint8\_\-t}]{nWriteBytes, }
+\item[{uint8\_\-t}]{nReadBytes}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_ad154a78a6027048c0a63406ce38ec59b}
+\hypertarget{class_i2_c___master_ad2b29c2c12ec81aacf953a4ed5a88fc5}{
+\index{I2C\_\-Master@{I2C\_\-Master}!WriteSync@{WriteSync}}
+\index{WriteSync@{WriteSync}!I2C_Master@{I2C\_\-Master}}
+\subsubsection[{WriteSync}]{\setlength{\rightskip}{0pt plus 5cm}int I2C\_\-Master::WriteSync (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ID, }
+\item[{uint8\_\-t $\ast$}]{Data, }
+\item[{uint8\_\-t}]{nBytes}
+\end{DoxyParamCaption}
+)}}
+\label{class_i2_c___master_ad2b29c2c12ec81aacf953a4ed5a88fc5}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+FWLib/inc/\hyperlink{_i2_c___master_8h}{I2C\_\-Master.h}\item 
+FWLib/src/\hyperlink{_i2_c___master_8cpp}{I2C\_\-Master.cpp}\end{DoxyCompactItemize}
