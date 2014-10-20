@@ -6,6 +6,8 @@ var NAVTREE =
       [ "CmdProcessor", "class_cmd_processor.html", null ],
       [ "Fifo", "class_fifo.html", null ],
       [ "HardwareSerial", "class_hardware_serial.html", null ],
+      [ "I2C_Master", "class_i2_c___master.html", null ],
+      [ "I2CNotify", "class_i2_c_notify.html", null ],
       [ "IMU", "class_i_m_u.html", null ],
       [ "IMUBase", "class_i_m_u_base.html", null ],
       [ "Port", "class_port.html", null ],
@@ -20,6 +22,10 @@ var NAVTREE =
     [ "Class Hierarchy", "hierarchy.html", [
       [ "CmdProcessor", "class_cmd_processor.html", null ],
       [ "Fifo", "class_fifo.html", null ],
+      [ "I2C_Master", "class_i2_c___master.html", null ],
+      [ "I2CNotify", "class_i2_c_notify.html", [
+        [ "IMU", "class_i_m_u.html", null ]
+      ] ],
       [ "IMUBase", "class_i_m_u_base.html", [
         [ "IMU", "class_i_m_u.html", null ]
       ] ],
@@ -49,6 +55,7 @@ var NAVTREE =
       [ "GyroAcc.cpp", "_gyro_acc_8cpp.html", null ],
       [ "HardwareSerial.cpp", "_hardware_serial_8cpp.html", null ],
       [ "HardwareSerial.h", "_hardware_serial_8h.html", null ],
+      [ "I2C_Master.h", "_i2_c___master_8h.html", null ],
       [ "IMU.cpp", "_i_m_u_8cpp.html", null ],
       [ "IMU.h", "_i_m_u_8h.html", null ],
       [ "IMUManager.cpp", "_i_m_u_manager_8cpp.html", null ],

@@ -164,7 +164,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_gyro_acc_8cpp_source.html#l00034">34</a> of file <a class="el" href="_gyro_acc_8cpp_source.html">GyroAcc.cpp</a>.</p>
 
-<p>References <a class="el" href="_hardware_serial_8cpp_source.html#l00140">HardwareSerial::begin()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00016">buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00248">HardwareSerial::enable()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00023">init()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00032">pdbgport</a>, <a class="el" href="_print_8cpp_source.html#l00045">Print::print()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00143">IMU::SetDebugPort()</a>, and <a class="el" href="_i_m_u_8cpp_source.html#l00148">IMU::SetDebugPort2()</a>.</p>
+<p>References <a class="el" href="class_i2_c___master.html#a4e6323d0c9dc60723d850c3783008319">I2C_Master::begin()</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00140">HardwareSerial::begin()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00016">buffer</a>, <a class="el" href="_hardware_serial_8cpp_source.html#l00248">HardwareSerial::enable()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00023">init()</a>, <a class="el" href="_gyro_acc_8cpp_source.html#l00032">pdbgport</a>, <a class="el" href="_print_8cpp_source.html#l00045">Print::print()</a>, <a class="el" href="_i_m_u_8cpp_source.html#l00143">IMU::SetDebugPort()</a>, and <a class="el" href="_i_m_u_8cpp_source.html#l00148">IMU::SetDebugPort2()</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordtype">char</span>    <a class="code" href="_i_m_u_8cpp.html#a38e7c3f1ce348a3ed20459d277245263">buffer</a>[100];
     <a class="code" href="_gyro_acc_8cpp.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();
@@ -198,11 +198,11 @@ Variables</h2></td></tr>
     dbgPort.SetState(0);
     <a class="code" href="_gyro_acc_8cpp.html#ab6b6625a30d84db3519866cb8c32dd39">pdbgport</a> = &amp;dbgPort;
 
-    I2C_Master  *pMaster[4];
-    I2C_Master hand(&amp;TWIC);
-    I2C_Master single(&amp;TWID);
-    I2C_Master pair1(&amp;TWIE);
-    I2C_Master pair2(&amp;TWIF);
+    <a class="code" href="class_i2_c___master.html">I2C_Master</a>  *pMaster[4];
+    <a class="code" href="class_i2_c___master.html">I2C_Master</a> hand(&amp;TWIC);
+    <a class="code" href="class_i2_c___master.html">I2C_Master</a> single(&amp;TWID);
+    <a class="code" href="class_i2_c___master.html">I2C_Master</a> pair1(&amp;TWIE);
+    <a class="code" href="class_i2_c___master.html">I2C_Master</a> pair2(&amp;TWIF);
 
     pMaster[0] = &amp;hand;
     pMaster[1] = &amp;single; <span class="comment">// Pinkie</span>
@@ -211,7 +211,7 @@ Variables</h2></td></tr>
     
     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x=0;x&lt;4;x++) {
         <span class="keywordflow">if</span> (pMaster[x]) {
-            pMaster[x]-&gt;begin(400e3);
+            pMaster[x]-&gt;<a class="code" href="class_i2_c___master.html#a4e6323d0c9dc60723d850c3783008319">begin</a>(400e3);
         }
     }
 

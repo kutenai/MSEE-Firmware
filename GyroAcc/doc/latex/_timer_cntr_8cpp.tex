@@ -1,5 +1,5 @@
 \hypertarget{_timer_cntr_8cpp}{
-\section{TimerCntr.cpp File Reference}
+\subsection{TimerCntr.cpp File Reference}
 \label{_timer_cntr_8cpp}\index{TimerCntr.cpp@{TimerCntr.cpp}}
 }
 {\ttfamily \#include $<$avr/io.h$>$}\par
@@ -7,14 +7,14 @@
 {\ttfamily \#include $<$avr/interrupt.h$>$}\par
 {\ttfamily \#include \char`\"{}TimerCore.h\char`\"{}}\par
 {\ttfamily \#include \char`\"{}TimerCntr.h\char`\"{}}\par
-\subsection*{Defines}
+\subsubsection*{Defines}
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{_timer_cntr_8cpp_a75b8174278ebbbe181f64d2fa6853ddf}{TC0\_\-ISR\_\-DEF}(tc)
 \item 
 \#define \hyperlink{_timer_cntr_8cpp_a914f266c151bfa683140e5abec4cc682}{TC1\_\-ISR\_\-DEF}(tc)
 \end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{_timer_cntr_8cpp_add2914bbd945ab19476f186a9f348489}{TC0\_\-ISR\_\-DEF} (TCC0)
@@ -31,179 +31,179 @@ static void \hyperlink{_timer_cntr_8cpp_acb2dde5ac0f74a08d831eb548afb26bd}{SetPo
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
+\subsubsection{Define Documentation}
 \hypertarget{_timer_cntr_8cpp_a75b8174278ebbbe181f64d2fa6853ddf}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!TC0\_\-ISR\_\-DEF@{TC0\_\-ISR\_\-DEF}}
 \index{TC0\_\-ISR\_\-DEF@{TC0\_\-ISR\_\-DEF}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{TC0\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}\#define TC0\_\-ISR\_\-DEF(
+\paragraph[{TC0\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}\#define TC0\_\-ISR\_\-DEF(
 \begin{DoxyParamCaption}
 \item[{}]{tc}
 \end{DoxyParamCaption}
-)}}
+)}\hfill}
 \label{_timer_cntr_8cpp_a75b8174278ebbbe181f64d2fa6853ddf}
 {\bfseries Value:}
 \begin{DoxyCode}
-static TimerCntr*  tc##cp = 0;\
-ISR(tc##_ERR_vect) {\
-    if (tc##cp) tc##cp->err();\
-}\
-ISR(tc##_OVF_vect) {\
-    if (tc##cp) tc##cp->ovf();\
-}\
-ISR(tc##_CCA_vect) {\
-    if (tc##cp) tc##cp->ccx(0);\
-}\
-ISR(tc##_CCB_vect) {\
-    if (tc##cp) tc##cp->ccx(1);\
-}\
-ISR(tc##_CCC_vect) {\
-    if (tc##cp) tc##cp->ccx(2);\
-}\
-ISR(tc##_CCD_vect) {\
-    if (tc##cp) tc##cp->ccx(3);\
-}
+\textcolor{keyword}{static} \hyperlink{class_timer_cntr}{TimerCntr}*  tc##cp = 0;\(\backslash\)
+ISR(tc##\_ERR\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->\hyperlink{class_timer_cntr_a98d639cbcb4ed28a75309870ae891d58}{err}();\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_OVF\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ovf();\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_CCA\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ccx(0);\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_CCB\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ccx(1);\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_CCC\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ccx(2);\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_CCD\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ccx(3);\(\backslash\)
+\}
 \end{DoxyCode}
 
 
-Definition at line 12 of file TimerCntr.cpp.
+Definition at line \hyperlink{_timer_cntr_8cpp_source_l00012}{12} of file \hyperlink{_timer_cntr_8cpp_source}{TimerCntr.cpp}.
 
 \hypertarget{_timer_cntr_8cpp_a914f266c151bfa683140e5abec4cc682}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!TC1\_\-ISR\_\-DEF@{TC1\_\-ISR\_\-DEF}}
 \index{TC1\_\-ISR\_\-DEF@{TC1\_\-ISR\_\-DEF}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{TC1\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}\#define TC1\_\-ISR\_\-DEF(
+\paragraph[{TC1\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}\#define TC1\_\-ISR\_\-DEF(
 \begin{DoxyParamCaption}
 \item[{}]{tc}
 \end{DoxyParamCaption}
-)}}
+)}\hfill}
 \label{_timer_cntr_8cpp_a914f266c151bfa683140e5abec4cc682}
 {\bfseries Value:}
 \begin{DoxyCode}
-static TimerCntr*  tc##cp = 0;\
-ISR(tc##_ERR_vect) {\
-    if (tc##cp) tc##cp->err();\
-}\
-ISR(tc##_OVF_vect) {\
-    if (tc##cp) tc##cp->ovf();\
-}\
-ISR(tc##_CCA_vect) {\
-    if (tc##cp) tc##cp->ccx(0);\
-}\
-ISR(tc##_CCB_vect) {\
-    if (tc##cp) tc##cp->ccx(1);\
-}
+\textcolor{keyword}{static} \hyperlink{class_timer_cntr}{TimerCntr}*  tc##cp = 0;\(\backslash\)
+ISR(tc##\_ERR\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->\hyperlink{class_timer_cntr_a98d639cbcb4ed28a75309870ae891d58}{err}();\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_OVF\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ovf();\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_CCA\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ccx(0);\(\backslash\)
+\}\(\backslash\)
+ISR(tc##\_CCB\_vect) \{\(\backslash\)
+    \textcolor{keywordflow}{if} (tc##cp) tc##cp->ccx(1);\(\backslash\)
+\}
 \end{DoxyCode}
 
 
-Definition at line 47 of file TimerCntr.cpp.
+Definition at line \hyperlink{_timer_cntr_8cpp_source_l00047}{47} of file \hyperlink{_timer_cntr_8cpp_source}{TimerCntr.cpp}.
 
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \hypertarget{_timer_cntr_8cpp_afb2d9165fd31c92b47af4ebc5adfc08a}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!SetPointer@{SetPointer}}
 \index{SetPointer@{SetPointer}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{SetPointer}]{\setlength{\rightskip}{0pt plus 5cm}static void SetPointer (
+\paragraph[{SetPointer}]{\setlength{\rightskip}{0pt plus 5cm}static void SetPointer (
 \begin{DoxyParamCaption}
 \item[{TC0\_\-t $\ast$}]{tc, }
 \item[{{\bf TimerCntr} $\ast$}]{pTC}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}\hfill}
 \label{_timer_cntr_8cpp_afb2d9165fd31c92b47af4ebc5adfc08a}
 
 
-Definition at line 74 of file TimerCntr.cpp.
+Definition at line \hyperlink{_timer_cntr_8cpp_source_l00074}{74} of file \hyperlink{_timer_cntr_8cpp_source}{TimerCntr.cpp}.
 
 
 \begin{DoxyCode}
-{
-    // Register this object with the appropriate
-    // pointer so that the ISR routines can call p
-    // class.
-    if (tc == &TCC0) {
+\{
+    \textcolor{comment}{// Register this object with the appropriate}
+    \textcolor{comment}{// pointer so that the ISR routines can call p}
+    \textcolor{comment}{// class.}
+    \textcolor{keywordflow}{if} (tc == &TCC0) \{
         TCC0cp = pTC;
-    } else if (tc == &TCD0) {
+    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tc == &TCD0) \{
         TCD0cp = pTC;
-#if not defined(TIMERCORE_USE_TCE0)
-    } else if (tc == &TCE0) {
+\textcolor{preprocessor}{#if not defined(TIMERCORE\_USE\_TCE0)}
+\textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tc == &TCE0) \{
         TCE0cp = pTC;
-#endif
-#if not defined(TIMERCORE_USE_TCF0)
-    } else if (tc == &TCF0) {
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#if not defined(TIMERCORE\_USE\_TCF0)}
+\textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tc == &TCF0) \{
         TCF0cp = pTC;
-#endif
-    }
-}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}    \}
+\}
 \end{DoxyCode}
 \hypertarget{_timer_cntr_8cpp_acb2dde5ac0f74a08d831eb548afb26bd}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!SetPointer@{SetPointer}}
 \index{SetPointer@{SetPointer}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{SetPointer}]{\setlength{\rightskip}{0pt plus 5cm}static void SetPointer (
+\paragraph[{SetPointer}]{\setlength{\rightskip}{0pt plus 5cm}static void SetPointer (
 \begin{DoxyParamCaption}
 \item[{TC1\_\-t $\ast$}]{tc, }
 \item[{{\bf TimerCntr} $\ast$}]{pTC}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}\hfill}
 \label{_timer_cntr_8cpp_acb2dde5ac0f74a08d831eb548afb26bd}
 
 
-Definition at line 94 of file TimerCntr.cpp.
+Definition at line \hyperlink{_timer_cntr_8cpp_source_l00094}{94} of file \hyperlink{_timer_cntr_8cpp_source}{TimerCntr.cpp}.
 
 
 \begin{DoxyCode}
-{
-    // Register this object with the appropriate
-    // pointer so that the ISR routines can call p
-    // class.
-    if (tc == &TCC1) {
+\{
+    \textcolor{comment}{// Register this object with the appropriate}
+    \textcolor{comment}{// pointer so that the ISR routines can call p}
+    \textcolor{comment}{// class.}
+    \textcolor{keywordflow}{if} (tc == &TCC1) \{
         TCC1cp = pTC;
-    } else if (tc == &TCD1) {
+    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tc == &TCD1) \{
         TCD1cp = pTC;
-#if not defined(TIMERCORE_USE_TCE1)
-    } else if (tc == &TCE1) {
+\textcolor{preprocessor}{#if not defined(TIMERCORE\_USE\_TCE1)}
+\textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tc == &TCE1) \{
         TCE1cp = pTC;
-#endif
-#if not defined(TIMERCORE_USE_TCF1)
-#if defined(TCF1)
-    } else if (tc == &TCF1) {
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#if not defined(TIMERCORE\_USE\_TCF1)}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#if defined(TCF1)}
+\textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tc == &TCF1) \{
         TCF1cp = pTC;
-#endif
-#endif
-    }
-}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}    \}
+\}
 \end{DoxyCode}
 \hypertarget{_timer_cntr_8cpp_a1169f7d0e22eb5607bf2267b4334233d}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!TC0\_\-ISR\_\-DEF@{TC0\_\-ISR\_\-DEF}}
 \index{TC0\_\-ISR\_\-DEF@{TC0\_\-ISR\_\-DEF}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{TC0\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC0\_\-ISR\_\-DEF (
+\paragraph[{TC0\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC0\_\-ISR\_\-DEF (
 \begin{DoxyParamCaption}
 \item[{TCD0}]{}
 \end{DoxyParamCaption}
-)}}
+)}\hfill}
 \label{_timer_cntr_8cpp_a1169f7d0e22eb5607bf2267b4334233d}
 \hypertarget{_timer_cntr_8cpp_add2914bbd945ab19476f186a9f348489}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!TC0\_\-ISR\_\-DEF@{TC0\_\-ISR\_\-DEF}}
 \index{TC0\_\-ISR\_\-DEF@{TC0\_\-ISR\_\-DEF}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{TC0\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC0\_\-ISR\_\-DEF (
+\paragraph[{TC0\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC0\_\-ISR\_\-DEF (
 \begin{DoxyParamCaption}
 \item[{TCC0}]{}
 \end{DoxyParamCaption}
-)}}
+)}\hfill}
 \label{_timer_cntr_8cpp_add2914bbd945ab19476f186a9f348489}
 \hypertarget{_timer_cntr_8cpp_a3865656655ac5108dd77105db88c9df4}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!TC1\_\-ISR\_\-DEF@{TC1\_\-ISR\_\-DEF}}
 \index{TC1\_\-ISR\_\-DEF@{TC1\_\-ISR\_\-DEF}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{TC1\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC1\_\-ISR\_\-DEF (
+\paragraph[{TC1\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC1\_\-ISR\_\-DEF (
 \begin{DoxyParamCaption}
 \item[{TCC1}]{}
 \end{DoxyParamCaption}
-)}}
+)}\hfill}
 \label{_timer_cntr_8cpp_a3865656655ac5108dd77105db88c9df4}
 \hypertarget{_timer_cntr_8cpp_aaf2dd82ac2c50f84dbc0a8266e68395a}{
 \index{TimerCntr.cpp@{TimerCntr.cpp}!TC1\_\-ISR\_\-DEF@{TC1\_\-ISR\_\-DEF}}
 \index{TC1\_\-ISR\_\-DEF@{TC1\_\-ISR\_\-DEF}!TimerCntr.cpp@{TimerCntr.cpp}}
-\subsubsection[{TC1\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC1\_\-ISR\_\-DEF (
+\paragraph[{TC1\_\-ISR\_\-DEF}]{\setlength{\rightskip}{0pt plus 5cm}TC1\_\-ISR\_\-DEF (
 \begin{DoxyParamCaption}
 \item[{TCD1}]{}
 \end{DoxyParamCaption}
-)}}
+)}\hfill}
 \label{_timer_cntr_8cpp_aaf2dd82ac2c50f84dbc0a8266e68395a}

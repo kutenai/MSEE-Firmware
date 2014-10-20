@@ -59,9 +59,6 @@
 \newcommand{\clearemptydoublepage}{%
   \newpage{\pagestyle{empty}\cleardoublepage}%
 }
-\renewcommand{\chaptermark}[1]{%
-  \markboth{#1}{}%
-}
 \renewcommand{\sectionmark}[1]{%
   \markright{\thesection\ #1}%
 }
@@ -73,8 +70,8 @@
 \fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
 \fancyfoot[LE]{\fancyplain{}{}}
 \fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generated on Tue Aug 30 2011 11:12:19 for GyroAccGlove by Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generated on Tue Aug 30 2011 11:12:19 for GyroAccGlove by Doxygen }}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generated on Sat Sep 10 2011 17:54:13 for GyroAccGlove by Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generated on Sat Sep 10 2011 17:54:13 for GyroAccGlove by Doxygen }}
 \fancyfoot[CO]{\fancyplain{}{}}
 \fancyfoot[RO]{\fancyplain{}{}}
 %---------- Internal commands used in this style file ----------------
@@ -109,11 +106,11 @@
 
 % Used by @code ... @endcode
 \newenvironment{DoxyCode}{%
-  \footnotesize%
-  \verbatim%
+
+
+\begin{footnotesize}\begin{alltt}%
 }{%
-  \endverbatim%
-  \normalsize%
+\end{alltt}\end{footnotesize}%
 }
 
 % Used by @example, @include, @includelineno and @dontinclude

@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00037"></a>00037     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_m_u_base.html#a78622fbfb40a5bbee5e83bb8a0780d04">ResetDevices</a>() = 0;
 <a name="l00038"></a>00038 };
 <a name="l00039"></a>00039 
-<a name="l00040"></a><a class="code" href="class_i_m_u.html">00040</a> <span class="keyword">class </span><a class="code" href="class_i_m_u.html">IMU</a> : <span class="keyword">public</span> <a class="code" href="class_i_m_u_base.html">IMUBase</a>, <span class="keyword">public</span> I2CNotify, <span class="keyword">public</span> <a class="code" href="class_timer_notify.html">TimerNotify</a>
+<a name="l00040"></a><a class="code" href="class_i_m_u.html">00040</a> <span class="keyword">class </span><a class="code" href="class_i_m_u.html">IMU</a> : <span class="keyword">public</span> <a class="code" href="class_i_m_u_base.html">IMUBase</a>, <span class="keyword">public</span> <a class="code" href="class_i2_c_notify.html">I2CNotify</a>, <span class="keyword">public</span> <a class="code" href="class_timer_notify.html">TimerNotify</a>
 <a name="l00041"></a>00041 {
 <a name="l00042"></a><a class="code" href="class_i_m_u.html#a7b5e1bf1cf1407b3e4cf0dd2e18b523f">00042</a>     <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="class_i_m_u.html#a7b5e1bf1cf1407b3e4cf0dd2e18b523f">StateType</a> {
 <a name="l00043"></a><a class="code" href="class_i_m_u.html#a7b5e1bf1cf1407b3e4cf0dd2e18b523fa82181a217d68f26cba06b38cfb94c1bc">00043</a>         <a class="code" href="class_i_m_u.html#a7b5e1bf1cf1407b3e4cf0dd2e18b523fa82181a217d68f26cba06b38cfb94c1bc">sIdle</a>           = 0,
@@ -169,7 +169,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00086"></a><a class="code" href="class_i_m_u.html#aca284ca1bcf10458005d4ca630833ea9">00086</a>     <a class="code" href="class_i_m_u.html#a7b5e1bf1cf1407b3e4cf0dd2e18b523f">StateType</a>       <a class="code" href="class_i_m_u.html#aca284ca1bcf10458005d4ca630833ea9">_previousState</a>; <span class="comment">// Used for error recovery.</span>
 <a name="l00087"></a><a class="code" href="class_i_m_u.html#a39ed63b67b50c67520c5f8e5a2c26b26">00087</a>     <a class="code" href="class_i_m_u.html#a4edeb07a848734657792b4ef8749fb97">FailType</a>        <a class="code" href="class_i_m_u.html#a39ed63b67b50c67520c5f8e5a2c26b26">_failType</a>;
 <a name="l00088"></a>00088     
-<a name="l00089"></a><a class="code" href="class_i_m_u.html#a466148932203b7250c83a4c5bb684ca1">00089</a>     I2C_Master*     <a class="code" href="class_i_m_u.html#a466148932203b7250c83a4c5bb684ca1">_pMas</a>;
+<a name="l00089"></a><a class="code" href="class_i_m_u.html#a466148932203b7250c83a4c5bb684ca1">00089</a>     <a class="code" href="class_i2_c___master.html">I2C_Master</a>*     <a class="code" href="class_i_m_u.html#a466148932203b7250c83a4c5bb684ca1">_pMas</a>;
 <a name="l00090"></a><a class="code" href="class_i_m_u.html#a62978e791838c3b4829e1d3d683e99b2">00090</a>     <span class="keywordtype">bool</span>            <a class="code" href="class_i_m_u.html#a62978e791838c3b4829e1d3d683e99b2">_bDualChan</a>;
 <a name="l00091"></a><a class="code" href="class_i_m_u.html#a27df580b4559aaf3234469bfe16eb158">00091</a>     uint8_t         <a class="code" href="class_i_m_u.html#a27df580b4559aaf3234469bfe16eb158">_numChans</a>;
 <a name="l00092"></a><a class="code" href="class_i_m_u.html#a53aa928d2d68a5287da893bd157e7cbe">00092</a>     <span class="keywordtype">bool</span>            <a class="code" href="class_i_m_u.html#a53aa928d2d68a5287da893bd157e7cbe">_configOkay</a>[2];
@@ -196,9 +196,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00114"></a><a class="code" href="class_i_m_u.html#a72d5aa462d6627b458db76ca6567d130">00114</a>     <a class="code" href="class_i_m_u_base.html">IMUBase</a>*        <a class="code" href="class_i_m_u.html#a72d5aa462d6627b458db76ca6567d130">_pNextIMU</a>;
 <a name="l00115"></a>00115 
 <a name="l00116"></a>00116 <span class="keyword">public</span>:
-<a name="l00117"></a>00117     <a class="code" href="class_i_m_u.html#ab77a4c6c64f65642c42ebbf55a4e7a1e">IMU</a>(I2C_Master* pMas);
-<a name="l00118"></a>00118     <a class="code" href="class_i_m_u.html#ab77a4c6c64f65642c42ebbf55a4e7a1e">IMU</a>(I2C_Master* pMas, uint8_t gID, uint8_t aID);
-<a name="l00119"></a>00119     <a class="code" href="class_i_m_u.html#ab77a4c6c64f65642c42ebbf55a4e7a1e">IMU</a>(I2C_Master* pMas, uint8_t gID, uint8_t aID,
+<a name="l00117"></a>00117     <a class="code" href="class_i_m_u.html#ab77a4c6c64f65642c42ebbf55a4e7a1e">IMU</a>(<a class="code" href="class_i2_c___master.html">I2C_Master</a>* pMas);
+<a name="l00118"></a>00118     <a class="code" href="class_i_m_u.html#ab77a4c6c64f65642c42ebbf55a4e7a1e">IMU</a>(<a class="code" href="class_i2_c___master.html">I2C_Master</a>* pMas, uint8_t gID, uint8_t aID);
+<a name="l00119"></a>00119     <a class="code" href="class_i_m_u.html#ab77a4c6c64f65642c42ebbf55a4e7a1e">IMU</a>(<a class="code" href="class_i2_c___master.html">I2C_Master</a>* pMas, uint8_t gID, uint8_t aID,
 <a name="l00120"></a>00120         uint8_t gID2, uint8_t aID2
 <a name="l00121"></a>00121         );
 <a name="l00122"></a>00122     

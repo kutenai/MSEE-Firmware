@@ -2,10 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>GyroGlove: Class Members - Functions</title>
+<title>GyroAccGlove: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body onload='searchBox.OnSelectItem(0);'>
@@ -19,8 +26,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GyroGlove&#160;<span id="projectnumber">1.0</span></div>
-   <div id="projectbrief">FirmwareforGyroGloveMastersThesis</div>
+   <div id="projectname">GyroAccGlove&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">FirmwareforGyroAccGloveMastersThesis.</div>
   </td>
  </tr>
  </tbody>
@@ -69,8 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
-      <li><a href="functions_func.html#index__"><span>_</span></a></li>
-      <li><a href="functions_func_0x61.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_func.html#index_a"><span>a</span></a></li>
       <li><a href="functions_func_0x62.html#index_b"><span>b</span></a></li>
       <li><a href="functions_func_0x63.html#index_c"><span>c</span></a></li>
       <li><a href="functions_func_0x64.html#index_d"><span>d</span></a></li>
@@ -82,47 +88,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func_0x6c.html#index_l"><span>l</span></a></li>
       <li><a href="functions_func_0x6d.html#index_m"><span>m</span></a></li>
       <li><a href="functions_func_0x6e.html#index_n"><span>n</span></a></li>
+      <li><a href="functions_func_0x6f.html#index_o"><span>o</span></a></li>
       <li><a href="functions_func_0x70.html#index_p"><span>p</span></a></li>
       <li><a href="functions_func_0x71.html#index_q"><span>q</span></a></li>
       <li><a href="functions_func_0x72.html#index_r"><span>r</span></a></li>
       <li><a href="functions_func_0x73.html#index_s"><span>s</span></a></li>
       <li><a href="functions_func_0x74.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_func_0x75.html#index_u"><span>u</span></a></li>
       <li><a href="functions_func_0x77.html#index_w"><span>w</span></a></li>
       <li><a href="functions_func_0x7e.html#index_0x7e"><span>~</span></a></li>
     </ul>
   </div>
 </div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('functions.html','');
+</script>
+<div id="doc-content">
 <div class="contents">
 &#160;
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>FailRecovery()
+: <a class="el" href="class_i_m_u.html#acf8e9ee1971e527c255c046d3d3c1fe9">IMU</a>
+</li>
 <li>Fifo()
 : <a class="el" href="class_fifo.html#a68ef51a0abbde28576475176bea5ee77">Fifo</a>
-</li>
-<li>FifoInitialized()
-: <a class="el" href="class_i_m_u_base.html#a348707fb32602948fd865f3179e854b7">IMUBase</a>
-, <a class="el" href="class_i_m_u_dual.html#ac33359e3c7d79338c22c89571849c8eb">IMUDual</a>
-, <a class="el" href="class_i_m_u.html#a43f4305ecbac1b200601b1a463e49065">IMU</a>
-</li>
-<li>FifoReady()
-: <a class="el" href="class_i_m_u_base.html#a32f6d0c3785c0449c1a5fed912fed7af">IMUBase</a>
-, <a class="el" href="class_i_m_u_dual.html#a34fa8e7a4996a0857fed465744a2bbf6">IMUDual</a>
-, <a class="el" href="class_i_m_u.html#a509706163866cc0be5b8fedd9ee4e122">IMU</a>
-</li>
-<li>FifosInitialized()
-: <a class="el" href="class_i_m_u_manager.html#a3506c09a57713cb85f51faa53d815246">IMUManager</a>
-</li>
-<li>FifosReady()
-: <a class="el" href="class_i_m_u_manager.html#aa5359a75b1ab7abeb7fae4c11d68f02a">IMUManager</a>
 </li>
 <li>flush()
 : <a class="el" href="class_hardware_serial.html#a1eeb094d8da77e0292f95f4498a5396f">HardwareSerial</a>
 </li>
+<li>ForceStartStop()
+: <a class="el" href="class_i_m_u.html#a004d2bb9e6155f45edc9e46bce730644">IMU</a>
+, <a class="el" href="class_i_m_u_base.html#a60bf7f5f9728d11bae5ca64bc7a9c10b">IMUBase</a>
+, <a class="el" href="class_i2_c___master.html#a08749ea515583e38c5bfb0e50751a0ec">I2C_Master</a>
+</li>
 <li>full()
-: <a class="el" href="class_fifo.html#a3fb55a710ba79ce77c348bb192c41694">Fifo</a>
+: <a class="el" href="class_fifo.html#a2b09a5751fc2a301a341245e98f1e44a">Fifo</a>
 </li>
 </ul>
 </div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="footer">Generated by&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
+    </ul>
+  </div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -137,8 +158,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Feb 16 2011 16:56:03 for GyroGlove by&#160;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
+
 </body>
 </html>
